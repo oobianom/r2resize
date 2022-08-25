@@ -1,0 +1,80 @@
+---
+title: "Introduction to sciRmdTheme: An R package for Styling Scientific Rmarkdown Documents"
+author: "Obinna N. Obianom"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to sciRmdTheme: An R package for Styling Scientific Rmarkdown Documents}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r,echo=FALSE}
+sciRmdTheme::set.theme(
+  theme = "default",
+  color = "purple",
+  header.sticky=TRUE,
+  header.image="https://coursewhiz.org/mainsite/logo.png",
+  list.group.icon = "arrow",
+  font.family = "Arial",
+  font.color = "#333",
+  header.color = "blue"
+  )
+
+```
+
+
+The use of R Markdown and R Notebook for documenting processes, experiments and for writing reports has continued to grow in the last 5+ years. This is exciting, as more and more companies are also starting to adapt it for bookkeeping purposes. However, the available R markdown templates are not well-suited for professional reports and displays. Therefore, the purpose of the sciRmdTheme package is to provide more tools to help data analytists, scientists and writers in drafting professional R markdown pages.
+
+## Installation and Library Attachment
+
+The sciRmdTheme package is available on CRAN and can be installed as shown below
+
+`install.packages(sciRmdTheme)`
+
+Attach library 
+
+`library(sciRmdTheme)`
+
+## Use
+
+The sciRmdTheme can be used within the R Markdown document using an R chunk as shown below
+
+
+`sciRmdTheme::set.theme()`
+
+or by using the available options. An example of how the available options can be used is show below
+
+```{r eval=FALSE,echo=TRUE}
+sciRmdTheme::set.theme(
+  theme = "default",
+  color = "purple",
+  header.sticky=TRUE,
+  header.image="https://coursewhiz.org/mainsite/logo.png",
+  list.group.icon = "arrow",
+  font.family = "Arial",
+  font.color = "#333",
+  header.color = "blue"
+  )
+```
+
+## Features 
+
+  - Simple user interface with adjusted letter sizing
+  - Ability to use wide or narrow screen display width
+  - Ability to set theme colors that a applied across the template
+  - Ability to optimize the color of the title
+  - Ability to add logo to the header section
+  - Ability to use sticky or non-sticky headers
+  - Image and table resizing options
+  
+## Examples and Demo Pages
+
+View examples and demo pages at https://github.com/oobianom/sciRmdTheme
+View other pages created by me at https://coursewhiz.org

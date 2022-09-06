@@ -8,4 +8,4 @@
 
 ### Sample of the output document after inclusion
 
-![](https://obianom.com/r2resize_card2.png)
+![](https://obianom.com/r2resize_card3.png)

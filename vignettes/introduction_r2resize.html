@@ -12,43 +12,57 @@
 
 <meta name="author" content="Obinna N. Obianom" />
 
-<meta name="date" content="2022-06-28" />
+<meta name="date" content="2022-09-06" />
 
-<title>Introduction to sciRmdTheme: An R package for Styling Scientific Rmarkdown Documents</title>
+<title>Welcome to r2resize: In-text resizing for images and tables in Markdown and Quarto documents</title>
 
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
   }
 });
 </script>
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
-<style type="text/css">code{white-space: pre;}</style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
 <style type="text/css" data-origin="pandoc">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -68,7 +82,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -122,6 +136,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 })();
 </script>
+
 
 
 
@@ -317,51 +332,171 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<h1 class="title toc-ignore">Introduction to sciRmdTheme: An R package for Styling Scientific Rmarkdown Documents</h1>
+<h1 class="title toc-ignore">Welcome to r2resize: In-text resizing for
+images and tables in Markdown and Quarto documents</h1>
 <h4 class="author">Obinna N. Obianom</h4>
-<h4 class="date">2022-06-28</h4>
+<h4 class="date">2022-09-06</h4>
 
 
 
-<p>The use of R Markdown and R Notebook for documenting processes, experiments and for writing reports has continued to grow in the last 5+ years. This is exciting, as more and more companies are also starting to adapt it for bookkeeping purposes. However, the available R markdown templates are not well-suited for professional reports and displays. Therefore, the purpose of the sciRmdTheme package is to provide more tools to help data analytists, scientists and writers in drafting professional R markdown pages.</p>
+<div id="automatic-resizing-toolbar-for-images-and-tables-in-markdown-rmarkdown-and-quarto-documents" class="section level1">
+<h1>Automatic resizing toolbar for images and tables in Markdown,
+Rmarkdown and Quarto documents</h1>
 <div id="installation-and-library-attachment" class="section level2">
 <h2>Installation and Library Attachment</h2>
-<p>The sciRmdTheme package is available on CRAN and can be installed as shown below</p>
-<p><code>install.packages(sciRmdTheme)</code></p>
+<p>The r2resize package is available on CRAN and can be installed as
+shown below</p>
+<p><code>install.packages(r2resize)</code></p>
 <p>Attach library</p>
-<p><code>library(sciRmdTheme)</code></p>
+<p><code>library(r2resize)</code></p>
 </div>
 <div id="use" class="section level2">
 <h2>Use</h2>
-<p>The sciRmdTheme can be used within the R Markdown document using an R chunk as shown below</p>
-<p><code>sciRmdTheme::set.theme()</code></p>
-<p>or by using the available options. An example of how the available options can be used is show below</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>sciRmdTheme<span class="op">::</span><span class="kw">set.theme</span>(</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="dt">theme =</span> <span class="st">&quot;default&quot;</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>  <span class="dt">header.sticky=</span><span class="ot">TRUE</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="dt">header.image=</span><span class="st">&quot;https://coursewhiz.org/mainsite/logo.png&quot;</span>,</span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="dt">list.group.icon =</span> <span class="st">&quot;arrow&quot;</span>,</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="dt">font.family =</span> <span class="st">&quot;Arial&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="dt">font.color =</span> <span class="st">&quot;#333&quot;</span>,</span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="dt">header.color =</span> <span class="st">&quot;blue&quot;</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>  )</span></code></pre></div>
+<p>The r2resize can be used within the R Markdown document using an R
+chunk as shown below</p>
+<p><code>r2resize::add.resizer()</code></p>
+<p>or by using the available options. An example of how the available
+options can be used is show below</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>r2resize<span class="sc">::</span><span class="fu">add.resizer</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">theme.color =</span> <span class="st">&quot;brown&quot;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">position =</span> <span class="st">&quot;top&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">font.size =</span> <span class="st">&quot;green&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">font.color =</span> <span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">tables =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">images =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">line.width =</span> <span class="dv">150</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div>
 </div>
-<div id="features" class="section level2">
-<h2>Features</h2>
-<ul>
-<li>Simple user interface with adjusted letter sizing</li>
-<li>Ability to use wide or narrow screen display width</li>
-<li>Ability to set theme colors that a applied across the template</li>
-<li>Ability to optimize the color of the title</li>
-<li>Ability to add logo to the header section</li>
-<li>Ability to use sticky or non-sticky headers</li>
-<li>Image and table resizing options</li>
-</ul>
 </div>
-<div id="examples-and-demo-pages" class="section level2">
-<h2>Examples and Demo Pages</h2>
-<p>View examples and demo pages at <a href="https://github.com/oobianom/sciRmdTheme" class="uri">https://github.com/oobianom/sciRmdTheme</a> View other pages created by me at <a href="https://coursewhiz.org" class="uri">https://coursewhiz.org</a></p>
+<div id="images-examples" class="section level1">
+<h1>Images Examples</h1>
+<p>Elit pellentesque habitant morbi tristique senectus et netus et
+malesuada. Amet massa vitae tortor condimentum lacinia quis vel
+eros.</p>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Ut ornare lectus sit amet est placerat in. Risus in hendrerit gravida
+rutrum quisque non tellus orci ac. Viverra justo nec ultrices dui sapien
+eget. Elit scelerisque mauris pellentesque pulvinar pellentesque.</p>
+<p><img src="data:image/png;base64,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" /><!-- --><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Imperdiet nulla malesuada pellentesque elit eget gravida. Turpis
+massa sed elementum tempus egestas.</p>
+<p><img src="data:image/png;base64,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" /><!-- --><img src="data:image/png;base64,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" /><!-- --><img src="data:image/png;base64,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" /><!-- --></p>
+</div>
+<div id="table-examples" class="section level1">
+<h1>Table Examples</h1>
+<p>Quis varius quam quisque id diam. Donec enim diam vulputate ut
+pharetra. Nunc aliquet bibendum enim facilisis gravida neque convallis a
+cras. Vitae tempus quam pellentesque nec nam aliquam sem et tortor.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Ex1</th>
+<th>Ex2</th>
+<th>Ex3</th>
+<th>Ex4</th>
+<th>Ex 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>23</td>
+<td>1</td>
+<td>45</td>
+<td>6 - 12</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>NA</td>
+<td>4 - 5.5</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>7</td>
+<td>5</td>
+<td>0</td>
+<td>5 - 34</td>
+</tr>
+</tbody>
+</table>
+<p>Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non
+sodales neque sodales ut etiam. Ut placerat orci nulla pellentesque
+dignissim enim sit amet. Tempus quam pellentesque nec nam. Egestas purus
+viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. Leo
+integer malesuada nunc vel risus commodo.</p>
+<div id="table-1-and-2" class="section level2">
+<h2>Table 1 and 2</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Column 1</th>
+<th>Column 2</th>
+<th>Column 3</th>
+<th>Column 4</th>
+<th>Column 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>23</td>
+<td>1</td>
+<td>45</td>
+<td>6 - 12</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>NA</td>
+<td>4 - 5.5</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>7</td>
+<td>5</td>
+<td>0</td>
+<td>5 - 34</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>head1</th>
+<th>head2</th>
+<th>head3</th>
+<th>head4</th>
+<th>head5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>23</td>
+<td>1</td>
+<td>A</td>
+<td>AA</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>B</td>
+<td>BB</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>7</td>
+<td>5</td>
+<td>C</td>
+<td>CC</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 

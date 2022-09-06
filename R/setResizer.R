@@ -8,9 +8,9 @@
 #' @param tables add the table
 #' @param images add the resizer for all images
 #'
-#' @section Demos for sciRmdTheme:
+#' @section Demos for r2resize:
 #' More examples and demo pages for are located at this link -
-#' \url{https://github.com/oobianom/sciRmdTheme}.
+#' \url{https://github.com/oobianom/r2resize}.
 #'
 #' @return styles for themeing the page
 #'
@@ -32,13 +32,27 @@ add.resizer <- function(
   font.size = NULL,
   font.color = NULL,
   tables = TRUE,
-  images = TRUE
+  images = TRUE,
+  line.color = NULL,
+  thumb.width = NULL,
+  thumb.height = NULL,
+  line.width = NULL,
+  line.height = NULL,
+  dim.units = "px"
   ) {
 
   position <- match.arg(position)
 
   # set content
   con <- ""
+
+  # get thumb properties
+  thumb.2width <- ifelse(is.null(thumb.width),"26px",paste0(as.numeric(thumb.width)+6,dim.units))
+  thumb.2height <- ifelse(is.null(thumb.height),"26px",paste0(as.numeric(thumb.height)+6,dim.units))
+  thumb.width <- ifelse(is.null(thumb.width),"20px",paste0(thumb.width,dim.units))
+  thumb.height <- ifelse(is.null(thumb.height),"20px",paste0(thumb.height,dim.units))
+  line.width <- ifelse(is.null(line.width),"100",paste0(line.width,dim.units))
+  line.height <- ifelse(is.null(line.height),"7px",paste0(line.height,dim.units))
 
 
 
@@ -48,11 +62,21 @@ add.resizer <- function(
   theme.02.css <- paste0(template.loc(), "/", theme.01, ".css")
   if (file.exists(theme.02.css)) {
     con <- c(con, "<style>", readLines(theme.02.css), "</style>")
-    if (!is.null(color)) {
-      con <- gsub("gray", color, con)
+    if (!is.null(theme.color)) {
+      con <- gsub("gray", theme.color, con)
+    }
+    if (!is.null(line.color)) {
+      con <- gsub("#cfae7c", line.color, con)
     }
     if(!is.null(font.color))
       con <- gsub("fontcolorplaceholder", font.color, con)
+
+    con <- gsub("thumb.width", thumb.width, con)
+    con <- gsub("thumb.height", thumb.height, con)
+    con <- gsub("thumb.2width", thumb.2width, con)
+    con <- gsub("thumb.2height", thumb.2height, con)
+    con <- gsub("line.width", line.width, con)
+    con <- gsub("line.height", line.height, con)
   }
 
   # fetch js

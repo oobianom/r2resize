@@ -24,7 +24,7 @@ add.resizer(
 
 \item{position}{primary color for the theme}
 
-\item{font.size}{make header sticky, TRUE or FALSE}
+\item{font.size}{size of font in px e.g 14px}
 
 \item{font.color}{set a list group icon}
 
@@ -46,12 +46,14 @@ More examples and demo pages for are located at this link -
 
 \examples{
 add.resizer(
-   theme.color = NULL,
-   position = "top",
-   font.size = NULL,
-   font.color = NULL,
-   tables = TRUE,
-   images = TRUE
+  theme.color = "black",
+  position = "top",
+  font.size = "12px",
+  font.color = "gray",
+  tables = TRUE,
+  images = TRUE,
+  line.color = "orange",
+  line.width = 350
 )
 
 }

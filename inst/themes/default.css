@@ -1,9 +1,15 @@
+body{
+  font-size: fontsizedefault;
+  color: fontcolordefault;
+}
+
 .fullscreenicon,.fullscreenicon2,.closericon{
   height: thumb.2height;
   width: thumb.2width;
   cursor: pointer;
   display: inline-block;
   margin:2px;
+  margin-left:8px;
   max-width: 30px!important;
 }
 .sliderimageinput,.slidertableinput, .slidertablefont {
@@ -49,7 +55,7 @@
      height: line.height;
      cursor: pointer;
      box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-     background: #cfbea5;
+     background: #cfae7c;
      border-radius: 25px;
      border: 0px solid #000101;
 }
@@ -73,7 +79,7 @@
      cursor: pointer;
      animate: 0.2s;
      box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-     background: #cfbea5;
+     background: #cfae7c;
      border-radius: 25px;
      border: 0px solid #000101;
 }
@@ -167,4 +173,7 @@
   z-index:100;background:#fff;
   padding:20px;
   overflow: auto;
+}
+.fullscreenicon2,.closericon{
+  margin-top: 20px;
 }

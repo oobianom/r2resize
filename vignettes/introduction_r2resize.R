@@ -1,13 +1,14 @@
 ## ----eval=FALSE,echo=TRUE-----------------------------------------------------
 #  r2resize::add.resizer(
-#    theme.color = "brown",
+#    theme.color = "black",
 #    position = "top",
-#    font.size = "green",
-#    font.color = "blue",
+#    font.size = "12px",
+#    font.color = "gray",
 #    tables = TRUE,
 #    images = TRUE,
-#    line.width = 150
-#    )
+#    line.color = "orange",
+#    line.width = 350
+#  )
 
 ## ----pressure1, echo=FALSE----------------------------------------------------
 

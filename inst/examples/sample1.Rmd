@@ -14,14 +14,15 @@ output:
 
 ```{r,echo=TRUE}
 r2resize::add.resizer(
-  theme.color = "blue",
+  theme.color = "black",
   position = "top",
-  font.size = "green",
-  font.color = "blue",
+  font.size = "12px",
+  font.color = "gray",
   tables = TRUE,
   images = TRUE,
-  line.width = 250
-  )
+  line.color = "orange",
+  line.width = 350
+)
 
 ```
 

@@ -3,7 +3,7 @@
 #' Set options for the styling of the Rmarkdown theme to use on the page
 #' @param theme.color theme to use for the page
 #' @param position primary color for the theme
-#' @param font.size make header sticky, TRUE or FALSE
+#' @param font.size size of font in px e.g 14px
 #' @param font.color set a list group icon
 #' @param tables add the table
 #' @param images add the resizer for all images
@@ -16,12 +16,14 @@
 #'
 #' @examples
 #' add.resizer(
-#'    theme.color = NULL,
-#'    position = "top",
-#'    font.size = NULL,
-#'    font.color = NULL,
-#'    tables = TRUE,
-#'    images = TRUE
+#'   theme.color = "black",
+#'   position = "top",
+#'   font.size = "12px",
+#'   font.color = "gray",
+#'   tables = TRUE,
+#'   images = TRUE,
+#'   line.color = "orange",
+#'   line.width = 350
 #' )
 #'
 #' @export
@@ -62,21 +64,6 @@ add.resizer <- function(
   theme.02.css <- paste0(template.loc(), "/", theme.01, ".css")
   if (file.exists(theme.02.css)) {
     con <- c(con, "<style>", readLines(theme.02.css), "</style>")
-    if (!is.null(theme.color)) {
-      con <- gsub("gray", theme.color, con)
-    }
-    if (!is.null(line.color)) {
-      con <- gsub("#cfae7c", line.color, con)
-    }
-    if(!is.null(font.color))
-      con <- gsub("fontcolorplaceholder", font.color, con)
-
-    con <- gsub("thumb.width", thumb.width, con)
-    con <- gsub("thumb.height", thumb.height, con)
-    con <- gsub("thumb.2width", thumb.2width, con)
-    con <- gsub("thumb.2height", thumb.2height, con)
-    con <- gsub("line.width", line.width, con)
-    con <- gsub("line.height", line.height, con)
   }
 
   # fetch js
@@ -85,6 +72,38 @@ add.resizer <- function(
     con <- c(con, "<script>", readLines(theme.02.js), "</script>")
     con <- gsub("listgroupixon", "xxxxx", con)
   }
+
+  # font size
+  if(!is.null(font.size))
+    con <- gsub("fontsizedefault", font.size, con)
+
+  # font color
+  if(!is.null(font.color))
+    con <- gsub("fontcolordefault", font.color, con)
+
+
+  # add resize to image or/and tables
+  if(!tables)
+    con <- gsub("if\\(allowtable\\)", "if(!allowtable)", con)
+  if(!images)
+    con <- gsub("if\\(allowimage\\)", "if(!allowimage)", con)
+
+  # sub others
+  if (!is.null(theme.color)) {
+    con <- gsub("gray", theme.color, con)
+  }
+  if (!is.null(line.color)) {
+    con <- gsub("#cfae7c", line.color, con)
+  }
+  if(!is.null(font.color))
+    con <- gsub("fontcolorplaceholder", font.color, con)
+
+  con <- gsub("thumb.width", thumb.width, con)
+  con <- gsub("thumb.height", thumb.height, con)
+  con <- gsub("thumb.2width", thumb.2width, con)
+  con <- gsub("thumb.2height", thumb.2height, con)
+  con <- gsub("line.width", line.width, con)
+  con <- gsub("line.height", line.height, con)
 
   # combine and collapse content
   con <- paste(con, collapse = "")

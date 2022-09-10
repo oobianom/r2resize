@@ -34,7 +34,7 @@ or by using the available options. An example of how the available options can b
 ```{r eval=FALSE,echo=TRUE}
 r2resize::add.resizer(
   theme.color = "black",
-  position = "top",
+  position = "bottom",
   font.size = "12px",
   font.color = "gray",
   tables = TRUE,

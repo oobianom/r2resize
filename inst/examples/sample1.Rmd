@@ -15,7 +15,7 @@ output:
 ```{r,echo=TRUE}
 r2resize::add.resizer(
   theme.color = "black",
-  position = "top",
+  position = "bottom",
   font.size = "12px",
   font.color = "gray",
   tables = TRUE,
@@ -77,13 +77,34 @@ Quis varius quam quisque id diam. Donec enim diam vulputate ut pharetra. Nunc al
 
 Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Ut placerat orci nulla pellentesque dignissim enim sit amet. Tempus quam pellentesque nec nam. Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. Leo integer malesuada nunc vel risus commodo.
 
-## Table 1 and 2
+## Regular Table 1 and 2
 
 | Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
 |----------|----------|----------|----------|----------|
 | 1        | 23       | 1        | 45       | 6 - 12   |
 | 3        | 4        | 5        | NA       | 4 - 5.5  |
 | 7        | 7        | 5        | 0        | 5 - 34   |
+
+| head1 | head2 | head3 | head4 | head5 |
+|-------|-------|-------|-------|-------|
+| 1     | 23    | 1     | A     | AA    |
+| 3     | 4     | 5     | B     | BB    |
+| 7     | 7     | 5     | C     | CC    |
+
+
+
+## Use in Datatable 
+
+```{r}
+
+library(DT)
+datatable(iris)
+
+```
+
+
+
+## another table 
 
 | head1 | head2 | head3 | head4 | head5 |
 |-------|-------|-------|-------|-------|

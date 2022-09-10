@@ -30,7 +30,7 @@
 
 add.resizer <- function(
   theme.color = NULL,
-  position = c("top","bottom","left","right"),
+  position = c("top","bottom"),
   font.size = NULL,
   font.color = NULL,
   tables = TRUE,
@@ -67,7 +67,7 @@ add.resizer <- function(
   }
 
   # fetch js
-  theme.02.js <- paste0(template.loc(), "/", theme.01, ".js")
+  theme.02.js <- paste0(template.loc(), "/", theme.01,"_", position, ".js")
   if (file.exists(theme.02.js)) {
     con <- c(con, "<script>", readLines(theme.02.js), "</script>")
     con <- gsub("listgroupixon", "xxxxx", con)

@@ -4,15 +4,15 @@
 \name{r2resize-package}
 \alias{r2resize}
 \alias{r2resize-package}
-\title{r2resize: In-text resizing for images and tables in Markdown and Quarto documents}
+\title{r2resize: In-text resizing for images and data tables in Markdown and Quarto documents}
 \description{
 Automatic resizing toolbar for images and tables in Markdown, Rmarkdown and Quarto documents
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/oobianom/sciRmdTheme}
-  \item Report bugs at \url{https://github.com/oobianom/sciRmdTheme}
+  \item \url{https://r2resize.obi.obianom.com/}
+  \item Report bugs at \url{https://github.com/oobianom/r2resize/issues}
 }
 
 }

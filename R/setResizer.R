@@ -10,19 +10,19 @@
 #'
 #' @section Demos for r2resize:
 #' More examples and demo pages for are located at this link -
-#' \url{https://github.com/oobianom/r2resize}.
+#' \url{https://rnetwork.obi.obianom.com/package/r2resize}.
 #'
-#' @return styles for themeing the page
+#' @return Inclusion of mini toolbar for images and tables within a page
 #'
 #' @examples
-#' add.resizer(
-#'   theme.color = "black",
+#' r2resize::add.resizer(
+#'   theme.color = "blue",
 #'   position = "top",
 #'   font.size = "12px",
-#'   font.color = "gray",
+#'   font.color = "brown",
 #'   tables = TRUE,
 #'   images = TRUE,
-#'   line.color = "orange",
+#'   line.color = "green",
 #'   line.width = 350
 #' )
 #'

@@ -1,7 +1,7 @@
 ## ----eval=FALSE,echo=TRUE-----------------------------------------------------
 #  r2resize::add.resizer(
 #    theme.color = "black",
-#    position = "top",
+#    position = "bottom",
 #    font.size = "12px",
 #    font.color = "gray",
 #    tables = TRUE,

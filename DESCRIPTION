@@ -1,13 +1,13 @@
 Package: r2resize
 Type: Package
-Title: In-text resizing for images and tables in Markdown and Quarto documents
-Version: 1.0
+Title: In-text resizing for images and data tables in Markdown and Quarto documents
+Version: 1.2
 Author: Obinna Obianom
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
 Description: Automatic resizing toolbar for images and tables in Markdown, Rmarkdown and Quarto documents
 License: MIT + file LICENSE
-URL: https://github.com/oobianom/sciRmdTheme
-BugReports: https://github.com/oobianom/sciRmdTheme
+URL: https://r2resize.obi.obianom.com/
+BugReports: https://github.com/oobianom/r2resize/issues
 Depends: 
     R (>= 3.4)
 Imports: 

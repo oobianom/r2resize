@@ -4,9 +4,9 @@
 \name{r2resize-package}
 \alias{r2resize}
 \alias{r2resize-package}
-\title{r2resize: In-text resizing for images and data tables in Markdown and Quarto documents}
+\title{r2resize: In-Text Resizing for Images and Data Tables in 'Markdown' and 'Quarto' Documents}
 \description{
-Automatic resizing toolbar for images and tables in Markdown, Rmarkdown and Quarto documents
+Automatic resizing toolbar for images and tables. Most suitable to include resize functionality in 'Markdown', 'Rmarkdown' and 'Quarto' documents.
 }
 \seealso{
 Useful links:

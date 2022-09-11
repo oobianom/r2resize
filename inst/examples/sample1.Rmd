@@ -1,11 +1,11 @@
 ---
-title: "r2resize"
+title: "r2resize example"
 author: "Obinna N. Obianom"
-date: "6/29/2022"
+date: "09/10/2022"
 output:
   html_document:
     theme: default
-    toc: false
+    toc: true
     toc_depth: 3
     toc_float: true
 ---
@@ -15,13 +15,13 @@ output:
 ```{r,echo=TRUE}
 r2resize::add.resizer(
   theme.color = "black",
-  position = "bottom",
+  position = "top",
   font.size = "12px",
-  font.color = "gray",
+  font.color = "darkblue",
   tables = TRUE,
   images = TRUE,
   line.color = "orange",
-  line.width = 350
+  line.height = 5
 )
 
 ```
@@ -29,6 +29,7 @@ r2resize::add.resizer(
 # Images Examples
 
 
+# Single image
 
 Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Amet massa vitae tortor condimentum lacinia quis vel eros. 
 
@@ -39,6 +40,7 @@ plot(mtcars)
 
 ```
 
+# Two images
 
 Ut ornare lectus sit amet est placerat in. Risus in hendrerit gravida rutrum quisque non tellus orci ac. Viverra justo nec ultrices dui sapien eget. Elit scelerisque mauris pellentesque pulvinar pellentesque. 
 
@@ -50,6 +52,8 @@ plot(cars)
 
 ```
 
+
+# Three images
 
 Imperdiet nulla malesuada pellentesque elit eget gravida. Turpis massa sed elementum tempus egestas.
 
@@ -65,19 +69,22 @@ plot(cars)
 
 # Table Examples
 
-Quis varius quam quisque id diam. Donec enim diam vulputate ut pharetra. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras. Vitae tempus quam pellentesque nec nam aliquam sem et tortor. 
+## Use with dataTable 
+
+Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Ut placerat orci nulla pellentesque dignissim enim sit amet. Tempus quam pellentesque nec nam. 
+
+```{r}
+
+library(DT)
+datatable(iris)
+
+```
 
 
-| Ex1      | Ex2      | Ex3      | Ex4      | Ex 5     |
-|----------|----------|----------|----------|----------|
-| 1        | 23       | 1        | 45       | 6 - 12   |
-| 3        | 4        | 5        | NA       | 4 - 5.5  |
-| 7        | 7        | 5        | 0        | 5 - 34   |
 
+## Regular Markdown Table 1 and 2
 
-Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Ut placerat orci nulla pellentesque dignissim enim sit amet. Tempus quam pellentesque nec nam. Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. Leo integer malesuada nunc vel risus commodo.
-
-## Regular Table 1 and 2
+Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. Leo integer malesuada nunc vel risus commodo.
 
 | Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
 |----------|----------|----------|----------|----------|
@@ -93,18 +100,7 @@ Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sod
 
 
 
-## Use in Datatable 
-
-```{r}
-
-library(DT)
-datatable(iris)
-
-```
-
-
-
-## another table 
+## Single Markdown Table
 
 | head1 | head2 | head3 | head4 | head5 |
 |-------|-------|-------|-------|-------|

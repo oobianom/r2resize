@@ -2,7 +2,7 @@
 % Please edit documentation in R/setResizer.R
 \name{add.resizer}
 \alias{add.resizer}
-\title{Create settings for Rmarkdown page}
+\title{Configure toolbar settings for the page}
 \usage{
 add.resizer(
   theme.color = NULL,
@@ -20,31 +20,45 @@ add.resizer(
 )
 }
 \arguments{
-\item{theme.color}{theme to use for the page}
+\item{theme.color}{theme color for resizer and table e.g. black or #000000}
 
-\item{position}{primary color for the theme}
+\item{position}{position of the resize toolbar e.g. top or bottom}
 
-\item{font.size}{size of font in px e.g 14px}
+\item{font.size}{size of the page font in px e.g. 14px}
 
-\item{font.color}{set a list group icon}
+\item{font.color}{color of the page font in e.g. darkblue or #006699}
 
-\item{tables}{add the table}
+\item{tables}{boolean. TRUE or FALSE, to add resize toobar to tables}
 
-\item{images}{add the resizer for all images}
+\item{images}{boolean. TRUE or FALSE, to add resize toobar to images}
+
+\item{line.color}{color of the resizer track e.g. red or #f5f5f5}
+
+\item{thumb.width}{width of the resizer thumb e.g. 25}
+
+\item{thumb.height}{height of the resizer thumb e.g. 25}
+
+\item{line.width}{width of the resizer track e.g. 200}
+
+\item{line.height}{height of the resizer track e.g. 10}
+
+\item{dim.units}{unit for the height and width of the track or thumb}
 }
 \value{
 Inclusion of mini toolbar for images and tables within a page
 }
 \description{
-Set options for the styling of the Rmarkdown theme to use on the page
+Set options for the inclusion of sizing toolbar in documents
 }
-\section{Demos for r2resize}{
+\section{Examples for r2resize}{
 
 More examples and demo pages for are located at this link -
 \url{https://rnetwork.obi.obianom.com/package/r2resize}.
 }
 
 \examples{
+r2resize::add.resizer() #default settings
+
 r2resize::add.resizer(
   theme.color = "blue",
   position = "top",
@@ -53,7 +67,8 @@ r2resize::add.resizer(
   tables = TRUE,
   images = TRUE,
   line.color = "green",
-  line.width = 350
-)
+  line.width = 150,
+  line.height = 5
+) # customized settings
 
 }

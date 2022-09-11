@@ -48,7 +48,7 @@ r2resize::add.resizer(
   line.height = 5
 )
 
-```
+``
 
 # Images Examples
 
@@ -61,8 +61,7 @@ Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Amet 
 
 plot(mtcars)
 
-
-```
+``
 
 # Two images
 
@@ -74,7 +73,7 @@ plot(pressure)
 
 plot(cars)
 
-```
+``
 
 
 # Three images
@@ -89,7 +88,7 @@ plot(mtcars)
 
 plot(cars)
 
-```
+ ```
 
 # Table Examples
 
@@ -102,7 +101,7 @@ Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sod
 library(DT)
 datatable(iris)
 
-```
+ ```
 
 
 

@@ -38,10 +38,8 @@ output:
 
 ```{r,echo=TRUE}
 r2resize::add.resizer(
-  theme.color = "black",
+  theme.color = "blue",
   position = "top",
-  font.size = "12px",
-  font.color = "darkblue",
   tables = TRUE,
   images = TRUE,
   line.color = "orange",

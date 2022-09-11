@@ -1,5 +1,7 @@
 # r2resize: In-text resizing of images and tables in Rmarkdown and Quarto documents
 
+### Official site: https://r2resize.obi.obianom.com
+
 ## Installation 
 
 ```{r}
@@ -7,7 +9,7 @@ install.packages(r2resize)
 
 ```
 
-## Use
+## Use in Rmarkdown or Quarto document
 
 ### Load library
 
@@ -15,7 +17,7 @@ install.packages(r2resize)
 library(r2resize)
 ```
 
-### Include at the top of your Rmarkdown or Quarto document
+### Include at the top of your documet
 
 ![](https://obianom.com/r2resize_card.png)
 

@@ -88,7 +88,7 @@ plot(mtcars)
 
 plot(cars)
 
- ```
+``
 
 # Table Examples
 
@@ -101,7 +101,7 @@ Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sod
 library(DT)
 datatable(iris)
 
- ```
+``
 
 
 

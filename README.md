@@ -5,7 +5,12 @@
 ## Installation 
 
 ```{r}
+# From CRAN
 install.packages(r2resize)
+
+# OR from Github
+library(devtools)
+install_github("oobianom/r2resize")
 ```
 ## Use in Rmarkdown or Quarto document
 

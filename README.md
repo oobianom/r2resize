@@ -6,9 +6,7 @@
 
 ```{r}
 install.packages(r2resize)
-
 ```
-
 ## Use in Rmarkdown or Quarto document
 
 ### Load library
@@ -16,7 +14,6 @@ install.packages(r2resize)
 ```{r}
 library(r2resize)
 ```
-
 ### Include at the top of your documet
 
 ![](https://obianom.com/r2resize_card.png)

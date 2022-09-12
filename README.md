@@ -1,4 +1,4 @@
-# r2resize: In-text resizing of images and tables in Rmarkdown and Quarto documents
+# r2resize: In-text resizing of images and tables in Rmarkdown and Quarto documents <img src="https://r2resize.obi.obianom.com/r2resize_logo.png" width="200" align="right"/>
 
 ### Official site: https://r2resize.obi.obianom.com
 

@@ -1,10 +1,12 @@
-# r2resize: In-text resizing of images and tables in Rmarkdown and Quarto documents <img src="https://r2resize.obi.obianom.com/r2resize_logo.png" width="200" align="right"/>
+# r2resize: In-text resizing of containers, images and tables in Rmarkdown and Quarto documents <img src="https://r2resize.obi.obianom.com/r2resize_logo.png" width="200" align="right"/>
 
 ### Official site: https://r2resize.obi.obianom.com
 
+### Quick demo: https://r2resize.obi.obianom.com/r2resize-package.gif
+
 [![CRAN\_Status\_Badge](https://img.shields.io/badge/rPkgNet-published-orange)](https://rnetwork.obi.obianom.com/package/r2resize) [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/r2resize)](https://cran.r-project.org/package=r2resize) [![](https://cranlogs.r-pkg.org/badges/r2resize)](https://cran.r-project.org/package=r2resize) [![](https://cranlogs.r-pkg.org/badges/grand-total/r2resize)](https://cran.r-project.org/package=r2resize)
 
-<img src="https://r2resize.obi.obianom.com/r2resize-package.gif">
+
 
 ## Installation 
 

@@ -13,7 +13,8 @@
 #' @param left.bg.url left panel background image e.g image1.png or https://..image1.png
 #' @param right.bg.url right panel background image e.g image1.png or https://..image1.png
 #' @param border color of the resizer track e.g. red or #f5f5f5
-#' @param height width of the resizer thumb e.g. 25
+#' @param text.left.color color of left panel text
+#' @param text.right.color color of right panel text
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages for are located at this link -
@@ -44,7 +45,9 @@ splitCard <- function(left,right,width.left = 50, width.right = 50,
                       right.bg.url = NULL,
                       right.color = "lightgray",
                       border = c("none","primary","secondary","warning","danger","success"),
-                      height = NULL, position= c("vertical","horizontal")) {
+                      height = NULL, position= c("vertical","horizontal"),
+                      text.left.color = "white",
+                      text.right.color = "black") {
 
   # fetch selected position
   position <- match.arg(position)
@@ -92,6 +95,7 @@ splitCard <- function(left,right,width.left = 50, width.right = 50,
   # set initial content
   bgcol <-"background-color:"
   bgurl <-"background-image:url("
+  textcol <-"color:"
   shiny::div(
     shiny::div(
       class = holders,
@@ -99,6 +103,7 @@ splitCard <- function(left,right,width.left = 50, width.right = 50,
         class = panel.a,
         style = paste0(bgcol,left.color),
         style = ifelse(is.null(left.bg.url),"",paste0(bgurl,left.bg.url,")")),
+        style = ifelse(is.null(text.left.color),"",paste0(textcol,text.left.color,"")),
         left
       ),
       shiny::div(
@@ -109,6 +114,7 @@ splitCard <- function(left,right,width.left = 50, width.right = 50,
         class = panel.b,
         style = paste0(bgcol,right.color),
         style = ifelse(is.null(right.bg.url),"",paste0(bgurl,right.bg.url,")")),
+        style = ifelse(is.null(text.right.color),"",paste0(textcol,text.right.color,"")),
         right
       )
     ),

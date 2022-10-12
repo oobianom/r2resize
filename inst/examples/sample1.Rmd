@@ -126,8 +126,10 @@ r2resize::splitCard(
   "sample rpkg.net 1",
   "sample rpkg.net 2 ",
   splitter.color = "transparent",
-  right.color = "pink",
-  left.bg.url = "https://d2wi55zl4h3jkw.cloudfront.net/media/bi/34860/watercolor-herringbone-wallpaper-2x.jpg.webp?q=1664329812",
+  bg.right.color = "pink",
+  bg.left.color = "gray",
+  text.left.color = "green",
+  text.right.color = "yellow",
   position = "vertical"
 )
 ```

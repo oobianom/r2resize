@@ -4,7 +4,7 @@
 
 [![CRAN\_Status\_Badge](https://img.shields.io/badge/rPkgNet-published-orange)](https://rnetwork.obi.obianom.com/package/r2resize) [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/r2resize)](https://cran.r-project.org/package=r2resize) [![](https://cranlogs.r-pkg.org/badges/r2resize)](https://cran.r-project.org/package=r2resize) [![](https://cranlogs.r-pkg.org/badges/grand-total/r2resize)](https://cran.r-project.org/package=r2resize)
 
-<img src="https://r2resize.obi.obianom.com/r2resize-package.gif")">
+<img src="https://r2resize.obi.obianom.com/r2resize-package.gif">
 
 ## Installation 
 

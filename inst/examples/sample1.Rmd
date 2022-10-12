@@ -1,14 +1,23 @@
 ---
-title: "r2resize example"
+title: "r2resize package example to adding resizing capability to R documents"
 author: "Obinna N. Obianom"
 date: "09/10/2022"
 output:
   html_document:
     theme: default
-    toc: true
+    toc: false
     toc_depth: 3
     toc_float: true
 ---
+
+### Visit docs: https://github.com/oobianom/r2resize
+
+# Install and Use
+
+```{r,eval=FALSE}
+install.packages(r2resize)
+library(r2resize)
+```
 
 # Theme setting
 
@@ -17,11 +26,12 @@ r2resize::add.resizer(
   theme.color = "black",
   position = "top",
   font.size = "12px",
-  font.color = "darkblue",
+  font.color = "black",
   tables = TRUE,
   images = TRUE,
   line.color = "orange",
-  line.height = 5
+  line.height = 5,
+  line.width = 200
 )
 
 ```
@@ -107,3 +117,18 @@ Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. 
 | 1     | 23    | 1     | A     | AA    |
 | 3     | 4     | 5     | B     | BB    |
 | 7     | 7     | 5     | C     | CC    |
+
+
+## Resizable div
+
+```{r}
+r2resize::splitCard(
+  "sample rpkg.net 1",
+  "sample rpkg.net 2 ",
+  splitter.color = "transparent",
+  right.color = "pink",
+  left.bg.url = "https://d2wi55zl4h3jkw.cloudfront.net/media/bi/34860/watercolor-herringbone-wallpaper-2x.jpg.webp?q=1664329812",
+  position = "vertical"
+)
+```
+

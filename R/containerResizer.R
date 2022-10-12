@@ -1,0 +1,118 @@
+#' Resizable split screen container
+#'
+#' Highly customizable and resizable split screen container
+#'
+#' @param left theme color for resizer and table e.g. black or #000000
+#' @param right position of the resize toolbar e.g. top or bottom
+#' @param width.left size of the page font in px e.g. 14px
+#' @param width.right color of the page font in e.g. darkblue or #006699
+#' @param width.units boolean. TRUE or FALSE, to add resize toobar to tables
+#' @param splitter.color splitter color e.g red, black or #333333
+#' @param left.color left panel color e.g red, black or #333333
+#' @param right.color right panel color e.g red, black or #333333
+#' @param left.bg.url left panel background image e.g image1.png or https://..image1.png
+#' @param right.bg.url right panel background image e.g image1.png or https://..image1.png
+#' @param border color of the resizer track e.g. red or #f5f5f5
+#' @param height width of the resizer thumb e.g. 25
+#'
+#' @section Examples for r2resize:
+#' More examples and demo pages for are located at this link -
+#' \url{https://rpkg.net/package/r2resize}.
+#'
+#' @return Split screen container
+#'
+#' @examples
+#' r2resize::add.resizer() #default settings
+#'
+#' r2resize::add.resizer(
+#'   theme.color = "blue",
+#'   position = "top",
+#'   font.size = "12px",
+#'   font.color = "brown",
+#'   tables = TRUE,
+#'   images = TRUE,
+#'   line.color = "green",
+#'   line.width = 150,
+#'   line.height = 5
+#' ) # customized settings
+#'
+#' @export
+
+splitCard <- function(left,right,width.left = 50, width.right = 50,
+                      width.units = "%", splitter.color = "gray", left.color = "yellow",
+                      left.bg.url = NULL,
+                      right.bg.url = NULL,
+                      right.color = "lightgray",
+                      border = c("none","primary","secondary","warning","danger","success"),
+                      height = NULL, position= c("vertical","horizontal")) {
+
+  # fetch selected position
+  position <- match.arg(position)
+
+  # fetch selected border
+  border <- match.arg(border)
+
+  #set splitter classes
+
+  switch (position,
+    vertical = {
+      class.0 <- "container"
+      class.a <- "left"
+      class.b <- "splitter"
+      class.c <- "right"
+      class.d <- 'Height'
+    },
+    horizontal = {
+      class.0 <- "container-horizontal"
+      class.a <- "top"
+      class.b <- "splitter-horizontal"
+      class.c <- "bottom"
+      class.d <- 'Width'
+    }
+  )
+
+  holders <- paste0("r2resize-resizablediv-panel-",class.0)
+    panel.a <- paste0("r2resize-resizablediv-panel-",class.a)
+    splitters <- paste0("r2resize-resizablediv-",class.b)
+    panel.b <- paste0("r2resize-resizablediv-panel-",class.c)
+  # script fetch js
+  theme.02.js <- paste0(template.loc(), "/divsplitter.js")
+  script <- ""
+  if (file.exists(theme.02.js)) {
+    print("exists---")
+    script <- paste(c("<script>", readLines(theme.02.js), "</script>"),collapse = " ")
+    script <- gsub("resizepanelwhich", panel.a, script)
+    script <- gsub("resizesplitterwhich", splitters, script)
+    script <- gsub("HeWigdht", class.d, script)
+  }
+  # set to html
+  attr(script, "html") <- TRUE
+  class(script) <- c("html", "character")
+
+  # set initial content
+  bgcol <-"background-color:"
+  bgurl <-"background-image:url("
+  shiny::div(
+    shiny::div(
+      class = holders,
+      shiny::div(
+        class = panel.a,
+        style = paste0(bgcol,left.color),
+        style = ifelse(is.null(left.bg.url),"",paste0(bgurl,left.bg.url,")")),
+        left
+      ),
+      shiny::div(
+        class = splitters,
+        style = paste0(bgcol,splitter.color)
+      ),
+      shiny::div(
+        class = panel.b,
+        style = paste0(bgcol,right.color),
+        style = ifelse(is.null(right.bg.url),"",paste0(bgurl,right.bg.url,")")),
+        right
+      )
+    ),
+    script
+  )
+
+}

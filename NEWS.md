@@ -2,7 +2,7 @@
 
 ## Features
 
- [x] Resizable split screen container
+  + Resizable split screen container
 
 # r2resize 1.2
 

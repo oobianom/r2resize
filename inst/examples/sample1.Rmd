@@ -139,7 +139,7 @@ Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus preti
 
 ```{r}
 
-r2resize::rezcontCard(shiny::h2("me is header"),"heelo its mee")
+r2resize::rezcontCard(shiny::h1("me is header"),"heelo its mee")
 
 ```
 

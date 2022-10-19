@@ -40,8 +40,8 @@ body{font-size:fontsizedefault;color:fontcolordefault}.closericon,.fullscreenico
 text-decoration: none!important;
                color:#fff !important;}
 
-.r2resize-rezconcard-controls-small     {  font-size:50% !important;}
-.r2resize-rezconcard-controls-medium    {  font-size:100% !important;}
-.r2resize-rezconcard-controls-large     {  font-size:200%  !important;}
+.r2resize-rezconcard-controls-small     {  font-size:12px !important;}
+.r2resize-rezconcard-controls-medium    {  font-size:16px !important;}
+.r2resize-rezconcard-controls-large     {  font-size:24px  !important;}
 
 

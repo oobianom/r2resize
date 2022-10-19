@@ -144,3 +144,13 @@ r2resize::rezcontCard(shiny::h1("me is header"),"heelo its mee")
 ```
 
 klk
+
+
+```{r}
+
+r2resize::windowCard(shiny::h1("me is header"),"heelo its mee")
+
+```
+
+klk
+

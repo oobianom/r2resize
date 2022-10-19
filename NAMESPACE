@@ -3,5 +3,6 @@
 export(add.resizer)
 export(rezcontCard)
 export(splitCard)
+export(windowCard)
 import(DT)
 import(utils)

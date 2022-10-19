@@ -288,3 +288,35 @@ windowCard <- function(...,
       id = "r2resize-windowcard-ghostpane"),
     script)
 }
+
+
+#' Emphasize Card
+#'
+#' Emphasis container
+#'
+#' @param ... content
+#' @param bg.color background color
+#' @param border.color border color
+#'
+#' @section Examples for r2resize:
+#' More examples and demo pages for are located at this link -
+#' \url{https://rpkg.net/package/r2resize}.
+#'
+#' @return Split screen container
+#'
+#' @examples
+#'
+#' r2resize::empahsisCard(
+#'   "sample rpkg.net 1",
+#'   "sample rpkg.net 2 "
+#' )
+#'
+#' @export
+
+empahsisCard <- function(..., bg.color= NULL,border.color = NULL) {
+  #content
+  shiny::div(
+    class = "emphasizeDiv",
+    ...)
+}
+

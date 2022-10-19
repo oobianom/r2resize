@@ -277,7 +277,7 @@ windowCard <- function(...,
   #content
   shiny::div(
     shiny::div(
-      class = "r2resize-windowcard-pane",
+      id = "r2resize-windowcard-pane",
       shiny::div(
         class = "r2resize-windowcard-title",
         title
@@ -285,6 +285,6 @@ windowCard <- function(...,
       ...
     ),
     shiny::div(
-      class = "r2resize-windowcard-ghostpane"),
+      id = "r2resize-windowcard-ghostpane"),
     script)
 }

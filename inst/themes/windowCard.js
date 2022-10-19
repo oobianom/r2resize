@@ -1,14 +1,13 @@
 "use strict";
 
-// Minimum resizable area
+
 var minWidth = 60;
 var minHeight = 40;
 
-// Thresholds
+
 var FULLSCREEN_MARGINS = -10;
 var MARGINS = 4;
 
-// End of what's configurable.
 var clicked = null;
 var onRightEdge, onBottomEdge, onLeftEdge, onTopEdge;
 
@@ -20,8 +19,8 @@ var b, x, y;
 
 var redraw = false;
 
-var pane = document.getElementsByClassName('r2resize-windowcard-pane');
-var ghostpane = document.getElementsByClassName('r2resize-windowcard-ghostpane');
+var pane = document.getElementById('r2resize-windowcard-pane');
+var ghostpane = document.getElementById('r2resize-windowcard-ghostpane');
 
 function setBounds(element, x, y, w, h) {
 	element.style.left = x + 'px';
@@ -34,20 +33,15 @@ function hintHide() {
   setBounds(ghostpane, b.left, b.top, b.width, b.height);
   ghostpane.style.opacity = 0;
 
-  // var b = ghostpane.getBoundingClientRect();
-  // ghostpane.style.top = b.top + b.height / 2;
-  // ghostpane.style.left = b.left + b.width / 2;
-  // ghostpane.style.width = 0;
-  // ghostpane.style.height = 0;
 }
 
 
-// Mouse events
+
 pane.addEventListener('mousedown', onMouseDown);
 document.addEventListener('mousemove', onMove);
 document.addEventListener('mouseup', onUp);
 
-// Touch events
+
 pane.addEventListener('touchstart', onTouchDown);
 document.addEventListener('touchmove', onTouchMove);
 document.addEventListener('touchend', onTouchEnd);
@@ -159,23 +153,23 @@ function animate() {
   if (clicked && clicked.isMoving) {
 
     if (b.top < FULLSCREEN_MARGINS || b.left < FULLSCREEN_MARGINS || b.right > window.innerWidth - FULLSCREEN_MARGINS || b.bottom > window.innerHeight - FULLSCREEN_MARGINS) {
-      // hintFull();
+
       setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight);
       ghostpane.style.opacity = 0.2;
     } else if (b.top < MARGINS) {
-      // hintTop();
+
       setBounds(ghostpane, 0, 0, window.innerWidth, window.innerHeight / 2);
       ghostpane.style.opacity = 0.2;
     } else if (b.left < MARGINS) {
-      // hintLeft();
+
       setBounds(ghostpane, 0, 0, window.innerWidth / 2, window.innerHeight);
       ghostpane.style.opacity = 0.2;
     } else if (b.right > rightScreenEdge) {
-      // hintRight();
+
       setBounds(ghostpane, window.innerWidth / 2, 0, window.innerWidth / 2, window.innerHeight);
       ghostpane.style.opacity = 0.2;
     } else if (b.bottom > bottomScreenEdge) {
-      // hintBottom();
+
       setBounds(ghostpane, 0, window.innerHeight / 2, window.innerWidth, window.innerWidth / 2);
       ghostpane.style.opacity = 0.2;
     } else {
@@ -192,16 +186,14 @@ function animate() {
       return;
     }
 
-    // moving
+
     pane.style.top = (e.clientY - clicked.y) + 'px';
     pane.style.left = (e.clientX - clicked.x) + 'px';
 
     return;
   }
 
-  // This code executes when mouse moves without clicking
 
-  // style cursor
   if (onRightEdge && onBottomEdge || onLeftEdge && onTopEdge) {
     pane.style.cursor = 'nwse-resize';
   } else if (onRightEdge && onTopEdge || onBottomEdge && onLeftEdge) {
@@ -223,30 +215,30 @@ function onUp(e) {
   calc(e);
 
   if (clicked && clicked.isMoving) {
-    // Snap
+
     var snapped = {
       width: b.width,
       height: b.height
     };
 
     if (b.top < FULLSCREEN_MARGINS || b.left < FULLSCREEN_MARGINS || b.right > window.innerWidth - FULLSCREEN_MARGINS || b.bottom > window.innerHeight - FULLSCREEN_MARGINS) {
-      // hintFull();
+
       setBounds(pane, 0, 0, window.innerWidth, window.innerHeight);
       preSnapped = snapped;
     } else if (b.top < MARGINS) {
-      // hintTop();
+
       setBounds(pane, 0, 0, window.innerWidth, window.innerHeight / 2);
       preSnapped = snapped;
     } else if (b.left < MARGINS) {
-      // hintLeft();
+
       setBounds(pane, 0, 0, window.innerWidth / 2, window.innerHeight);
       preSnapped = snapped;
     } else if (b.right > rightScreenEdge) {
-      // hintRight();
+
       setBounds(pane, window.innerWidth / 2, 0, window.innerWidth / 2, window.innerHeight);
       preSnapped = snapped;
     } else if (b.bottom > bottomScreenEdge) {
-      // hintBottom();
+
       setBounds(pane, 0, window.innerHeight / 2, window.innerWidth, window.innerWidth / 2);
       preSnapped = snapped;
     } else {

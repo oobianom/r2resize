@@ -51,7 +51,7 @@ text-decoration: none!important;
 
 
 
-.r2resize-windowcard-pane {
+#r2resize-windowcard-pane {
 	position: absolute;
 	width: 45%;
 	height: 45%;
@@ -75,7 +75,7 @@ text-decoration: none!important;
 	text-align: center;
 }
 
-.r2resize-windowcard-ghostpane {
+#r2resize-windowcard-ghostpane {
 	background: #999;
 	opacity: 0.2;
 

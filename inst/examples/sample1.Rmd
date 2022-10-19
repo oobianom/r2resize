@@ -123,8 +123,8 @@ Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. 
 
 ```{r}
 r2resize::splitCard(
-  "sample rpkg.net 1",
-  "sample rpkg.net 2 ",
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At risus viverra adipiscing at. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Varius morbi enim nunc faucibus a pellentesque sit amet. In massa tempor nec feugiat nisl pretium fusce. Et ligula ullamcorper malesuada proin. Consectetur adipiscing elit ut aliquam purus sit. Turpis egestas maecenas pharetra convallis. Placerat orci nulla pellentesque dignissim. Mollis aliquam ut porttitor leo a diam. Tristique sollicitudin nibh sit amet. Ultrices neque ornare aenean euismod elementum nisi quis. Lacus sed turpis tincidunt id aliquet risus feugiat in. Sed faucibus turpis in eu. Amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Sed tempus urna et pharetra pharetra massa massa. Nec nam aliquam sem et tortor consequat id. Adipiscing commodo elit at imperdiet. Cras sed felis eget velit aliquet sagittis. Nunc sed velit dignissim sodales.",
+  "Magna sit amet purus gravida. Blandit turpis cursus in hac habitasse platea dictumst. Eget est lorem ipsum dolor. Eu mi bibendum neque egestas congue. Sit amet aliquam id diam maecenas ultricies mi eget. Semper risus in hendrerit gravida rutrum quisque. Velit dignissim sodales ut eu sem. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Commodo viverra maecenas accumsan lacus vel. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna. At varius vel pharetra vel turpis nunc eget lorem dolor. Enim blandit volutpat maecenas volutpat blandit. Morbi tempus iaculis urna id volutpat lacus. Faucibus ornare suspendisse sed nisi. Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. Venenatis urna cursus eget nunc scelerisque viverra.",
   splitter.color = "transparent",
   bg.right.color = "pink",
   bg.left.color = "gray",
@@ -134,3 +134,13 @@ r2resize::splitCard(
 )
 ```
 
+Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim. Cursus in hac habitasse platea dictumst. Id nibh tortor id aliquet lectus proin nibh nisl. Cum sociis natoque penatibus et magnis dis parturient montes. Vitae suscipit tellus mauris a diam maecenas sed enim. Netus et malesuada fames ac turpis. Mauris cursus mattis molestie a iaculis at erat.
+
+
+```{r}
+
+r2resize::rezcontCard(shiny::h2("me is header"),"heelo its mee")
+
+```
+
+klk

@@ -7,17 +7,14 @@
 splitCard(
   left,
   right,
-  width.left = 50,
-  width.right = 50,
-  width.units = "\%",
-  splitter.color = "gray",
-  bg.left.color = "yellow",
+  splitter.color = NULL,
+  bg.left.color = NULL,
   left.bg.url = NULL,
   right.bg.url = NULL,
-  bg.right.color = "lightgray",
+  bg.right.color = NULL,
   border.color = NULL,
   position = c("vertical", "horizontal"),
-  text.left.color = "white",
+  text.left.color = "black",
   text.right.color = "black"
 )
 }
@@ -25,12 +22,6 @@ splitCard(
 \item{left}{content on the left or top}
 
 \item{right}{content on the right or bottom}
-
-\item{width.left}{width of the left or top}
-
-\item{width.right}{width of the right or bottom}
-
-\item{width.units}{boolean. TRUE or FALSE, to add resize toobar to tables}
 
 \item{splitter.color}{splitter color e.g red, black or #333333}
 
@@ -42,35 +33,60 @@ splitCard(
 
 \item{bg.right.color}{right panel color e.g red, black or #333333}
 
-\item{border.color}{color of the container e.g. red or #f5f5f5}
+\item{border.color}{border color of the container e.g. red or #f5f5f5}
 
 \item{text.left.color}{color of left panel text}
 
 \item{text.right.color}{color of right panel text}
 }
 \value{
-Split screen container
+Resizeable split screen container
 }
 \description{
 Highly customizable and resizable split screen container
 }
 \section{Examples for r2resize}{
 
-More examples and demo pages for are located at this link -
+More examples and demo pages are located at this link -
 \url{https://rpkg.net/package/r2resize}.
 }
 
 \examples{
 
 r2resize::splitCard(
-  "sample rpkg.net 1",
-  "sample rpkg.net 2 ",
-  splitter.color = "transparent",
-  bg.right.color = "pink",
-  bg.left.color = "gray",
-  text.left.color = "green",
-  text.right.color = "yellow",
+  "Sample text",
+  "Sample text 2"
+)
+
+
+r2resize::splitCard(
+  "Sample r2symbols 1",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
   position = "vertical"
+)
+
+r2resize::splitCard(
+  "Sample shinyStorePlus",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  border.color = "black",
+  text.left.color = "black",
+  text.right.color = "black",
+  position = "vertical"
+)
+
+r2resize::splitCard(
+  "Sample sciRmdTheme 1",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  border.color = "gray",
+  text.left.color = "black",
+  text.right.color = "black",
+  position = "horizontal"
 )
 
 }

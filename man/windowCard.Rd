@@ -2,72 +2,58 @@
 % Please edit documentation in R/containerResizer.R
 \name{windowCard}
 \alias{windowCard}
-\title{Resizable Moveable Expandable Card}
+\title{Resizable Moveable Expandable Window Card}
 \usage{
 windowCard(
   ...,
   title = "Sample title",
-  width.right = 50,
-  width.units = "\%",
-  splitter.color = "gray",
-  bg.left.color = "yellow",
-  left.bg.url = NULL,
-  right.bg.url = NULL,
-  bg.right.color = "lightgray",
+  width = "50\%",
+  bg.color = NULL,
   border.color = NULL,
-  position = c("vertical", "horizontal"),
-  text.left.color = "white",
-  text.right.color = "black"
+  header.text.color = NULL,
+  body.text.color = NULL
 )
 }
 \arguments{
-\item{...}{content}
+\item{...}{content of the container}
 
-\item{title}{title of header}
+\item{title}{title of the header}
 
-\item{width.right}{color of the page font in e.g. darkblue or #006699}
+\item{width}{width of the container}
 
-\item{width.units}{boolean. TRUE or FALSE, to add resize toobar to tables}
+\item{bg.color}{background color of the content area}
 
-\item{splitter.color}{splitter color e.g red, black or #333333}
+\item{border.color}{color of the container border}
 
-\item{bg.left.color}{left panel color e.g red, black or #333333}
+\item{header.text.color}{color of the header text}
 
-\item{left.bg.url}{left panel background image e.g image1.png or https://..image1.png}
-
-\item{right.bg.url}{right panel background image e.g image1.png or https://..image1.png}
-
-\item{bg.right.color}{right panel color e.g red, black or #333333}
-
-\item{border.color}{color of the container e.g. red or #f5f5f5}
-
-\item{text.left.color}{color of left panel text}
-
-\item{text.right.color}{color of right panel text}
+\item{body.text.color}{color of the content text}
 }
 \value{
-Split screen container
+A window-like card container that is expandable and resizable
 }
 \description{
-Highly expandable and resizable container holder
+Easily expandable and resizable content container holder
+}
+\note{
+Please note that only one windowCard may be created by page
 }
 \section{Examples for r2resize}{
 
-More examples and demo pages for are located at this link -
+More examples and demo pages are located at this link -
 \url{https://rpkg.net/package/r2resize}.
 }
 
 \examples{
 
-r2resize::splitCard(
-  "sample rpkg.net 1",
-  "sample rpkg.net 2 ",
-  splitter.color = "transparent",
-  bg.right.color = "pink",
-  bg.left.color = "gray",
-  text.left.color = "green",
-  text.right.color = "yellow",
-  position = "vertical"
-)
+r2resize::windowCard("sample r2symbols text")
+
+r2resize::windowCard(
+title = "Sample Window card",
+width = "500px",
+bg.color = "white",
+border.color = "brown",
+header.text.color = "white",
+body.text.color = "black")
 
 }

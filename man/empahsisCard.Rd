@@ -2,34 +2,33 @@
 % Please edit documentation in R/containerResizer.R
 \name{empahsisCard}
 \alias{empahsisCard}
-\title{Emphasize Card}
+\title{Create an Emphasis Card}
 \usage{
-empahsisCard(..., bg.color = NULL, border.color = NULL)
+empahsisCard(..., bg.color = NULL)
 }
 \arguments{
-\item{...}{content}
+\item{...}{content of the card}
 
-\item{bg.color}{background color}
-
-\item{border.color}{border color}
+\item{bg.color}{content background color}
 }
 \value{
-Split screen container
+container with a moving border to denote emphasis
 }
 \description{
 Emphasis container
 }
-\section{Examples for r2resize}{
+\section{More examples for r2resize}{
 
-More examples and demo pages for are located at this link -
-\url{https://rpkg.net/package/r2resize}.
+More examples and demo pages are located at this link -
+\url{https://r2resize.obi.obianom.com}.
 }
 
 \examples{
 
 r2resize::empahsisCard(
   "sample rpkg.net 1",
-  "sample rpkg.net 2 "
+  "sample rpkg.net 2 ",
+  bg.color = "cyan"
 )
 
 }

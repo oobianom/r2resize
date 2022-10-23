@@ -2,7 +2,7 @@
 
 export(add.resizer)
 export(empahsisCard)
-export(rezcontCard)
+export(sizeableCard)
 export(splitCard)
 export(windowCard)
 import(DT)

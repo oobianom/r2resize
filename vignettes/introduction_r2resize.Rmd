@@ -10,9 +10,9 @@ vignette: >
 ---
 
 
-# Easily add automatic resizing toolbar for all images and tables in Markdown, Rmarkdown and Quarto documents
+## Easily add automatic resizing toolbar for all images and tables in Markdown, Rmarkdown and Quarto documents
 
-## Installation and Library Attachment
+### Installation and Library Attachment
 
 The r2resize package is available on CRAN and can be installed as shown below
 
@@ -22,7 +22,7 @@ Attach library
 
 `library(r2resize)`
 
-## Use
+### Use
 
 The r2resize can be used within the R Markdown or Quarto document using an R chunk as shown below
 
@@ -31,7 +31,7 @@ The r2resize can be used within the R Markdown or Quarto document using an R chu
 
 or by using the available options. An example of how the available options can be used is show below
 
-```{r eval=FALSE,echo=TRUE}
+```{r eval=TRUE,echo=TRUE}
 r2resize::add.resizer(
   theme.color = "black",
   position = "top",
@@ -44,55 +44,9 @@ r2resize::add.resizer(
 )
 ```
 
-# Images Examples
-
-Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Amet massa vitae tortor condimentum lacinia quis vel eros. 
+### Quick demo: https://r2resize.obi.obianom.com/r2resize-package.gif
 
 
-Imperdiet nulla malesuada pellentesque elit eget gravida. Turpis massa sed elementum tempus egestas.
-
-```{r pressure3, echo=FALSE}
-
-plot(pressure)
-
-plot(mtcars)
-
-plot(cars)
-
-```
-
-# Table Examples
-
-## Use with dataTable 
-
-Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Ut placerat orci nulla pellentesque dignissim enim sit amet. Tempus quam pellentesque nec nam. 
-
-```{r}
-
-library(DT)
-datatable(iris)
-
-```
-
-
-
-## Regular Markdown Table 1 and 2
-
-Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. Leo integer malesuada nunc vel risus commodo.
-
-| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
-|----------|----------|----------|----------|----------|
-| 1        | 23       | 1        | 45       | 6 - 12   |
-| 3        | 4        | 5        | NA       | 4 - 5.5  |
-| 7        | 7        | 5        | 0        | 5 - 34   |
-
-| head1 | head2 | head3 | head4 | head5 |
-|-------|-------|-------|-------|-------|
-| 1     | 23    | 1     | A     | AA    |
-| 3     | 4     | 5     | B     | BB    |
-| 7     | 7     | 5     | C     | CC    |
-
-
-# Full examples and documentation
+## Full examples and documentation
 
  + https://r2resize.obi.obianom.com

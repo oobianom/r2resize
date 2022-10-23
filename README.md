@@ -22,19 +22,17 @@ install_github("oobianom/r2resize")
 ```
 ## Use in Shiny, Rmarkdown or Quarto document
 
-### Load library
+### Load library and begin using functions
 
 ```{r}
 library(r2resize)
 ```
-### Include at the top of your documet
-
-![](https://obianom.com/r2resize_card.png)
 
 
 
 
 
 ### Example of the output after inclusion
-![](https://obianom.com/r2resize_card4.png)
+
 ![](https://obianom.com/r2resize_card3.png)
+![](https://obianom.com/r2resize_card4.png)

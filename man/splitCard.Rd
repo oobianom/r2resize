@@ -35,6 +35,8 @@ splitCard(
 
 \item{border.color}{border color of the container e.g. red or #f5f5f5}
 
+\item{position}{position of divider or splitter}
+
 \item{text.left.color}{color of left panel text}
 
 \item{text.right.color}{color of right panel text}

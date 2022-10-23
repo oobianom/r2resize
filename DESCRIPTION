@@ -1,6 +1,6 @@
 Package: r2resize
 Type: Package
-Title: In-Text Resizing for Containers, Images and Data Tables in 'Markdown' and 'Quarto' Documents
+Title: In-Text Resizing for Containers, Images and Data Tables in 'Shiny', 'Markdown' and 'Quarto' Documents
 Version: 1.3
 Author: Obinna Obianom
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
@@ -12,6 +12,7 @@ Depends:
     R (>= 3.4)
 Imports: 
     utils,
+    shiny,
     DT
 Suggests: 
     rmarkdown,

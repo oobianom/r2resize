@@ -10,9 +10,9 @@ vignette: >
 ---
 
 
-# Resizeable containers for Rmarkdown, Shiny and Quarto
+## Resizeable containers for Rmarkdown, Shiny and Quarto
 
-## Installation and Library Attachment
+### Installation and Library Attachment
 
 The r2resize package is available on CRAN and can be installed as shown below
 
@@ -22,13 +22,13 @@ Attach library
 
 `library(r2resize)`
 
-## Use cases
+![](https://obianom.com/r2resize2.gif)
 
+### Use cases
 
+#### splitCard function: Resizable split screen container
 
-## splitCard function: Resizable split screen container
-
-```{r}
+```{r,eval= FALSE}
 r2resize::splitCard(
   "Sample r2symbols 1",
   "Sample nextGen 1",
@@ -39,19 +39,19 @@ r2resize::splitCard(
 ```
 
 
-## sizeableCard function: Container with sizing toolbar
+#### sizeableCard function: Container with sizing toolbar
 
-```{r}
+```{r,eval= FALSE}
 
 r2resize::sizeableCard(shiny::h2("Sizeable text"), "
 Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.")
 
 ```
 
-## windowCard function: Window like container with resizable and expandable functions 
+#### windowCard function: Window like container with resizable and expandable functions 
 
 
-```{r}
+```{r,eval= FALSE}
 
 r2resize::windowCard("
 Drag to the edge of the window to expand. Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.",
@@ -64,9 +64,9 @@ Drag to the edge of the window to expand. Lobortis mattis aliquam faucibus purus
 
 ```
 
-## empahsisCard function: container with moving border 
+#### empahsisCard function: container with moving border to emphasize content
 
-```{r}
+```{r,eval= FALSE}
 
 r2resize::empahsisCard("text1","text2", bg.color = "#f1f1f1")
 
@@ -75,6 +75,6 @@ r2resize::empahsisCard("text1","text2", bg.color = "#f1f1f1")
 
 
 
-# Full examples and documentation
+## Full examples and documentation
 
  + https://r2resize.obi.obianom.com

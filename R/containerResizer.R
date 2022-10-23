@@ -9,6 +9,7 @@
 #' @param bg.right.color right panel color e.g red, black or #333333
 #' @param left.bg.url left panel background image e.g image1.png or https://..image1.png
 #' @param right.bg.url right panel background image e.g image1.png or https://..image1.png
+#' @param position position of divider or splitter
 #' @param border.color border color of the container e.g. red or #f5f5f5
 #' @param text.left.color color of left panel text
 #' @param text.right.color color of right panel text

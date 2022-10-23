@@ -21,7 +21,7 @@ library(devtools)
 install_github("oobianom/r2resize")
 ```
 
-__Please note that r2resize::add.resizer() should only be used in Rmarkdown or Quarto__
+## NOTE: Please note that r2resize::add.resizer() should only be used in Rmarkdown or Quarto
 
 ## Use in Shiny, Rmarkdown or Quarto document
 

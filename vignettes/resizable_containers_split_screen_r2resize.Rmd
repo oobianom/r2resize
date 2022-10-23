@@ -1,0 +1,80 @@
+---
+title: "New features r2resize 1.3: Resizeable Expandable Splittable containers"
+author: "Obinna N. Obianom"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{New features r2resize 1.3: Resizeable Expandable Splittable containers}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+# Resizeable containers for Rmarkdown, Shiny and Quarto
+
+## Installation and Library Attachment
+
+The r2resize package is available on CRAN and can be installed as shown below
+
+`install.packages(r2resize)`
+
+Attach library 
+
+`library(r2resize)`
+
+## Use cases
+
+
+
+## splitCard function: Resizable split screen container
+
+```{r}
+r2resize::splitCard(
+  "Sample r2symbols 1",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  position = "vertical"
+)
+```
+
+
+## sizeableCard function: Container with sizing toolbar
+
+```{r}
+
+r2resize::sizeableCard(shiny::h2("Sizeable text"), "
+Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.")
+
+```
+
+## windowCard function: Window like container with resizable and expandable functions 
+
+
+```{r}
+
+r2resize::windowCard("
+Drag to the edge of the window to expand. Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.",
+                     title = "Draggable, Resizable, Exapandable",
+                        width = "500px",
+                        bg.color = "white",
+                        border.color = "brown",
+                        header.text.color = "white",
+                        body.text.color = "black")
+
+```
+
+## empahsisCard function: container with moving border 
+
+```{r}
+
+r2resize::empahsisCard("text1","text2", bg.color = "#f1f1f1")
+
+```
+
+
+
+
+# Full examples and documentation
+
+ + https://r2resize.obi.obianom.com

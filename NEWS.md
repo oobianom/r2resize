@@ -1,13 +1,19 @@
+# r2resize 1.4
+
+## Features
+
+  - [x] Bug fixes
+  
 # r2resize 1.3
 
 ## Features
 
-  + Resizable split screen container
+  - [x] Resizable split screen container
 
 # r2resize 1.2
 
 ## Features
 
-  + Image and table resizing toolbar
+  - [x] Image and table resizing toolbar
   
-  + User enabled font-family and font-size change
+  - [x] User enabled font-family and font-size change

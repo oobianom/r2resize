@@ -2,6 +2,7 @@
 
 export(add.resizer)
 export(empahsisCard)
+export(emphasisCard)
 export(sizeableCard)
 export(splitCard)
 export(windowCard)

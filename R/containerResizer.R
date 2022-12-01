@@ -395,3 +395,25 @@ empahsisCard <- function(..., bg.color = NULL) {
                         ...),
              css)
 }
+
+
+#' Create an Emphasis Card
+#'
+#' Emphasis container
+#'
+#' @inheritParams empahsisCard
+#'
+#' @return container with a moving border to denote emphasis
+#'
+#' @examples
+#'
+#' r2resize::emphasisCard(
+#'   "sample rpkg.net 1",
+#'   "sample rpkg.net 2 ",
+#'   bg.color = "cyan"
+#' )
+#'
+#' @export
+#'
+
+emphasisCard <- empahsisCard

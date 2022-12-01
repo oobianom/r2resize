@@ -2,9 +2,11 @@
 
 ### Official site: https://r2resize.obi.obianom.com
 
-### Quick demo: https://r2resize.obi.obianom.com/r2resize-package.gif
+### Demo output: [x] [View here](https://rstudio-pubs-static.s3.amazonaws.com/977399_37ed43a251fe493d87efe81c452b7f7d.html)
 
-### Other packages required for r2resize: https://depends.rpkg.net/package/r2resize
+### Demo video: [View here](https://r2resize.obi.obianom.com/r2resize-package.gif)
+
+### Other packages required for r2resize: [View here](https://depends.rpkg.net/package/r2resize)
 
 ### RPKG.net package page for r2resize: https://rpkg.net/package/r2resize
 

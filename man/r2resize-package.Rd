@@ -11,7 +11,7 @@ Automatic resizing toolbar for containers, images and tables. Most suitable to i
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://r2resize.obi.obianom.com/}
+  \item \url{https://r2resize.obi.obianom.com}
   \item Report bugs at \url{https://github.com/oobianom/r2resize/issues}
 }
 

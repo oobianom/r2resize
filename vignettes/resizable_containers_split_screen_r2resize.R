@@ -27,6 +27,6 @@
 
 ## ----eval= FALSE--------------------------------------------------------------
 #  
-#  r2resize::empahsisCard("text1","text2", bg.color = "#f1f1f1")
+#  r2resize::emphasisCard("text1","text2", bg.color = "#f1f1f1")
 #  
 

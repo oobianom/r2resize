@@ -1,5 +1,5 @@
 ---
-title: "r2resize package with examples from all functionalities"
+title: "Taking the r2resize R package to a new level with multiple new functionalities"
 output:
   html_document:
     theme: default
@@ -33,51 +33,38 @@ r2resize::add.resizer(
 )
 
 ```
+# Great new features since Version 1.3
 
-# Images Examples
+## empahsisCard function: container with moving border 
+
+```{r}
+
+r2resize::empahsisCard("text1","heelo its mee", bg.color = "#f1f1f1")
+
+```
 
 
-# Single image
+Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim.
+
+
+## Images Examples
+
+
+### Single image
 
 Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Amet massa vitae tortor condimentum lacinia quis vel eros. 
 
 ```{r pressure1, echo=FALSE}
 
 plot(mtcars)
-
-
-```
-
-# Two images
-
-Ut ornare lectus sit amet est placerat in. Risus in hendrerit gravida rutrum quisque non tellus orci ac. Viverra justo nec ultrices dui sapien eget. Elit scelerisque mauris pellentesque pulvinar pellentesque. 
-
-```{r pressure2, echo=FALSE}
-
 plot(pressure)
 
-plot(cars)
-
 ```
 
 
-# Three images
+## Table Examples
 
-Imperdiet nulla malesuada pellentesque elit eget gravida. Turpis massa sed elementum tempus egestas.
-
-```{r pressure3, echo=FALSE}
-
-plot(pressure)
-
-plot(mtcars)
-
-plot(cars)
-
-```
-
-# Table Examples
-
-## Use with dataTable 
+### Use with dataTable 
 
 Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Ut placerat orci nulla pellentesque dignissim enim sit amet. Tempus quam pellentesque nec nam. 
 
@@ -100,21 +87,6 @@ Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. 
 | 3        | 4        | 5        | NA       | 4 - 5.5  |
 | 7        | 7        | 5        | 0        | 5 - 34   |
 
-| head1 | head2 | head3 | head4 | head5 |
-|-------|-------|-------|-------|-------|
-| 1     | 23    | 1     | A     | AA    |
-| 3     | 4     | 5     | B     | BB    |
-| 7     | 7     | 5     | C     | CC    |
-
-
-
-## Single Markdown Table
-
-| head1 | head2 | head3 | head4 | head5 |
-|-------|-------|-------|-------|-------|
-| 1     | 23    | 1     | A     | AA    |
-| 3     | 4     | 5     | B     | BB    |
-| 7     | 7     | 5     | C     | CC    |
 
 
 ## splitCard function: Resizable split screen container
@@ -188,13 +160,3 @@ Drag to the edge of the window to expand. Lobortis mattis aliquam faucibus purus
 
 Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim. 
 
-## empahsisCard function: container with moving border 
-
-```{r}
-
-r2resize::empahsisCard("text1","heelo its mee", bg.color = "#f1f1f1")
-
-```
-
-
-Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim.

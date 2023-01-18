@@ -22,7 +22,7 @@ Attach library
 
 `library(r2resize)`
 
-![](https://obianom.com/r2resize2.gif)
+
 
 ### Use cases
 

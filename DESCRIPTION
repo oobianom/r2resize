@@ -1,6 +1,6 @@
 Package: r2resize
 Type: Package
-Title: In-Text Resizing for Containers, Images and Data Tables in 'Shiny', 'Markdown' and 'Quarto' Documents
+Title: In-Text Expandable and Resizable Containers, Images and Data Tables in 'Shiny', 'Markdown' and 'Quarto' Documents
 Version: 1.4
 Author: Obinna Obianom
 Maintainer: Obinna Obianom <idonshayo@gmail.com>

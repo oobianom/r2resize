@@ -1,3 +1,9 @@
+# r2resize 1.5
+
+## Planned Features
+
+  - [ ] More robust integration for Shiny
+  
 # r2resize 1.4
 
 ## Features

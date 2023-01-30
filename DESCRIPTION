@@ -1,8 +1,9 @@
 Package: r2resize
 Type: Package
-Title: In-Text Expandable and Resizable Containers, Images and Data Tables in 'Shiny', 'Markdown' and 'Quarto' Documents
-Version: 1.4
-Author: Obinna Obianom
+Title: In-Text Expandable and Resizable Containers, Images, Tables and Data Tables in 'Shiny', 'Rmarkdown' and 'Quarto' Documents
+Version: 1.5
+Authors@R: c(
+    person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
 Description: Automatic resizing toolbar for containers, images and tables. Most suitable to include resize functionality in 'Markdown', 'Rmarkdown' and 'Quarto' documents.
 License: MIT + file LICENSE
@@ -16,7 +17,8 @@ Imports:
     DT
 Suggests: 
     rmarkdown,
-    knitr
+    knitr,
+    r2symbols
 Encoding: UTF-8
 VignetteBuilder: knitr
 Language: en-US

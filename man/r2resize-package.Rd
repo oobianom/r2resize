@@ -4,7 +4,7 @@
 \name{r2resize-package}
 \alias{r2resize}
 \alias{r2resize-package}
-\title{r2resize: In-Text Expandable and Resizable Containers, Images and Data Tables in 'Shiny', 'Markdown' and 'Quarto' Documents}
+\title{r2resize: In-Text Expandable and Resizable Containers, Images, Tables and Data Tables in 'Shiny', 'Rmarkdown' and 'Quarto' Documents}
 \description{
 Automatic resizing toolbar for containers, images and tables. Most suitable to include resize functionality in 'Markdown', 'Rmarkdown' and 'Quarto' documents.
 }
@@ -14,6 +14,10 @@ Useful links:
   \item \url{https://r2resize.obi.obianom.com}
   \item Report bugs at \url{https://github.com/oobianom/r2resize/issues}
 }
+
+}
+\author{
+\strong{Maintainer}: Obinna Obianom \email{idonshayo@gmail.com}
 
 }
 \keyword{internal}

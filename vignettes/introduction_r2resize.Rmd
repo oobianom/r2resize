@@ -22,7 +22,7 @@ Attach library
 
 `library(r2resize)`
 
-### Use
+### Use the easy resize functionality in Rmarkdown or Quarto
 
 The r2resize can be used within the R Markdown or Quarto document using an R chunk as shown below
 
@@ -44,9 +44,16 @@ r2resize::add.resizer(
 )
 ```
 
+### Use a lot of other cool functions such as the one below
+
+```{r eval=TRUE,echo=TRUE}
+library(r2symbols)
+r2resize::emphasisCard("text1",symbol("ram","hippopotamus","alpha","beta",font.size=50), bg.color = "#f1f1f1")
+```
+
 ### Quick demo: https://r2resize.obi.obianom.com/r2resize-package.gif
 
 
-## Full examples and documentation
+## More cool functions and examples and documentation
 
  + https://r2resize.obi.obianom.com

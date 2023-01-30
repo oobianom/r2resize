@@ -1,16 +1,16 @@
 ---
-title: "New features r2resize 1.3: Resizeable Expandable Splittable containers"
+title: "New features r2resize since 1.3: Resizeable Expandable Splittable containers and boxes in R"
 author: "Obinna N. Obianom"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{New features r2resize 1.3: Resizeable Expandable Splittable containers}
+  %\VignetteIndexEntry{New features r2resize since 1.3: Resizeable Expandable Splittable containers and boxes in R}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 
-## Resizeable containers for Rmarkdown, Shiny and Quarto
+## Resizeable containers and cards for Rmarkdown, Shiny and Quarto
 
 ### Installation and Library Attachment
 
@@ -68,7 +68,8 @@ Drag to the edge of the window to expand. Lobortis mattis aliquam faucibus purus
 
 ```{r,eval= FALSE}
 
-r2resize::emphasisCard("text1","text2", bg.color = "#f1f1f1")
+library(r2symbols)
+r2resize::emphasisCard("text1",symbol("heart","ram","hippopotamus","alpha","beta",font.size=60), bg.color = "lightblue")
 
 ```
 

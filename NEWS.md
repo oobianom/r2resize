@@ -2,6 +2,7 @@
 
 ## Planned Features
 
+  - [ ] Resolution to Quarto images with captions
   - [ ] More robust integration for Shiny
   
 # r2resize 1.4

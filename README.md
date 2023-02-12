@@ -6,6 +6,8 @@
 
 ### Demo video: [View here](https://r2resize.obi.obianom.com/r2resize-package.gif)
 
+### Sample R code to get started: [View here](https://github.com/oobianom/r2resize/blob/main/inst/examples/sample1.Rmd)
+
 ### Other packages required for r2resize: [View here](https://depends.rpkg.net/package/r2resize)
 
 ### RPKG.net package page for r2resize: [View here](https://rpkg.net/package/r2resize)

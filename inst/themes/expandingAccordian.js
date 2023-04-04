@@ -1,4 +1,11 @@
 // Expanding accordions
+$(".option").click(function(){
+   $(".option").removeClass("active");
+   $(this).addClass("active");
+
+});
+
+
 body {
   display: flex;
   flex-direction: row;

@@ -71,6 +71,7 @@ body .options .option {
   overflow: hidden;
   min-width: 60px;
   margin: 10px;
+  border: var(--bgcolorEA);
   background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
   background-size: auto 120%;
   background-position: center;

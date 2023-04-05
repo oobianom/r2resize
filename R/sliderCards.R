@@ -38,7 +38,8 @@ flexCard <- function(...,
                       title.color = "black",
                       descr.color = "black") {
   # fetch selected position
-  position <- match.arg(position)
+  cardlist <- list(...)
+
 
   # fetch css
   css <- ""
@@ -60,6 +61,7 @@ flexCard <- function(...,
     script <- gsub("resizepanelwhich", active.panel, script)
   }
   # combine stylesheets and scripts
+  uniquenum <- nextGenShinyApps::rand.num(1)
   cssjs <- paste0(css, script)
   cssjs <- gsub("87n767m08o", uniquenum, cssjs)
 
@@ -68,47 +70,47 @@ flexCard <- function(...,
   class(cssjs) <- c("html", "character")
 
   # set initial content
-  bgcol <- "background-color:"
+  bgcol <- paste0("--bgcolorEA:",border.width.px,"px solid ",border.color,";")
   bgurl <- "--optionBackground:url("
   textcol <- "color:"
 
 
   #combine all flex cards
-  flexcards = lapply(cardlist, function(self){
-    shiny::div(
-      class="option active",
-      style = ifelse(is.null(self$bg), "", paste0(bgurl, self$url, ");")),
+  step = 0
+  shiny::div(shiny::div(
+    class = "options",
+    lapply(cardlist, function(self){
+      step <<- step + 1
       shiny::div(
-        class="shadow"
-      ),
-      shiny::div(
-        class="label",
+        class="option",
+        class=ifelse(step == active.panel,"active",""),
+        style = paste0(bgcol,ifelse(is.null(self$bg), "", paste0(bgurl, self$bg, ");"))),
         shiny::div(
-          class="icon",
-          self$icon
+          class="shadow"
         ),
         shiny::div(
-          class="info",
+          class="label",
           shiny::div(
-            class="main",
-            self$title
+            class="icon",
+            self$icon
           ),
           shiny::div(
-            class="sub",
-            self$subtitle
+            class="info",
+            shiny::div(
+              class="main",
+              self$title
+            ),
+            shiny::div(
+              class="sub",
+              self$subtitle
+            )
           )
         )
       )
-    )
-  })
-
-
-  shiny::div(shiny::div(
-    class = "options",
-    flexcards
+    })
   ),
-  style = ifelse(is.null(height.px), "height:", height.px, ";"),
-  style = ifelse(is.null(width.px), "width:", width.px, ";"),
+  style = ifelse(is.null(height.px),"",paste0("height:", height.px, ";")),
+  style = ifelse(is.null(width.px),"",paste0("width:", width.px, ";")),
   cssjs)
 }
 

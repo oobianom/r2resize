@@ -99,34 +99,44 @@ flexCard <- function(left,
 
   # set initial content
   bgcol <- "background-color:"
-  bgurl <- "background-image:url("
+  bgurl <- "--optionBackground:url("
   textcol <- "color:"
-  shiny::div(shiny::div(
-    class = holders,
+
+  #combine all flex cards
+  flexcards = lapply(cardlist, function(self){
     shiny::div(
-      class = panel.a,
-      style = paste0(bgcol, bg.left.color, ";"),
-      style = ifelse(is.null(left.bg.url), "", paste0(bgurl, left.bg.url, ");")),
-      style = ifelse(
-        is.null(text.left.color),
-        "",
-        paste0(textcol, text.left.color, ";")
+      class="option active",
+      style = ifelse(is.null(self$bg), "", paste0(bgurl, self$url, ");")),
+      shiny::div(
+        class="shadow"
       ),
-      left
-    ),
-    shiny::div(class = splitters,
-               style = paste0(bgcol, splitter.color)),
-    shiny::div(
-      class = panel.b,
-      style = paste0(bgcol, bg.right.color, ";"),
-      style = ifelse(is.null(right.bg.url), "", paste0(bgurl, right.bg.url, ");")),
-      style = ifelse(
-        is.null(text.right.color),
-        "",
-        paste0(textcol, text.right.color, ";")
-      ),
-      right
+      shiny::div(
+        class="label",
+        shiny::div(
+          class="icon",
+          self$icon
+        ),
+        shiny::div(
+          class="info",
+          shiny::div(
+            class="main",
+            self$title
+          ),
+          shiny::div(
+            class="sub",
+            self$subtitle
+          )
+        )
+      )
     )
+  })
+
+
+  shiny::div(shiny::div(
+    class = "options",
+    flexcards
   ),
   cssjs)
 }
+
+

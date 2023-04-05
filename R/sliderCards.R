@@ -29,70 +29,40 @@
 #'
 #' @export
 
-flexCard <- function(left,
-                      right,
-                      splitter.color = NULL,
-                      bg.left.color = NULL,
-                      left.bg.url = NULL,
-                      right.bg.url = NULL,
-                      bg.right.color = NULL,
-                      border.color = NULL,
-                      position = c("vertical", "horizontal"),
-                      text.left.color = "black",
-                      text.right.color = "black") {
+flexCard <- function(...,
+                     height.px = NULL,
+                     width.px = NULL,
+                      border.color = "white",
+                      border.width.px = 1,
+                      active.panel = 1,
+                      title.color = "black",
+                      descr.color = "black") {
   # fetch selected position
   position <- match.arg(position)
 
-  # preset
-  if(is.null(border.color)) border.color <- "#ffffff"
-  uniquenum <-
-    substring(round(as.numeric(Sys.time()) * sample(7:78, 1)), 5)
-
-  # set splitter classes
-  switch(position,
-         vertical = {
-           class.0 <- paste0("container",uniquenum)
-           class.a <- paste0("left",uniquenum)
-           class.b <- paste0("splitter",uniquenum)
-           class.c <- paste0("right",uniquenum)
-           class.d <- paste0("Height",uniquenum)
-         },
-         horizontal = {
-           class.0 <- paste0("container-horizontal",uniquenum)
-           class.a <- paste0("top",uniquenum)
-           class.b <- paste0("splitter-horizontal",uniquenum)
-           class.c <- paste0("bottom",uniquenum)
-           class.d <- paste0("Width",uniquenum)
-         })
-
-  holders <- paste0("r2resize-resizablediv-panel-", class.0)
-  panel.a <- paste0("r2resize-resizablediv-panel-", class.a)
-  splitters <- paste0("r2resize-resizablediv-", class.b)
-  panel.b <- paste0("r2resize-resizablediv-panel-", class.c)
-
   # fetch css
   css <- ""
-  theme.02.css <- paste0(template.loc(), "/splitCard.css")
+  theme.02.css <- paste0(template.loc(), "/expandingAccordian.css")
   if (file.exists(theme.02.css)) {
     css <- c(css, "<style>", readLines(theme.02.css), "</style>")
     css <- gsub("sib53lver", border.color, css)
+    css <- gsub("sib53lpxver", border.width.px, css)
     css <- paste(css, collapse = "")
   }
 
 
   # script fetch js
-  theme.02.js <- paste0(template.loc(), "/divsplitter.js")
+  theme.02.js <- paste0(template.loc(), "/expandingAccordian.js")
   script <- ""
   if (file.exists(theme.02.js)) {
     script <-
       paste(c("<script>", readLines(theme.02.js), "</script>"), collapse = " ")
-    script <- gsub("resizepanelwhich", panel.a, script)
-    script <- gsub("resizesplitterwhich", splitters, script)
-    script <- gsub("HeWigdht", class.d, script)
+    script <- gsub("resizepanelwhich", active.panel, script)
   }
   # combine stylesheets and scripts
   cssjs <- paste0(css, script)
   cssjs <- gsub("87n767m08o", uniquenum, cssjs)
+
   # set to html
   attr(cssjs, "html") <- TRUE
   class(cssjs) <- c("html", "character")
@@ -101,6 +71,7 @@ flexCard <- function(left,
   bgcol <- "background-color:"
   bgurl <- "--optionBackground:url("
   textcol <- "color:"
+
 
   #combine all flex cards
   flexcards = lapply(cardlist, function(self){
@@ -136,6 +107,8 @@ flexCard <- function(left,
     class = "options",
     flexcards
   ),
+  style = ifelse(is.null(height.px), "height:", height.px, ";"),
+  style = ifelse(is.null(width.px), "width:", width.px, ";"),
   cssjs)
 }
 

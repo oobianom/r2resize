@@ -82,7 +82,7 @@ flexCard <- function(...,
   #combine all flex cards
   step = 0
   shiny::div(shiny::div(
-    class = "options",
+    class = "r2resize-flexCard-options",
     lapply(cardlist, function(self){
       self <- as.list(self)
       step <<- step + 1
@@ -215,7 +215,7 @@ elastiCard <- function(...,
   #combine all flex cards
   step = 0
   shiny::div(shiny::div(
-    class = "options",
+    class = "r2resize-flexCard-options",
     lapply(cardlist, function(self){
       self <- as.list(self)
       step <<- step + 1

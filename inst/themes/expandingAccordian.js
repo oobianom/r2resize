@@ -4,5 +4,3 @@ $(".r2resize-flexCard-option").click(function(){
    $(this).addClass("r2resize-flexCard-active");
 
 });
-
-

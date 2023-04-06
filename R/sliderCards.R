@@ -83,12 +83,11 @@ flexCard <- function(...,
   step = 0
   shiny::div(shiny::div(
     class = "r2resize-flexCard-options",
-    lapply(cardlist, function(self){
+    lapply(seq_along(cardlist), function(index,self = cardlist[[index]]){
       self <- as.list(self)
-      step <<- step + 1
       shiny::div(
         class="r2resize-flexCard-option",
-        class=ifelse(step == active.panel,"active",""),
+        class=ifelse(index == active.panel,"r2resize-flexCard-active",""),
         style = paste0(bgcol,ifelse(is.null(self$bg), "", paste0(bgurl, self$bg, ");"))),
         shiny::div(
           class="r2resize-flexCard-shadow"

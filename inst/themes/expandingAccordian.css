@@ -55,7 +55,7 @@ body .r2resize-flexCard-options .r2resize-flexCard-option {
 body .r2resize-flexCard-options .r2resize-flexCard-option i {
   --defaultBackground:#ED5565;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.active {
+body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active {
   flex-grow: 10000;
   transform: scale(1);
   max-width: 600px;
@@ -66,30 +66,30 @@ body .r2resize-flexCard-options .r2resize-flexCard-option.active {
      transform:scale(0.9);
   }*/
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.active .r2resize-flexCard-shadow {
+body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-shadow {
   box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.active .r2resize-flexCard-label {
+body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-label {
   bottom: 20px;
   left: 20px;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.active .r2resize-flexCard-label .r2resize-flexCard-info > div {
+body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-label .r2resize-flexCard-info > div {
   left: 0px;
   opacity: 1;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) {
   flex-grow: 1;
   border-radius: 30px;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) .r2resize-flexCard-shadow {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-shadow {
   bottom: -40px;
   box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) .r2resize-flexCard-label {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-label {
   bottom: 10px;
   left: 10px;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) .r2resize-flexCard-label .r2resize-flexCard-info > div {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-label .r2resize-flexCard-info > div {
   left: 20px;
   opacity: 0;
 }

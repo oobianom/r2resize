@@ -78,23 +78,8 @@ body .options .option {
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-body .options .option:nth-child(1) {
+body .options .option i {
   --defaultBackground:#ED5565;
-}
-body .options .option:nth-child(2) {
-  --defaultBackground:#FC6E51;
-}
-body .options .option:nth-child(3) {
-  --defaultBackground:#FFCE54;
-}
-body .options .option:nth-child(4) {
-  --defaultBackground:#2ECC71;
-}
-body .options .option:nth-child(5) {
-  --defaultBackground:#5D9CEC;
-}
-body .options .option:nth-child(6) {
-  --defaultBackground:#AC92EC;
 }
 body .options .option.active {
   flex-grow: 10000;
@@ -159,14 +144,14 @@ body .options .option .label .icon {
   height: 40px;
   border-radius: 100%;
   background-color: white;
-  color: var(--defaultBackground);
+  color: var(--defaultIconBg1);
 }
 body .options .option .label .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 10px;
-  color: white;
+  color: var(--defaulttEXTbG1);
   white-space: pre;
 }
 body .options .option .label .info > div {

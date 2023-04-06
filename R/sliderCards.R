@@ -80,6 +80,7 @@ flexCard <- function(...,
   shiny::div(shiny::div(
     class = "options",
     lapply(cardlist, function(self){
+      self <- as.list(self)
       step <<- step + 1
       shiny::div(
         class="option",
@@ -92,10 +93,12 @@ flexCard <- function(...,
           class="label",
           shiny::div(
             class="icon",
-            self$icon
+            style=paste0("--defaultIconBg1:",ifelse(is.null(self$icon.color),"#000",self$icon.color)),
+            shiny::icon(self$icon)
           ),
           shiny::div(
             class="info",
+            style=paste0("--defaulttEXTbG1:",ifelse(is.null(self$text.color),"#FFF",self$text.color)),
             shiny::div(
               class="main",
               self$title

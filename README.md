@@ -20,7 +20,25 @@ _The recommendation is that you download the latest version of this package from
 
 ### As of version 1.5, the flexCard() function
 
+Output:
 ![](https://r2resize.obi.obianom.com/m/r2resize_flexcard_2.gif)
+
+Code:
+```
+flexCard(
+  image = c(bg = "image1.jpg", icon = "edit", title="Sample text 1",subtitle="A cool subtitle"),
+  image = c(bg = "image2.jpg", icon = "fire", title="Another sample text",subtitle="Focused subt title"),
+  image = c(bg = "image3.jpg", icon = "wifi", title="Sample text 2",subtitle="Color text",text.color="brown"),
+  image = c(bg = "image4.jpg", icon = "user", title="Sample text 3",subtitle="Color text and icon",icon.color="blue",text.color="purple"),
+  image = c(bg = "image5.jpg", icon = "folder", title="Sample text 3",subtitle="Sub it is"),
+  image = c(bg = "image1.jpg", icon = "key", title="Sample text 4",subtitle="Sub it is"),
+  image = c(bg = "image1.jpg", icon = "lock", title="Smaple",subtitle="Sub it is",text.color="green"),
+  image = c(bg = "image1.jpg", icon = "plus",icon.color="red"),
+  border.color = "gray",
+  border.width.px = 0,
+  active.panel = 2
+)
+```
 
 ## Installation 
 

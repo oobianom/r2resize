@@ -157,10 +157,8 @@ flexCard <- function(...,
 #'   subtitle="A cool subtitle"),
 #'   item2 = c(
 #'   bg = "https://r2resize.obi.obianom.com/m/image2.jpg",
-#'   icon = "edit",
 #'   title="Sample text 2",
 #'   subtitle="A cool subtitle",
-#'   icon.color = "blue",
 #'   text.color = "brown"
 #'   )
 #' )
@@ -204,7 +202,7 @@ elastiCard <- function(...,
   class(cssjs) <- c("html", "character")
 
   # set initial content
-  bgcol <- paste0("--bgcolorEA:",border.width.px,"px solid ",border.color,";")
+  bgbdr <- paste0("border:",border.width.px,"px solid ",border.color,";")
   bgurl <- "background-image:url("
   textcol <- "color:"
 
@@ -219,14 +217,16 @@ elastiCard <- function(...,
         style = ifelse(is.null(self$bg), "", paste0(bgurl, self$bg, ");")),
         shiny::div(
         class="r2resize-flexCard-info",
+        style=paste0("color:",ifelse(is.null(self$text.color),"#FFF",self$text.color)),
         shiny::tags$h2(self$title),
         shiny::tags$h5(self$subtitle),
         shiny::tags$p(self$desc)
         )
       )
     }),
-    style = ifelse(is.null(height.px),"",paste0("height:", height.px, "px;")),
-    style = ifelse(is.null(width.px),"",paste0("width:", width.px, "px;"))
+
+    style = paste0(ifelse(is.null(height.px),"",paste0("height:", height.px, "px;")),
+                   ifelse(is.null(width.px),"",paste0("width:", width.px, "px;")),bgbdr)
   ),
   cssjs)
 }

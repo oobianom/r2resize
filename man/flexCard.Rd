@@ -24,7 +24,7 @@ flexCard(
 
 \item{border.width.px}{width of the container border}
 
-\item{active.panel}{the active panel or container e.g. 1}
+\item{active.panel}{the active panel or container e.g. 1. Use 0 to make all panels inactive}
 }
 \value{
 Multiple cards with flex functionality

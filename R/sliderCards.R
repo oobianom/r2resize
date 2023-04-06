@@ -7,7 +7,7 @@
 #' @param width.px width of container as numeric
 #' @param border.color color of border of each container
 #' @param border.width.px width of the container border
-#' @param active.panel the active panel or container e.g. 1
+#' @param active.panel the active panel or container e.g. 1. Use 0 to make all panels inactive
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -

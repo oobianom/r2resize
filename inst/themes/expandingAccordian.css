@@ -1,9 +1,3 @@
-body .credit {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: inherit;
-}
 body .r2resize-flexCard-options {
   display: flex;
   flex-direction: row;
@@ -18,7 +12,7 @@ body .r2resize-flexCard-options {
   body .r2resize-flexCard-options {
     min-width: 520px;
   }
-  body .r2resize-flexCard-options .option:nth-child(5) {
+  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(5) {
     display: none;
   }
 }
@@ -26,7 +20,7 @@ body .r2resize-flexCard-options {
   body .r2resize-flexCard-options {
     min-width: 440px;
   }
-  body .r2resize-flexCard-options .option:nth-child(4) {
+  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(4) {
     display: none;
   }
 }
@@ -34,7 +28,7 @@ body .r2resize-flexCard-options {
   body .r2resize-flexCard-options {
     min-width: 360px;
   }
-  body .r2resize-flexCard-options .option:nth-child(3) {
+  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(3) {
     display: none;
   }
 }
@@ -42,11 +36,11 @@ body .r2resize-flexCard-options {
   body .r2resize-flexCard-options {
     min-width: 280px;
   }
-  body .r2resize-flexCard-options .option:nth-child(2) {
+  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(2) {
     display: none;
   }
 }
-body .r2resize-flexCard-options .option {
+body .r2resize-flexCard-options .r2resize-flexCard-option {
   position: relative;
   overflow: hidden;
   min-width: 60px;
@@ -58,10 +52,10 @@ body .r2resize-flexCard-options .option {
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-body .r2resize-flexCard-options .option i {
+body .r2resize-flexCard-options .r2resize-flexCard-option i {
   --defaultBackground:#ED5565;
 }
-body .r2resize-flexCard-options .option.active {
+body .r2resize-flexCard-options .r2resize-flexCard-option.active {
   flex-grow: 10000;
   transform: scale(1);
   max-width: 600px;
@@ -72,34 +66,34 @@ body .r2resize-flexCard-options .option.active {
      transform:scale(0.9);
   }*/
 }
-body .r2resize-flexCard-options .option.active .shadow {
+body .r2resize-flexCard-options .r2resize-flexCard-option.active .r2resize-flexCard-shadow {
   box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
 }
-body .r2resize-flexCard-options .option.active .label {
+body .r2resize-flexCard-options .r2resize-flexCard-option.active .r2resize-flexCard-label {
   bottom: 20px;
   left: 20px;
 }
-body .r2resize-flexCard-options .option.active .label .info > div {
+body .r2resize-flexCard-options .r2resize-flexCard-option.active .r2resize-flexCard-label .r2resize-flexCard-info > div {
   left: 0px;
   opacity: 1;
 }
-body .r2resize-flexCard-options .option:not(.active) {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) {
   flex-grow: 1;
   border-radius: 30px;
 }
-body .r2resize-flexCard-options .option:not(.active) .shadow {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) .r2resize-flexCard-shadow {
   bottom: -40px;
   box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
 }
-body .r2resize-flexCard-options .option:not(.active) .label {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) .r2resize-flexCard-label {
   bottom: 10px;
   left: 10px;
 }
-body .r2resize-flexCard-options .option:not(.active) .label .info > div {
+body .r2resize-flexCard-options .r2resize-flexCard-option:not(.active) .r2resize-flexCard-label .r2resize-flexCard-info > div {
   left: 20px;
   opacity: 0;
 }
-body .r2resize-flexCard-options .option .shadow {
+body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-shadow {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -107,14 +101,14 @@ body .r2resize-flexCard-options .option .shadow {
   height: 120px;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-body .r2resize-flexCard-options .option .label {
+body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label {
   display: flex;
   position: absolute;
   right: 0px;
   height: 40px;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-body .r2resize-flexCard-options .option .label .icon {
+body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-icon {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,7 +120,7 @@ body .r2resize-flexCard-options .option .label .icon {
   background-color: white;
   color: var(--defaultIconBg1);
 }
-body .r2resize-flexCard-options .option .label .info {
+body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,14 +128,14 @@ body .r2resize-flexCard-options .option .label .info {
   color: var(--defaulttEXTbG1);
   white-space: pre;
 }
-body .r2resize-flexCard-options .option .label .info > div {
+body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info > div {
   position: relative;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
 }
-body .r2resize-flexCard-options .option .label .info .main {
+body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info .r2resize-flexCard-main {
   font-weight: bold;
   font-size: 1.2rem;
 }
-body .r2resize-flexCard-options .option .label .info .sub {
+body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info .r2resize-flexCard-sub {
   transition-delay: 0.1s;
 }

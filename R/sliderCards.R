@@ -87,28 +87,28 @@ flexCard <- function(...,
       self <- as.list(self)
       step <<- step + 1
       shiny::div(
-        class="option",
+        class="r2resize-flexCard-option",
         class=ifelse(step == active.panel,"active",""),
         style = paste0(bgcol,ifelse(is.null(self$bg), "", paste0(bgurl, self$bg, ");"))),
         shiny::div(
-          class="shadow"
+          class="r2resize-flexCard-shadow"
         ),
         shiny::div(
-          class="label",
+          class="r2resize-flexCard-label",
           shiny::div(
-            class="icon",
+            class="r2resize-flexCard-icon",
             style=paste0("--defaultIconBg1:",ifelse(is.null(self$icon.color),"#000",self$icon.color)),
             shiny::icon(self$icon)
           ),
           shiny::div(
-            class="info",
+            class="r2resize-flexCard-info",
             style=paste0("--defaulttEXTbG1:",ifelse(is.null(self$text.color),"#FFF",self$text.color)),
             shiny::div(
-              class="main",
+              class="r2resize-flexCard-main",
               self$title
             ),
             shiny::div(
-              class="sub",
+              class="r2resize-flexCard-sub",
               self$subtitle
             )
           )

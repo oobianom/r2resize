@@ -41,6 +41,25 @@ flexCard(
 )
 ```
 
+### Also, the elastiCard() function
+
+Output:
+
+![](https://r2resize.obi.obianom.com/m/r2resize_elasticard_2.gif)
+
+Code:
+```
+elastiCard(
+  image = c(bg = "image1.jpg", title="Sample text 3",subtitle="Sub it is",descr="Sample description"),
+  image = c(bg = "image2.jpg", icon = "key", title="Sample text 4",subtitle="Sub it is"),
+  image = c(bg = "image3.jpg", icon = "lock", title="Smaple",subtitle="Sub it is",text.color="brown"),
+  image = c(bg = "image4.jpg"),
+  border.color = "black",
+  border.width.px = 5
+)
+
+```
+
 ## Installation 
 
 ```{r}

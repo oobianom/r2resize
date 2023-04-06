@@ -1,8 +1,6 @@
 /*Expanding accordions*/
-$(".option").click(function(){
-   $(".option").removeClass("active");
+$(".r2resize-flexCard-option").click(function(){
+   $(".r2resize-flexCard-option").removeClass("active");
    $(this).addClass("active");
 
 });
-
-

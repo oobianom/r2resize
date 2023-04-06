@@ -41,7 +41,7 @@ flexCard <- function(...,
                       border.color = "white",
                       border.width.px = 1,
                       active.panel = 1) {
-  # fetch selected position
+  # fetch card list
   cardlist <- list(...)
 
 
@@ -174,7 +174,7 @@ elastiCard <- function(...,
                      border.color = "white",
                      border.width.px = 1,
                      active.panel = 1) {
-  # fetch selected position
+  # fetch card list
   cardlist <- list(...)
 
 

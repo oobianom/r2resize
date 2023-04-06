@@ -31,9 +31,9 @@ flexCard(
   image = c(bg = "image3.jpg", icon = "wifi", title="Sample text 2",subtitle="Color text",text.color="brown"),
   image = c(bg = "image4.jpg", icon = "user", title="Sample text 3",subtitle="Color text and icon",icon.color="blue",text.color="purple"),
   image = c(bg = "image5.jpg", icon = "folder", title="Sample text 3",subtitle="Sub it is"),
-  image = c(bg = "image1.jpg", icon = "key", title="Sample text 4",subtitle="Sub it is"),
-  image = c(bg = "image1.jpg", icon = "lock", title="Smaple",subtitle="Sub it is",text.color="green"),
-  image = c(bg = "image1.jpg", icon = "plus",icon.color="red"),
+  image = c(bg = "image6.jpg", icon = "key", title="Sample text 4",subtitle="Sub it is"),
+  image = c(bg = "image7.jpg", icon = "lock", title="Smaple",subtitle="Sub it is",text.color="green"),
+  image = c(bg = "image8.jpg", icon = "plus",icon.color="red"),
   border.color = "gray",
   border.width.px = 0,
   active.panel = 2

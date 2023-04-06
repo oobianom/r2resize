@@ -2,7 +2,7 @@
 % Please edit documentation in R/sliderCards.R
 \name{elastiCard}
 \alias{elastiCard}
-\title{Elastic card container}
+\title{Hover elastic card container}
 \usage{
 elastiCard(
   ...,
@@ -27,10 +27,10 @@ elastiCard(
 \item{active.panel}{the active panel or container e.g. 1}
 }
 \value{
-Multiple cards with elastic functionality
+Multiple cards with hover elastic functionality
 }
 \description{
-Expandable elastic card holder for images or navigation items
+Automatic elastic card holder for images or navigation items
 }
 \section{Examples for r2resize}{
 

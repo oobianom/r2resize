@@ -130,9 +130,9 @@ flexCard <- function(...,
 
 
 
-#' Elastic card container
+#' Hover elastic card container
 #'
-#' Expandable elastic card holder for images or navigation items
+#' Automatic elastic card holder for images or navigation items
 #'
 #' @param ... list of image containers, see example below
 #' @param height.px height of container as numeric
@@ -145,7 +145,7 @@ flexCard <- function(...,
 #' More examples and demo pages are located at this link -
 #' \url{https://rpkg.net/package/r2resize}.
 #'
-#' @return Multiple cards with elastic functionality
+#' @return Multiple cards with hover elastic functionality
 #'
 #' @examples
 #'
@@ -182,8 +182,6 @@ elastiCard <- function(...,
   theme.02.css <- paste0(template.loc(), "/expandingAccordian.css")
   if (file.exists(theme.02.css)) {
     css <- c(css, "<style>", readLines(theme.02.css), "</style>")
-    css <- gsub("sib53lver", border.color, css)
-    css <- gsub("sib53lpxver", border.width.px, css)
     css <- paste(css, collapse = "")
   }
 
@@ -207,43 +205,23 @@ elastiCard <- function(...,
 
   # set initial content
   bgcol <- paste0("--bgcolorEA:",border.width.px,"px solid ",border.color,";")
-  bgurl <- "--optionBackground:url("
+  bgurl <- "background-image:url("
   textcol <- "color:"
 
 
   #combine all flex cards
   step = 0
-  shiny::div(shiny::div(
-    class = "r2resize-flexCard-options",
+  shiny::div(shiny::tags$section(
+    class = "r2resize-elastiCard-team",
     lapply(cardlist, function(self){
       self <- as.list(self)
-      step <<- step + 1
-      shiny::div(
-        class="option",
-        class=ifelse(step == active.panel,"active",""),
-        style = paste0(bgcol,ifelse(is.null(self$bg), "", paste0(bgurl, self$bg, ");"))),
+      shiny::tags$article(
+        style = ifelse(is.null(self$bg), "", paste0(bgurl, self$bg, ");")),
         shiny::div(
-          class="shadow"
-        ),
-        shiny::div(
-          class="label",
-          shiny::div(
-            class="icon",
-            style=paste0("--defaultIconBg1:",ifelse(is.null(self$icon.color),"#000",self$icon.color)),
-            shiny::icon(self$icon)
-          ),
-          shiny::div(
-            class="info",
-            style=paste0("--defaulttEXTbG1:",ifelse(is.null(self$text.color),"#FFF",self$text.color)),
-            shiny::div(
-              class="main",
-              self$title
-            ),
-            shiny::div(
-              class="sub",
-              self$subtitle
-            )
-          )
+        class="r2resize-flexCard-info",
+        shiny::tags$h2(self$title),
+        shiny::tags$h5(self$subtitle),
+        shiny::tags$p(self$desc)
         )
       )
     }),
@@ -252,6 +230,5 @@ elastiCard <- function(...,
   ),
   cssjs)
 }
-
 
 

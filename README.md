@@ -18,7 +18,9 @@
 
 _The recommendation is that you download the latest version of this package from CRAN, as I am constantly updating this repository. If you do download from here, know that things may break sometimes_
 
+### As of version 1.5, the flexCard() function
 
+![](https://r2resize.obi.obianom.com/m/r2resize_flexcard_2.gif)
 
 ## Installation 
 

@@ -23,8 +23,7 @@
 #' @examples
 #'
 #' r2resize::flexCard(
-#'   "Sample text",
-#'   "Sample text 2"
+#'   item1 = c(bg = "https://cdn.wallpapersafari.com/49/92/FVrnSJ.jpg", icon = "edit", title="Sample text 1",subtitle="A cool subtitle")
 #' )
 #'
 #' @export
@@ -147,7 +146,7 @@ flexCard <- function(...,
 #' More examples and demo pages are located at this link -
 #' \url{https://rpkg.net/package/r2resize}.
 #'
-#' @return Multiple cards with flex functionality
+#' @return Multiple cards with elastic functionality
 #'
 #' @examples
 #'

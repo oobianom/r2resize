@@ -21,6 +21,7 @@ _The recommendation is that you download the latest version of this package from
 ### As of version 1.5, the flexCard() function
 
 Output:
+
 ![](https://r2resize.obi.obianom.com/m/r2resize_flexcard_2.gif)
 
 Code:

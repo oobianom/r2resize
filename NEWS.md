@@ -1,8 +1,9 @@
 # r2resize 1.6
 
-## Planned Features
+## Features
 
-  - [ ] More robust integration for Shiny
+  - [x] elastiCard function for elastic image containers
+  - [x] flexCard function for clickable image blocks
   
 # r2resize 1.5
 

@@ -135,17 +135,12 @@ flexCard <- function(...,
 #'
 #' Expandable elastic card holder for images or navigation items
 #'
-#' @param left content on the left or top
-#' @param right content on the right or bottom
-#' @param splitter.color splitter color e.g red, black or #333333
-#' @param bg.left.color left panel color e.g red, black or #333333
-#' @param bg.right.color right panel color e.g red, black or #333333
-#' @param left.bg.url left panel background image e.g image1.png or https://..image1.png
-#' @param right.bg.url right panel background image e.g image1.png or https://..image1.png
-#' @param position position of divider or splitter
-#' @param border.color border color of the container e.g. red or #f5f5f5
-#' @param text.left.color color of left panel text
-#' @param text.right.color color of right panel text
+#' @param ... list of image containers, see example below
+#' @param height.px height of container as numeric
+#' @param width.px width of container as numeric
+#' @param border.color color of border of each container
+#' @param border.width.px width of the container border
+#' @param active.panel the active panel or container e.g. 1
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -
@@ -156,8 +151,19 @@ flexCard <- function(...,
 #' @examples
 #'
 #' r2resize::elastiCard(
-#'   "Sample text",
-#'   "Sample text 2"
+#'   item1 = c(
+#'   bg = "https://r2resize.obi.obianom.com/m/image1.jpg",
+#'   icon = "edit",
+#'   title="Sample text 1",
+#'   subtitle="A cool subtitle"),
+#'   item2 = c(
+#'   bg = "https://r2resize.obi.obianom.com/m/image2.jpg",
+#'   icon = "edit",
+#'   title="Sample text 2",
+#'   subtitle="A cool subtitle",
+#'   icon.color = "blue",
+#'   text.color = "brown"
+#'   )
 #' )
 #'
 #' @export
@@ -167,9 +173,7 @@ elastiCard <- function(...,
                      width.px = NULL,
                      border.color = "white",
                      border.width.px = 1,
-                     active.panel = 1,
-                     title.color = "black",
-                     descr.color = "black") {
+                     active.panel = 1) {
   # fetch selected position
   cardlist <- list(...)
 

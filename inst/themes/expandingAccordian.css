@@ -1,4 +1,4 @@
-body .r2resize-flexCard-options {
+.r2resize-flexCard-options {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -9,38 +9,38 @@ body .r2resize-flexCard-options {
   height: 400px;
 }
 @media screen and (max-width: 718px) {
-  body .r2resize-flexCard-options {
+  .r2resize-flexCard-options {
     min-width: 520px;
   }
-  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(5) {
+  .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(5) {
     display: none;
   }
 }
 @media screen and (max-width: 638px) {
-  body .r2resize-flexCard-options {
+  .r2resize-flexCard-options {
     min-width: 440px;
   }
-  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(4) {
+  .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(4) {
     display: none;
   }
 }
 @media screen and (max-width: 558px) {
-  body .r2resize-flexCard-options {
+  .r2resize-flexCard-options {
     min-width: 360px;
   }
-  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(3) {
+  .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(3) {
     display: none;
   }
 }
 @media screen and (max-width: 478px) {
-  body .r2resize-flexCard-options {
+  .r2resize-flexCard-options {
     min-width: 280px;
   }
-  body .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(2) {
+  .r2resize-flexCard-options .r2resize-flexCard-option:nth-child(2) {
     display: none;
   }
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option {
+.r2resize-flexCard-options .r2resize-flexCard-option {
   position: relative;
   overflow: hidden;
   min-width: 60px;
@@ -52,10 +52,10 @@ body .r2resize-flexCard-options .r2resize-flexCard-option {
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option i {
+.r2resize-flexCard-options .r2resize-flexCard-option i {
   --defaultBackground:#ED5565;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active {
+.r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active {
   flex-grow: 10000;
   transform: scale(1);
   max-width: 600px;
@@ -66,34 +66,34 @@ body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-acti
      transform:scale(0.9);
   }*/
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-shadow {
+.r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-shadow {
   box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-label {
+.r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-label {
   bottom: 20px;
   left: 20px;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-label .r2resize-flexCard-info > div {
+.r2resize-flexCard-options .r2resize-flexCard-option.r2resize-flexCard-active .r2resize-flexCard-label .r2resize-flexCard-info > div {
   left: 0px;
   opacity: 1;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) {
+.r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) {
   flex-grow: 1;
   border-radius: 30px;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-shadow {
+.r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-shadow {
   bottom: -40px;
   box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-label {
+.r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-label {
   bottom: 10px;
   left: 10px;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-label .r2resize-flexCard-info > div {
+.r2resize-flexCard-options .r2resize-flexCard-option:not(.r2resize-flexCard-active) .r2resize-flexCard-label .r2resize-flexCard-info > div {
   left: 20px;
   opacity: 0;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-shadow {
+.r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-shadow {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -101,14 +101,14 @@ body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-sha
   height: 120px;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label {
+.r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label {
   display: flex;
   position: absolute;
   right: 0px;
   height: 40px;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-icon {
+.r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-icon {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,7 +120,7 @@ body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-lab
   background-color: white;
   color: var(--defaultIconBg1);
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info {
+.r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,14 +128,14 @@ body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-lab
   color: var(--defaulttEXTbG1);
   white-space: pre;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info > div {
+.r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info > div {
   position: relative;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info .r2resize-flexCard-main {
+.r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info .r2resize-flexCard-main {
   font-weight: bold;
   font-size: 1.2rem;
 }
-body .r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info .r2resize-flexCard-sub {
+.r2resize-flexCard-options .r2resize-flexCard-option .r2resize-flexCard-label .r2resize-flexCard-info .r2resize-flexCard-sub {
   transition-delay: 0.1s;
 }

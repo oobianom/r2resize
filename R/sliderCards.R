@@ -114,10 +114,10 @@ flexCard <- function(...,
           )
         )
       )
-    })
+    }),
+  style = ifelse(is.null(height.px),"",paste0("height:", height.px, "px;")),
+  style = ifelse(is.null(width.px),"",paste0("width:", width.px, "px;"))
   ),
-  style = ifelse(is.null(height.px),"",paste0("height:", height.px, ";")),
-  style = ifelse(is.null(width.px),"",paste0("width:", width.px, ";")),
   cssjs)
 }
 

@@ -1,12 +1,12 @@
-.c87n767m08o .r2resize-splitcard2-content-text {
+.r2resize-c87n767m08o-splitcard2-content-text {
   padding: 2em;
 }
 
-.c87n767m08o .r2resize-splitcard2-text-left {
+.r2resize-c87n767m08o-splitcard2-text-left {
   text-align: left;
 }
 
-.c87n767m08o .r2resize-splitcard2-text-right {
+.r2resize-c87n767m08o-splitcard2-text-right {
   text-align: right;
 }
 
@@ -19,43 +19,43 @@
   text-align: center;
 }
 
-.c87n767m08o .responsive-img {
+.responsive-img {
   width: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
 
-.c87n767m08o .r2resize-splitcard2-split-container {
+.r2resize-c87n767m08o-splitcard2-split-container {
   color: #fff;
   background-color: #666;
   min-height: 2em;
   border: 1px solid sib534lver;
 }
-.c87n767m08o .r2resize-splitcard2-split-container figure {
+.r2resize-c87n767m08o-splitcard2-split-container figure {
   margin: 0;
 }
 
-.c87n767m08o [class*=r2resize-splitcard2-split-content-] {
+[class*=split-content-] {
   text-align: center;
 }
 
-html:not(.no-js) .c87n767m08o .r2resize-splitcard2-split-container {
+html:not(.no-js) .r2resize-c87n767m08o-splitcard2-split-container {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-areas: "container";
 }
-html:not(.no-js) .c87n767m08o [class*=r2resize-splitcard2-split-content-] {
+html:not(.no-js) [class*=split-content-] {
   grid-area: container;
 }
-html:not(.no-js) .c87n767m08o .r2resize-splitcard2-separator {
+html:not(.no-js) .r2resize-c87n767m08o-splitcard2-separator {
   grid-area: container;
   position: relative;
   padding: 0.1em;
   background-color: #fff;
   width: 0;
 }
-html:not(.no-js) .c87n767m08o .r2resize-splitcard2-separator::before {
+html:not(.no-js) .r2resize-c87n767m08o-splitcard2-separator::before {
   content: "";
   position: absolute;
   left: -0.45em;
@@ -70,10 +70,10 @@ html:not(.no-js) .c87n767m08o .r2resize-splitcard2-separator::before {
   border: 0.3em solid #fff;
   transition: background 0.3s;
 }
-html:not(.no-js) .c87n767m08o .r2resize-splitcard2-separator.active::before {
+html:not(.no-js) .r2resize-c87n767m08o-splitcard2-separator.active::before {
   background-color: #666;
 }
-html:not(.no-js) .c87n767m08o .r2resize-splitcard2-split-content-right {
+html:not(.no-js) .r2resize-c87n767m08o-splitcard2-split-content-right {
   -webkit-clip-path: polygon(slidepos1232 0%, 100% 0%, 100% 100%, slidepos1232 100%);
           clip-path: polygon(slidepos1232 0%, 100% 0%, 100% 100%, slidepos1232 100%);
 }

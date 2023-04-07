@@ -263,7 +263,7 @@ splitCard2 <- function(left,
       class = "split-container",
       shiny::div(
         class = "split-content-left",
-        style = paste0(bgcol, bg.right.color, ";"),
+        style = paste0(bgcol, bg.left.color, ";"),
         shiny::div(
           class = "content-text",
           style = ifelse(is.null(text.left.color), "", paste0(textcol, text.left.color, ";")),

@@ -33,7 +33,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 10
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -53,7 +53,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 9
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -73,7 +73,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 8
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -93,7 +93,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 7
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -113,7 +113,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 6
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -133,7 +133,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 5
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -153,7 +153,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 4
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -172,7 +172,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 3
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -191,7 +191,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 2
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
@@ -211,7 +211,7 @@ r2resize::splitCard2(
 
 ## FAQ Number 1
 
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),

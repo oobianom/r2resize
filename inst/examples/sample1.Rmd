@@ -1,5 +1,5 @@
 ---
-title: "Taking the r2resize R package to a new level with multiple new functionalities"
+title: "Usinge the r2resize::emphasisCard() function in Markdown and Shiny"
 output:
   html_document:
     theme: default
@@ -19,144 +19,13 @@ library(r2resize)
 
 # Theme setting
 
-```{r,echo=TRUE}
-r2resize::add.resizer(
-  theme.color = "black",
-  position = "top",
-  font.size = "12px",
-  font.color = "black",
-  tables = TRUE,
-  images = TRUE,
-  line.color = "orange",
-  line.height = 5,
-  line.width = 200
-)
-
-```
-# Great new features since Version 1.3
-
 ## empahsisCard function: container with moving border 
 
 ```{r}
 
-r2resize::empahsisCard("text1","heelo its mee", bg.color = "#f1f1f1")
+r2resize::emphasisCard(shiny::div(
+    shiny::tags$h2("Question"),
+     shiny::tags$h4("Let's begin with a simply curiousity. Do you consider yourself successful? If you do, then why?")
+  ), bg.color = "#f1f1f1")
 
 ```
-
-
-Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim.
-
-
-## Images Examples
-
-
-### Single image
-
-Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Amet massa vitae tortor condimentum lacinia quis vel eros. 
-
-```{r pressure1, echo=FALSE}
-
-plot(mtcars)
-plot(pressure)
-
-```
-
-
-## Table Examples
-
-### Use with dataTable 
-
-Libero id faucibus nisl tincidunt. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Ut placerat orci nulla pellentesque dignissim enim sit amet. Tempus quam pellentesque nec nam. 
-
-```{r}
-
-library(DT)
-datatable(iris)
-
-```
-
-
-
-## Regular Markdown Table 1 and 2
-
-Egestas purus viverra accumsan in. Eu ultrices vitae auctor eu augue ut lectus. Leo integer malesuada nunc vel risus commodo.
-
-| Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
-|----------|----------|----------|----------|----------|
-| 1        | 23       | 1        | 45       | 6 - 12   |
-| 3        | 4        | 5        | NA       | 4 - 5.5  |
-| 7        | 7        | 5        | 0        | 5 - 34   |
-
-
-
-## splitCard function: Resizable split screen container
-
-```{r}
-r2resize::splitCard(
-  "Sample text",
-  "Sample text 2"
-)
-
-
-r2resize::splitCard(
-  "Sample r2symbols 1",
-  "Sample nextGen 1",
-  bg.right.color = "white",
-  bg.left.color = "lightgray",
-  position = "vertical"
-)
-
-r2resize::splitCard(
-  "Sample shinyStorePlus",
-  "Sample nextGen 1",
-  bg.right.color = "white",
-  bg.left.color = "lightgray",
-  border.color = "black",
-  text.left.color = "black",
-  text.right.color = "black",
-  position = "vertical"
-)
-
-
-
-```
-
-
-Sample text - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim. 
-
-
-## sizeableCard function: Container with sizing toolbar
-
-```{r}
-
-r2resize::sizeableCard(shiny::h2("Sizeable text"), "
-Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.")
-
-
-r2resize::sizeableCard(shiny::h1("Second seziable text"),"
-Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.", bg.color = "lightgray", border.color="black")
-
-```
-
-
-Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim. 
-
-
-## windowCard function: Window like container with resizable and expandable functions 
-
-
-```{r}
-
-r2resize::windowCard("
-Drag to the edge of the window to expand. Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.",
-                     title = "Draggable, Resizable, Exapandable",
-                        width = "500px",
-                        bg.color = "white",
-                        border.color = "brown",
-                        header.text.color = "white",
-                        body.text.color = "black")
-
-```
-
-Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim. 
-

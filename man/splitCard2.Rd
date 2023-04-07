@@ -12,7 +12,7 @@ splitCard2(
   border.color = NULL,
   text.left.color = "black",
   text.right.color = "black",
-  slider.position = c(1:100)
+  slider.position = charNum1to100
 )
 }
 \arguments{

@@ -254,6 +254,7 @@ splitCard2 <- function(left,
   if (file.exists(theme.02.js)) {
     script <-
       paste(c("<script>", readLines(theme.02.js), "</script>"), collapse = " ")
+    script <- gsub("slidepos1232", slider.position, script)
   }
   # combine stylesheets and scripts
   cssjs <- paste0(css, script)

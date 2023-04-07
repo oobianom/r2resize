@@ -80,7 +80,25 @@ splitCard2(
 
 ```
 
-### And so many more cool features...
+## And so many more cool features...
+
+### windowCard()
+
+![](https://r2resize.obi.obianom.com/m/r2resize_windowcard_1.gif)
+
+### emphasisCard()
+
+![](https://r2resize.obi.obianom.com/m/r2resize_emphasiscard_1.gif)
+
+
+### windowCard()
+
+![](https://r2resize.obi.obianom.com/m/r2resize_windowcard_1.gif)
+
+
+### windowCard()
+
+![](https://r2resize.obi.obianom.com/m/r2resize_windowcard_1.gif)
 
 
 ## Installation 

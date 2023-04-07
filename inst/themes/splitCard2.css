@@ -74,6 +74,6 @@ html:not(.no-js) .separator.active::before {
   background-color: #666;
 }
 html:not(.no-js) .split-content-right {
-  -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
-          clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  -webkit-clip-path: polygon(slidepos1232 0%, 100% 0%, 100% 100%, slidepos1232 100%);
+          clip-path: polygon(slidepos1232 0%, 100% 0%, 100% 100%, slidepos1232 100%);
 }

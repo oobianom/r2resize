@@ -3,7 +3,10 @@
 ## Features
 
   - [x] elastiCard function for elastic image containers
+  
   - [x] flexCard function for clickable image blocks
+  
+  - [x] splitCard2 function is another version of the splitCard
   
 # r2resize 1.5
 

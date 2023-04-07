@@ -262,41 +262,31 @@ splitCard2 <- function(left,
     shiny::div(
       class = "split-container",
       shiny::div(
+        class = "split-content-left",
+        style = paste0(bgcol, bg.right.color, ";"),
         shiny::div(
-          class = "split-content-left",
-          style = paste0(bgcol, bg.right.color, ";"),
-          shiny::div(shiny::div(
-            class = "content-text",
-            style = ifelse(
-              is.null(text.left.color),
-              "",
-              paste0(textcol, text.left.color, ";")
-            ),
+          class = "content-text",
+          style = ifelse(is.null(text.left.color), "", paste0(textcol, text.left.color, ";")),
+          shiny::div(
             shiny::div(
-              shiny::div(
-                class = "text-left",
-                left
-              )
+              class = "text-left",
+              left
             )
-          ))
-        ),
+          )
+        )
+      ),
+      shiny::div(
+        class = "split-content-right",
+        style = paste0(bgcol, bg.right.color, ";"),
         shiny::div(
-          class = "split-content-right",
-          style = paste0(bgcol, bg.right.color, ";"),
-          shiny::div(shiny::div(
-            class = "content-text",
-            style = ifelse(
-              is.null(text.right.color),
-              "",
-              paste0(textcol, text.right.color, ";")
-            ),
+          class = "content-text",
+          style = ifelse(is.null(text.right.color), "", paste0(textcol, text.right.color, ";")),
+          shiny::div(
             shiny::div(
-              shiny::div(
-                class = "text-right",
-                right
-              )
+              class = "text-right",
+              right
             )
-          ))
+          )
         )
       )
     ),

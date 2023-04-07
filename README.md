@@ -69,8 +69,8 @@ Output:
 Code:
 ```
 splitCard2(
-  "text 1",
-  "text 2",
+  "question text 1",
+  "answer text 2",
   bg.right.color = "black",
   bg.left.color = "red",
   text.left.color = "white",

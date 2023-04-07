@@ -30,6 +30,24 @@ library(devtools)
 install_github("oobianom/r2resize")
 ```
 
+### Screenshots:
+
+![](https://r2resize.obi.obianom.com/m/resizers.png)
+
+Code:
+```
+r2resize::add.resizer(
+  theme.color = "black",
+  position = "top",
+  font.size = "12px",
+  font.color = "black",
+  tables = TRUE,
+  images = TRUE,
+  line.color = "orange",
+  line.height = 5,
+  line.width = 200
+)
+```
 
 ### As of version 1.6, the flexCard() function
 
@@ -126,10 +144,3 @@ library(r2resize)
 ```
 
 
-
-
-
-### Examples of the output after inclusion
-
-![](https://obianom.com/r2resize_card3.png)
-![](https://obianom.com/r2resize_card4.png)

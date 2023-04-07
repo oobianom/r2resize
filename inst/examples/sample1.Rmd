@@ -15,26 +15,48 @@ output:
 ```{r,eval=FALSE}
 install.packages(r2resize)
 library(r2resize)
-```
 
-# Theme setting
-
-
-## sizeableCard function: Container with sizing toolbar
-
-```{r}
-
-r2resize::sizeableCard(shiny::h2("Sizeable text"), "
-Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.")
-
+r2resize::splitCard(
+  "Sample shinyStorePlus",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  border.color = "black",
+  text.left.color = "black",
+  text.right.color = "black",
+  position = "vertical"
+)
 ```
 
 ```{r,echo=FALSE}
-r2resize::sizeableCard(shiny::h1("Second seziable text"),"
-Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.", bg.color = "lightgray", border.color="black")
+
+r2resize::splitCard(
+  "",
+  "",
+  left.bg.url = "https://images.pexels.com/photos/5211437/pexels-photo-5211437.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  right.bg.url = "https://images.pexels.com/photos/8499534/pexels-photo-8499534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  position = "vertical"
+)
+
+r2resize::splitCard(
+  shiny::div(
+  shiny::tags$h2("Answer to a Question"),
+  shiny::tags$h4("I’m interviewing with a few companies for a range of positions, but they all come down to delivering an excellent customer experience. I wanted to keep an open mind about how to best achieve that goal, but so far it seems that this role will really allow me to focus all of my energy on customer experience and retention, which I find very appealing.")
+),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    shiny::tags$h4("My current goal is to earn the CPA license so that I’m fully certified and prepared to contribute in a junior staff accounting job. My undergraduate degree is in finance and I completed an accounting internship with RPKG.net last summer.")
+  ),
+  bg.right.color = "brown",
+  bg.left.color = "lightgray",
+  border.color = "black",
+  text.left.color = "white",
+  text.right.color = "white",
+  position = "vertical"
+)
+
+
 
 ```
-
-Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim. 
-
-

@@ -130,7 +130,7 @@ splitCard <- function(left,
 
   # set initial content
   bgcol <- "background-color:"
-  bgurl <- "background-image:url("
+  bgurl <- "background-size: cover;background-image:url("
   textcol <- "color:"
   shiny::div(shiny::div(
     class = holders,

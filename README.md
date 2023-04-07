@@ -18,6 +18,19 @@
 
 _The recommendation is that you download the latest version of this package from CRAN, as I am constantly updating this repository. If you do download from here, know that things may break sometimes_
 
+
+## Installation 
+
+```{r}
+# From CRAN
+install.packages(r2resize)
+
+# OR from Github
+library(devtools)
+install_github("oobianom/r2resize")
+```
+
+
 ### As of version 1.6, the flexCard() function
 
 Output:
@@ -96,21 +109,11 @@ splitCard2(
 ![](https://r2resize.obi.obianom.com/m/r2resize_sizeablecard_1.gif)
 
 
-### windowCard()
+### splitCard()
 
-![](https://r2resize.obi.obianom.com/m/r2resize_windowcard_1.gif)
+![](https://r2resize.obi.obianom.com/m/r2resize_splitcard_1.gif)
 
 
-## Installation 
-
-```{r}
-# From CRAN
-install.packages(r2resize)
-
-# OR from Github
-library(devtools)
-install_github("oobianom/r2resize")
-```
 
 _NOTE: Please note that r2resize::add.resizer() should only be used in Rmarkdown or Quarto_
 

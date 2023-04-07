@@ -270,7 +270,7 @@ splitCard2 <- function(left,
     shiny::div(
       class = "r2resize-splitcard2-split-container",
       shiny::div(
-        class = "split-content-left",
+        class = "r2resize-splitcard2-split-content-left",
         style = paste0(bgcol, bg.left.color, ";"),
         shiny::div(
           class = "r2resize-splitcard2-content-text",
@@ -284,7 +284,7 @@ splitCard2 <- function(left,
         )
       ),
       shiny::div(
-        class = "split-content-right",
+        class = "r2resize-splitcard2-split-content-right",
         style = paste0(bgcol, bg.right.color, ";"),
         shiny::div(
           class = "r2resize-splitcard2-content-text",

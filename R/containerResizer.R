@@ -228,10 +228,10 @@ splitCard2 <- function(left,
                        border.color = NULL,
                        text.left.color = "black",
                        text.right.color = "black",
-                       slider.position = c(1:100)) {
+                       slider.position = as.character(c(1:100))) {
 
   # set position
-  slider.position = paste0(match.arg(as.character(slider.position)),"%")
+  slider.position = paste0(match.arg(slider.position),"%")
 
   # preset
   if(is.null(border.color)) border.color <- "#ffffff"

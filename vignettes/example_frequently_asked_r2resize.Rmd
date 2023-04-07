@@ -1,0 +1,239 @@
+---
+title: "Top Frequently asked interview questions in R using the r2resize package"
+author: "Obinna N. Obianom"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Top Frequently asked interview questions in R using the r2resize package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, echo=TRUE}
+library(r2resize)
+```
+
+Example - 
+
+```{r, eval=FALSE}
+r2resize::splitCard2(
+  "Question Text",
+  "Answer Text",
+  bg.right.color = "black",
+  bg.left.color = "brown",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "85"
+)
+```
+
+![](https://r2resize.obi.obianom.com/m/r2resize_splitcard2_1.gif)
+
+
+## FAQ Number 10
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+     shiny::tags$h4("Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it.")
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    shiny::tags$h4("In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them.")
+  ),
+  bg.right.color = "black",
+  bg.left.color = "brown",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "95"
+)
+```
+
+## FAQ Number 9
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+     shiny::tags$h4("Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it.")
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    shiny::tags$h4("In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them.")
+  ),
+  bg.right.color = "black",
+  bg.left.color = "brown",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "95"
+)
+```
+
+## FAQ Number 8
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+     shiny::tags$h4("Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it.")
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    shiny::tags$h4("In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them.")
+  ),
+  bg.right.color = "black",
+  bg.left.color = "brown",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "95"
+)
+```
+
+## FAQ Number 7
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+     shiny::tags$h4("Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it.")
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    shiny::tags$h4("In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them.")
+  ),
+  bg.right.color = "black",
+  bg.left.color = "brown",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "95"
+)
+```
+
+## FAQ Number 6
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+     shiny::tags$h4("Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it.")
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    shiny::tags$h4("In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them.")
+  ),
+  bg.right.color = "black",
+  bg.left.color = "brown",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "95"
+)
+```
+
+## FAQ Number 5
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+     shiny::tags$h4("Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it.")
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    shiny::tags$h4("In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them.")
+  ),
+  bg.right.color = "black",
+  bg.left.color = "brown",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "95"
+)
+```
+
+## FAQ Number 4
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+    "Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it."
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    "In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them."
+  ),
+  bg.right.color = "blue",
+  bg.left.color = "yellow",
+  text.left.color = "black",
+  text.right.color = "white"
+)
+```
+
+## FAQ Number 3
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+    "Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it."
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    "In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them."
+  ),
+  bg.right.color = "blue",
+  bg.left.color = "yellow",
+  text.left.color = "black",
+  text.right.color = "white"
+)
+```
+
+## FAQ Number 2
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+    "Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it."
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    "In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them."
+  ),
+  bg.right.color = "blue",
+  bg.left.color = "yellow",
+  text.left.color = "black",
+  text.right.color = "white"
+)
+```
+
+
+## FAQ Number 1
+
+```{r, echo=FALSE}
+r2resize::splitCard2(
+  shiny::div(
+    shiny::tags$h2("Question"),
+    "Tell me about a challenge or conflict you’ve faced at work, and how you dealt with it."
+  ),
+  shiny::div(
+    shiny::tags$h2("Answer"),
+    "In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving. I gave everyone an opportunity to share their input and concerns, and it turned out that they were struggling in the roles I’d given them."
+  ),
+  bg.right.color = "yellow",
+  bg.left.color = "purple",
+  text.left.color = "white",
+  text.right.color = "black"
+)
+```
+
+
+
+
+
+## Concluding Remarks
+
+R CRAN for r2resize: https://cran.r-project.org/web/packages/r2resize
+
+GitHub Project: https://github.com/oobianom/r2resize

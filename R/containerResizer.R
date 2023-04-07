@@ -283,7 +283,7 @@ splitCard2 <- function(left,
           style = ifelse(is.null(text.right.color), "", paste0(textcol, text.right.color, ";")),
           shiny::div(
             shiny::div(
-              class = "text-right",
+              class = "text-left",
               right
             )
           )

@@ -37,14 +37,14 @@ r2resize::splitCard2(
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
-     shiny::tags$h4("Do you consider yourself successful")
+     shiny::tags$h4("Let's begin with a simply curiousity. Do you consider yourself successful?")
   ),
   shiny::div(
     shiny::tags$h2("Answer"),
     shiny::tags$h4("I do consider myself successful, even though I’m early in my professional career. I took a full load of classes in my junior year of college because I wanted to take that summer to volunteer for a human rights organization overseas.")
   ),
   bg.right.color = "black",
-  bg.left.color = "brown",
+  bg.left.color = "green",
   text.left.color = "white",
   text.right.color = "white",
   slider.position = "85"
@@ -157,11 +157,11 @@ r2resize::splitCard2(
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
-    "What do you consider to be your weaknesses?"
+    shiny::tags$h4("What do you consider to be your weaknesses?")
   ),
   shiny::div(
     shiny::tags$h2("Answer"),
-    "It can be difficult for me to gauge when the people I’m working with are overwhelmed or dissatisfied with their workloads. To ensure that I’m not asking too much or too little from my team, we have weekly check-ins. "
+    shiny::tags$h4("It can be difficult for me to gauge when the people I’m working with are overwhelmed or dissatisfied with their workloads. To ensure that I’m not asking too much or too little from my team, we have weekly check-ins. ")
   ),
   bg.right.color = "blue",
   bg.left.color = "yellow",
@@ -176,11 +176,11 @@ r2resize::splitCard2(
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
-    "What is your greatest professional achievement?"
+    shiny::tags$h4("What is your greatest professional achievement?")
   ),
   shiny::div(
     shiny::tags$h2("Answer"),
-    "My greatest accomplishment was when I helped the street lighting company I worked for convince the small town of Bend, Oregon to convert antiquated street lighting to energy-efficient LED bulbs. My role was created to promote and sell the energy-efficient bulbs, while touting the long-term advantage of reduced energy costs."
+    shiny::tags$h4("My greatest accomplishment was when I helped the street lighting company I worked for convince the small town of Bend, Oregon to convert antiquated street lighting to energy-efficient LED bulbs. My role was created to promote and sell the energy-efficient bulbs, while touting the long-term advantage of reduced energy costs.")
   ),
   bg.right.color = "blue",
   bg.left.color = "yellow",
@@ -195,11 +195,11 @@ r2resize::splitCard2(
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
-    "Tell me about a time you demonstrated leadership skills."
+    shiny::tags$h4("Tell me about a time you demonstrated leadership skills.")
   ),
   shiny::div(
     shiny::tags$h2("Answer"),
-    "I think that a good leader is someone who can make decisions while also listening to others and being willing to admit when you’re wrong and course correct. In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving."
+    shiny::tags$h4("I think that a good leader is someone who can make decisions while also listening to others and being willing to admit when you’re wrong and course correct. In my last role, my team and I were responsible for giving a big presentation to a prospective client. I quickly assigned different tasks to members of my team, but the project never really got moving.")
   ),
   bg.right.color = "blue",
   bg.left.color = "yellow",
@@ -215,11 +215,11 @@ r2resize::splitCard2(
 r2resize::splitCard2(
   shiny::div(
     shiny::tags$h2("Question"),
-    "What’s a time you disagreed with a decision that was made at work?"
+    shiny::tags$h4("What’s a time you disagreed with a decision that was made at work?")
   ),
   shiny::div(
     shiny::tags$h2("Answer"),
-    "In my job as a finance assistant, I was in charge of putting together reports for potential company investments. It was important to get the details and numbers right so that leaders had the best information to make a decision. One time, my boss asked me to generate a new report on a Wednesday morning and wanted it done by Thursday at 5 PM."
+    shiny::tags$h4("In my job as a finance assistant, I was in charge of putting together reports for potential company investments. It was important to get the details and numbers right so that leaders had the best information to make a decision. One time, my boss asked me to generate a new report on a Wednesday morning and wanted it done by Thursday at 5 PM.")
   ),
   bg.right.color = "yellow",
   bg.left.color = "purple",
@@ -237,3 +237,5 @@ r2resize::splitCard2(
 R CRAN for r2resize: https://cran.r-project.org/web/packages/r2resize
 
 GitHub Project: https://github.com/oobianom/r2resize
+
+<style>h2,h4{border-bottom-width: 4px!important;}

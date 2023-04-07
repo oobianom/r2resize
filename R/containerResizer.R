@@ -236,7 +236,7 @@ splitCard2 <- function(left,
   # preset
   if(is.null(border.color)) border.color <- "#ffffff"
   uniquenum <-nextGenShinyApps::rand.num(1)
-  uniqclass <- paste0("r2resize-sC2-",uniquenum)
+  uniqclass <- paste0("sC2-",uniquenum)
 
   # fetch css
   css <- ""
@@ -270,30 +270,30 @@ splitCard2 <- function(left,
   shiny::div(
     class = uniqclass,
     shiny::div(
-      class = "r2resize-splitcard2-split-container",
+      class = paste0("r2resize-",uniqclass,"splitcard2-split-container"),
       shiny::div(
-        class = "r2resize-splitcard2-split-content-left",
+        class = paste0("r2resize-",uniqclass,"splitcard2-split-content-left"),
         style = paste0(bgcol, bg.left.color, ";"),
         shiny::div(
-          class = "r2resize-splitcard2-content-text",
+          class = paste0("r2resize-",uniqclass,"splitcard2-content-text"),
           style = ifelse(is.null(text.left.color), "", paste0(textcol, text.left.color, ";")),
           shiny::div(
             shiny::div(
-              class = "r2resize-splitcard2-text-left",
+              class = paste0("r2resize-",uniqclass,"splitcard2-text-left"),
               left
             )
           )
         )
       ),
       shiny::div(
-        class = "r2resize-splitcard2-split-content-right",
+        class = paste0("r2resize-",uniqclass,"splitcard2-split-content-right"),
         style = paste0(bgcol, bg.right.color, ";"),
         shiny::div(
-          class = "r2resize-splitcard2-content-text",
+          class = paste0("r2resize-",uniqclass,"splitcard2-content-text"),
           style = ifelse(is.null(text.right.color), "", paste0(textcol, text.right.color, ";")),
           shiny::div(
             shiny::div(
-              class = "r2resize-splitcard2-text-left",
+              class = paste0("r2resize-",uniqclass,"splitcard2-text-left"),
               right
             )
           )

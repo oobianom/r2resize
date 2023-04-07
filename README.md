@@ -80,6 +80,8 @@ splitCard2(
 
 ```
 
+### And so many more cool features...
+
 
 ## Installation 
 

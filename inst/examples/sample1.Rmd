@@ -1,5 +1,5 @@
 ---
-title: "Usinge the r2resize::emphasisCard() function in Markdown and Shiny"
+title: "Taking the r2resize R package to a new level with multiple new functionalities"
 output:
   html_document:
     theme: default
@@ -19,13 +19,22 @@ library(r2resize)
 
 # Theme setting
 
-## empahsisCard function: container with moving border 
+
+## sizeableCard function: Container with sizing toolbar
 
 ```{r}
 
-r2resize::emphasisCard(shiny::div(
-    shiny::tags$h2("Question"),
-     shiny::tags$h4("Let's begin with a simply curiousity. Do you consider yourself successful? If you do, then why?")
-  ), bg.color = "#f1f1f1")
+r2resize::sizeableCard(shiny::h2("Sizeable text"), "
+Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.")
 
 ```
+
+```{r,echo=FALSE}
+r2resize::sizeableCard(shiny::h1("Second seziable text"),"
+Lobortis mattis aliquam faucibus purus in massa tempor. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. At lectus urna duis convallis. Arcu non odio euismod lacinia at quis risus. Tincidunt ornare massa eget egestas purus viverra accumsan in. Cras adipiscing enim eu turpis egestas pretium aenean.", bg.color = "lightgray", border.color="black")
+
+```
+
+Sample text as a separator - Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Risus pretium quam vulputate dignissim suspendisse in. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Sed viverra ipsum nunc aliquet bibendum enim. 
+
+

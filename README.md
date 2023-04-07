@@ -91,9 +91,9 @@ splitCard2(
 ![](https://r2resize.obi.obianom.com/m/r2resize_emphasiscard_1.gif)
 
 
-### windowCard()
+### sizeableCard()
 
-![](https://r2resize.obi.obianom.com/m/r2resize_windowcard_1.gif)
+![](https://r2resize.obi.obianom.com/m/r2resize_sizeablecard_1.gif)
 
 
 ### windowCard()

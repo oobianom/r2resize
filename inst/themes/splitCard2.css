@@ -48,14 +48,14 @@ html:not(.no-js) .split-container {
 html:not(.no-js) [class*=split-content-] {
   grid-area: container;
 }
-html:not(.no-js) .separator {
+html:not(.no-js) .r2resize-splitcard2-separator {
   grid-area: container;
   position: relative;
   padding: 0.1em;
   background-color: #fff;
   width: 0;
 }
-html:not(.no-js) .separator::before {
+html:not(.no-js) .r2resize-splitcard2-separator::before {
   content: "";
   position: absolute;
   left: -0.45em;
@@ -70,7 +70,7 @@ html:not(.no-js) .separator::before {
   border: 0.3em solid #fff;
   transition: background 0.3s;
 }
-html:not(.no-js) .separator.active::before {
+html:not(.no-js) .r2resize-splitcard2-separator.active::before {
   background-color: #666;
 }
 html:not(.no-js) .split-content-right {

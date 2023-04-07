@@ -2,7 +2,7 @@
 % Please edit documentation in R/containerResizer.R
 \name{splitCard2}
 \alias{splitCard2}
-\title{Resizable split screen container version 2}
+\title{Re sizable split screen container version 2}
 \usage{
 splitCard2(
   left,
@@ -11,7 +11,8 @@ splitCard2(
   bg.right.color = NULL,
   border.color = NULL,
   text.left.color = "black",
-  text.right.color = "black"
+  text.right.color = "black",
+  slider.position = c(1:100)
 )
 }
 \arguments{
@@ -28,12 +29,14 @@ splitCard2(
 \item{text.left.color}{color of left panel text}
 
 \item{text.right.color}{color of right panel text}
+
+\item{slider.position}{position of the slider in percent}
 }
 \value{
-Resizeable split screen container style 2
+Realizable split screen container style 2
 }
 \description{
-Highly customizable and resizable split screen container version 2
+Highly customizable and re sizable split screen container version 2
 }
 \section{Examples for r2resize}{
 
@@ -44,8 +47,9 @@ More examples and demo pages are located at this link -
 \examples{
 
 r2resize::splitCard2(
-  "Sample text",
-  "Sample text 2"
+  shiny::tags$h1("Question 1"),
+  shiny::tags$h1("Answer 1"),
+  slider.position = 40
 )
 
 

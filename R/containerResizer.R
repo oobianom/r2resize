@@ -164,6 +164,150 @@ splitCard <- function(left,
 
 
 
+#' Resizable split screen container version 2
+#'
+#' Highly customizable and resizable split screen container version 2
+#'
+#' @param left content on the left or top
+#' @param right content on the right or bottom
+#' @param bg.left.color left panel color e.g red, black or #333333
+#' @param bg.right.color right panel color e.g red, black or #333333
+#' @param border.color border color of the container e.g. red or #f5f5f5
+#' @param text.left.color color of left panel text
+#' @param text.right.color color of right panel text
+#'
+#' @section Examples for r2resize:
+#' More examples and demo pages are located at this link -
+#' \url{https://rpkg.net/package/r2resize}.
+#'
+#' @return Resizeable split screen container style 2
+#'
+#' @examples
+#'
+#' r2resize::splitCard2(
+#'   "Sample text",
+#'   "Sample text 2"
+#' )
+#'
+#'
+#' r2resize::splitCard2(
+#'   "Sample r2symbols 1",
+#'   "Sample nextGen 1",
+#'   bg.right.color = "white",
+#'   bg.left.color = "lightgray"
+#' )
+#'
+#' r2resize::splitCard2(
+#'   "Sample shinyStorePlus",
+#'   "Sample nextGen 1",
+#'   bg.right.color = "white",
+#'   bg.left.color = "lightgray",
+#'   border.color = "black",
+#'   text.left.color = "black",
+#'   text.right.color = "black"
+#' )
+#'
+#' r2resize::splitCard2(
+#'   "Sample sciRmdTheme 1",
+#'   "Sample nextGen 1",
+#'   bg.right.color = "white",
+#'   bg.left.color = "lightgray",
+#'   border.color = "gray",
+#'   text.left.color = "black",
+#'   text.right.color = "black"
+#' )
+#'
+#' @export
+
+splitCard2 <- function(left,
+                       right,
+                       bg.left.color = NULL,
+                       bg.right.color = NULL,
+                       border.color = NULL,
+                       text.left.color = "black",
+                       text.right.color = "black") {
+  # fetch selected position
+  position <- match.arg(position)
+
+  # preset
+  if(is.null(border.color)) border.color <- "#ffffff"
+  uniquenum <-nextGenShinyApps::rand.num(1)
+
+  # fetch css
+  css <- ""
+  theme.02.css <- paste0(template.loc(), "/splitCard2.css")
+  if (file.exists(theme.02.css)) {
+    css <- c(css, "<style>", readLines(theme.02.css), "</style>")
+    css <- gsub("sib53lver", border.color, css)
+    css <- paste(css, collapse = "")
+  }
+
+
+  # script fetch js
+  theme.02.js <- paste0(template.loc(), "/splitCard2.js")
+  script <- ""
+  if (file.exists(theme.02.js)) {
+    script <-
+      paste(c("<script>", readLines(theme.02.js), "</script>"), collapse = " ")
+  }
+  # combine stylesheets and scripts
+  cssjs <- paste0(css, script)
+  cssjs <- gsub("87n767m08o", uniquenum, cssjs)
+  # set to html
+  attr(cssjs, "html") <- TRUE
+  class(cssjs) <- c("html", "character")
+
+  # set initial content
+  bgcol <- "background-color:"
+  textcol <- "color:"
+  shiny::div(
+    shiny::div(
+      class = "split-container",
+      shiny::div(
+        shiny::div(
+          class = "split-content-left",
+          style = paste0(bgcol, bg.right.color, ";"),
+          shiny::div(shiny::div(
+            class = "content-text",
+            style = ifelse(
+              is.null(text.left.color),
+              "",
+              paste0(textcol, text.left.color, ";")
+            ),
+            shiny::div(
+              shiny::div(
+                class = "text-left",
+                left
+              )
+            )
+          ))
+        ),
+        shiny::div(
+          class = "split-content-right",
+          style = paste0(bgcol, bg.right.color, ";"),
+          shiny::div(shiny::div(
+            class = "content-text",
+            style = ifelse(
+              is.null(text.right.color),
+              "",
+              paste0(textcol, text.right.color, ";")
+            ),
+            shiny::div(
+              shiny::div(
+                class = "text-right",
+                right
+              )
+            )
+          ))
+        )
+      )
+    ),
+    cssjs
+  )
+}
+
+
+
 #' Resizable container content holder
 #'
 #' Highly customizable and resizable  container content holder

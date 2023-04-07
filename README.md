@@ -60,6 +60,27 @@ elastiCard(
 
 ```
 
+### Also, the splitCard2() function
+
+Output:
+
+![](https://r2resize.obi.obianom.com/m/r2resize_splitcard2_1.gif)
+
+Code:
+```
+splitCard2(
+  "text 1",
+  "text 2",
+  bg.right.color = "black",
+  bg.left.color = "red",
+  text.left.color = "white",
+  text.right.color = "white",
+  slider.position = "95"
+)
+
+```
+
+
 ## Installation 
 
 ```{r}

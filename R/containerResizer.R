@@ -228,7 +228,7 @@ splitCard2 <- function(left,
                        border.color = NULL,
                        text.left.color = "black",
                        text.right.color = "black",
-                       slider.position = as.character(c(1:100))) {
+                       slider.position = charNum1to100) {
 
   # set position
   slider.position = paste0(match.arg(slider.position),"%")
@@ -557,3 +557,5 @@ empahsisCard <- function(..., bg.color = NULL) {
 #'
 
 emphasisCard <- empahsisCard
+
+charNum1to100 <- as.character(unique(c(80,1:100)))

@@ -22,7 +22,7 @@ _The recommendation is that you download the latest version of this package from
 
 Output:
 
-![](https://r2resize.obi.obianom.com/m/r2resize_flexcard_2.gif)
+![](https://r2resize.obi.obianom.com/m/r2resize_flexcard_1.gif)
 
 Code:
 ```
@@ -45,7 +45,7 @@ flexCard(
 
 Output:
 
-![](https://r2resize.obi.obianom.com/m/r2resize_elasticard_2.gif)
+![](https://r2resize.obi.obianom.com/m/r2resize_elasticard_1.gif)
 
 Code:
 ```

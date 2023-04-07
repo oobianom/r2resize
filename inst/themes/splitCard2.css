@@ -1,0 +1,78 @@
+.content-text {
+  padding: 2em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.light-gray {
+  background-color: #eee;
+  color: #000;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.split-container {
+  color: #fff;
+  background-color: #666;
+  min-height: 2em;
+}
+.split-container figure {
+  margin: 0;
+}
+
+[class*=split-content-] {
+  text-align: center;
+}
+
+html:not(.no-js) .split-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas: "container";
+}
+html:not(.no-js) [class*=split-content-] {
+  grid-area: container;
+}
+html:not(.no-js) .separator {
+  grid-area: container;
+  position: relative;
+  padding: 0.1em;
+  background-color: #fff;
+  width: 0;
+}
+html:not(.no-js) .separator::before {
+  content: "";
+  position: absolute;
+  left: -0.45em;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  padding: 0.25em;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.3em solid #fff;
+  transition: background 0.3s;
+}
+html:not(.no-js) .separator.active::before {
+  background-color: #666;
+}
+html:not(.no-js) .split-content-right {
+  -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+          clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}

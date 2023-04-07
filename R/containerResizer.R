@@ -243,6 +243,7 @@ splitCard2 <- function(left,
   if (file.exists(theme.02.css)) {
     css <- c(css, "<style>", readLines(theme.02.css), "</style>")
     css <- gsub("sib534lver", border.color, css)
+    css <- gsub("slidepos1232", slider.position, css)
     css <- paste(css, collapse = "")
   }
 

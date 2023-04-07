@@ -48,10 +48,8 @@ r2resize::elastiCard(
   subtitle="A cool subtitle"),
   item2 = c(
   bg = "https://r2resize.obi.obianom.com/m/image2.jpg",
-  icon = "edit",
   title="Sample text 2",
   subtitle="A cool subtitle",
-  icon.color = "blue",
   text.color = "brown"
   )
 )

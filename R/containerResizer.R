@@ -268,7 +268,7 @@ splitCard2 <- function(left,
   textcol <- "color:"
   shiny::div(
     shiny::div(
-      class = "split-container",
+      class = "r2resize-splitcard2-split-container",
       shiny::div(
         class = "split-content-left",
         style = paste0(bgcol, bg.left.color, ";"),

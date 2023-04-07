@@ -1,12 +1,12 @@
-.content-text {
+.r2resize-splitcard2-content-text {
   padding: 2em;
 }
 
-.text-left {
+.r2resize-splitcard2-text-left {
   text-align: left;
 }
 
-.text-right {
+.r2resize-splitcard2-text-right {
   text-align: right;
 }
 
@@ -26,13 +26,13 @@
   max-width: fit-content;
 }
 
-.split-container {
+.r2resize-splitcard2-split-container {
   color: #fff;
   background-color: #666;
   min-height: 2em;
   border: 1px solid sib534lver;
 }
-.split-container figure {
+.r2resize-splitcard2-split-container figure {
   margin: 0;
 }
 
@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-html:not(.no-js) .split-container {
+html:not(.no-js) .r2resize-splitcard2-split-container {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-areas: "container";

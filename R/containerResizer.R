@@ -236,7 +236,7 @@ splitCard2 <- function(left,
   theme.02.css <- paste0(template.loc(), "/splitCard2.css")
   if (file.exists(theme.02.css)) {
     css <- c(css, "<style>", readLines(theme.02.css), "</style>")
-    css <- gsub("sib53lver", border.color, css)
+    css <- gsub("sib534lver", border.color, css)
     css <- paste(css, collapse = "")
   }
 

@@ -164,9 +164,9 @@ splitCard <- function(left,
 
 
 
-#' Resizable split screen container version 2
+#' Re sizable split screen container version 2
 #'
-#' Highly customizable and resizable split screen container version 2
+#' Highly customizable and re sizable split screen container version 2
 #'
 #' @param left content on the left or top
 #' @param right content on the right or bottom
@@ -175,18 +175,20 @@ splitCard <- function(left,
 #' @param border.color border color of the container e.g. red or #f5f5f5
 #' @param text.left.color color of left panel text
 #' @param text.right.color color of right panel text
+#' @param slider.position position of the slider in percent
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -
 #' \url{https://rpkg.net/package/r2resize}.
 #'
-#' @return Resizeable split screen container style 2
+#' @return Realizable split screen container style 2
 #'
 #' @examples
 #'
 #' r2resize::splitCard2(
-#'   "Sample text",
-#'   "Sample text 2"
+#'   shiny::tags$h1("Question 1"),
+#'   shiny::tags$h1("Answer 1"),
+#'   slider.position = 40
 #' )
 #'
 #'

@@ -236,6 +236,7 @@ splitCard2 <- function(left,
   # preset
   if(is.null(border.color)) border.color <- "#ffffff"
   uniquenum <-nextGenShinyApps::rand.num(1)
+  uniqclass <- paste0("r2resize-sC2-",uniquenum)
 
   # fetch css
   css <- ""
@@ -258,7 +259,7 @@ splitCard2 <- function(left,
   }
   # combine stylesheets and scripts
   cssjs <- paste0(css, script)
-  cssjs <- gsub("87n767m08o", uniquenum, cssjs)
+  cssjs <- gsub("c87n767m08o", uniqclass, cssjs)
   # set to html
   attr(cssjs, "html") <- TRUE
   class(cssjs) <- c("html", "character")
@@ -267,6 +268,7 @@ splitCard2 <- function(left,
   bgcol <- "background-color:"
   textcol <- "color:"
   shiny::div(
+    class = uniqclass,
     shiny::div(
       class = "r2resize-splitcard2-split-container",
       shiny::div(

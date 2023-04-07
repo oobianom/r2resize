@@ -28,9 +28,15 @@ install.packages(r2resize)
 # OR from Github
 library(devtools)
 install_github("oobianom/r2resize")
+
+# Load library and begin using functions
+library(r2resize)
+
 ```
 
 ### Screenshots:
+
+## Use in Rmarkdown or Quarto document
 
 ![](https://r2resize.obi.obianom.com/m/resizers.png)
 
@@ -49,6 +55,7 @@ r2resize::add.resizer(
 )
 ```
 
+## Use in Shiny, Rmarkdown or Quarto document
 ### As of version 1.6, the flexCard() function
 
 Output:
@@ -135,12 +142,7 @@ splitCard2(
 
 _NOTE: Please note that r2resize::add.resizer() should only be used in Rmarkdown or Quarto_
 
-## Use in Shiny, Rmarkdown or Quarto document
 
-### Load library and begin using functions
 
-```{r}
-library(r2resize)
-```
 
 

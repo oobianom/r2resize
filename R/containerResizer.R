@@ -236,7 +236,7 @@ splitCard2 <- function(left,
   # preset
   if(is.null(border.color)) border.color <- "#ffffff"
   uniquenum <-nextGenShinyApps::rand.num(1)
-  uniqclass <- paste0("sC2-",uniquenum)
+  uniqclass <- paste0("r2rsC2",uniquenum)
 
   # fetch css
   css <- ""

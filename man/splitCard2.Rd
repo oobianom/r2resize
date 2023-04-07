@@ -12,7 +12,7 @@ splitCard2(
   border.color = NULL,
   text.left.color = "black",
   text.right.color = "black",
-  slider.position = as.character(unique(c(80, 1:100)))
+  slider.position = charNum1to100
 )
 }
 \arguments{
@@ -49,7 +49,7 @@ More examples and demo pages are located at this link -
 r2resize::splitCard2(
   shiny::tags$h1("Question 1"),
   shiny::tags$h1("Answer 1"),
-  slider.position = 40
+  slider.position = "40"
 )
 
 

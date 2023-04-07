@@ -226,8 +226,6 @@ splitCard2 <- function(left,
                        border.color = NULL,
                        text.left.color = "black",
                        text.right.color = "black") {
-  # fetch selected position
-  position <- match.arg(position)
 
   # preset
   if(is.null(border.color)) border.color <- "#ffffff"

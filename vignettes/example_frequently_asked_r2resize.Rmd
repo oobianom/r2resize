@@ -234,8 +234,5 @@ r2resize::splitCard2(
 
 ## Concluding Remarks
 
-R CRAN for r2resize: https://cran.r-project.org/web/packages/r2resize/index.html
-
 GitHub Project: https://github.com/oobianom/r2resize/
 
-<style>h2,h4{border-bottom-width: 4px!important;}

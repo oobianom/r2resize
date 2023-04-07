@@ -161,7 +161,7 @@ splitCard <- function(left,
   ),
   cssjs)
 }
-
+charNum1to100 <- as.character(unique(c(80,1:100)))
 
 
 #' Re sizable split screen container version 2
@@ -188,7 +188,7 @@ splitCard <- function(left,
 #' r2resize::splitCard2(
 #'   shiny::tags$h1("Question 1"),
 #'   shiny::tags$h1("Answer 1"),
-#'   slider.position = 40
+#'   slider.position = "40"
 #' )
 #'
 #'
@@ -228,7 +228,7 @@ splitCard2 <- function(left,
                        border.color = NULL,
                        text.left.color = "black",
                        text.right.color = "black",
-                       slider.position = as.character(unique(c(80,1:100)))) {
+                       slider.position = charNum1to100) {
 
   # set position
   slider.position = paste0(match.arg(slider.position),"%")

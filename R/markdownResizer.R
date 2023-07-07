@@ -83,7 +83,8 @@ add.resizer <- function(theme.color = NULL,
   if (file.exists(theme.02.js)) {
     con <- c(con, "<script>", readLines(theme.02.js), "</script>")
     con <- gsub("listgroupixon", "xxxxx", con)
-    if(!is.null(default.image.width)) con <- gsub("'pre3e2423'", "xxxxx", con)
+    if(!is.null(default.image.width))
+      con <- gsub("'pre3e2423'", paste0("'",default.image.width,"'"), con)
   }
 
   # font size

@@ -16,7 +16,8 @@ add.resizer(
   thumb.height = NULL,
   line.width = NULL,
   line.height = NULL,
-  dim.units = "px"
+  dim.units = "px",
+  default.image.width = NULL
 )
 }
 \arguments{
@@ -43,6 +44,8 @@ add.resizer(
 \item{line.height}{height of the resizer track e.g. 10}
 
 \item{dim.units}{unit for the height and width of the track or thumb}
+
+\item{default.image.width}{default width of all images on the page e.g. 100, 50%}
 }
 \value{
 Inclusion of mini toolbar for images and tables within a page

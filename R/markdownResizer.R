@@ -14,7 +14,7 @@
 #' @param line.width width of the resizer track e.g. 200
 #' @param line.height height of the resizer track e.g. 10
 #' @param dim.units unit for the height and width of the track or thumb
-#' @param default.image.width default width of all images on the page e.g. 100, 50%
+#' @param default.image.width default width of all images on the page e.g. 100
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages for are located at this link -
@@ -34,7 +34,8 @@
 #'   images = TRUE,
 #'   line.color = "green",
 #'   line.width = 150,
-#'   line.height = 5
+#'   line.height = 5,
+#'   default.image.width = "40%"
 #' ) # customized settings
 #'
 #' @export

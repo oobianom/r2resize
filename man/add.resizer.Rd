@@ -45,7 +45,7 @@ add.resizer(
 
 \item{dim.units}{unit for the height and width of the track or thumb}
 
-\item{default.image.width}{default width of all images on the page e.g. 100, 50%}
+\item{default.image.width}{default width of all images on the page e.g. 100}
 }
 \value{
 Inclusion of mini toolbar for images and tables within a page
@@ -71,7 +71,8 @@ r2resize::add.resizer(
   images = TRUE,
   line.color = "green",
   line.width = 150,
-  line.height = 5
+  line.height = 5,
+  default.image.width = "40\%"
 ) # customized settings
 
 }

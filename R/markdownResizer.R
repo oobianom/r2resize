@@ -14,6 +14,7 @@
 #' @param line.width width of the resizer track e.g. 200
 #' @param line.height height of the resizer track e.g. 10
 #' @param dim.units unit for the height and width of the track or thumb
+#' @param default.image.width default width of all images on the page e.g. 100, 50%
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages for are located at this link -
@@ -49,7 +50,8 @@ add.resizer <- function(theme.color = NULL,
                         thumb.height = NULL,
                         line.width = NULL,
                         line.height = NULL,
-                        dim.units = "px") {
+                        dim.units = "px",
+                        default.image.width = NULL) {
 
   # fetch selected position
   position <- match.arg(position)

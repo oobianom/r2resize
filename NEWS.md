@@ -1,3 +1,10 @@
+# r2resize 1.7
+
+## Features
+ 
+ - [x] Added new argument to add.resizer() called 'default.image.width'. This argument allows the user to easily set a default for all the images on the page
+
+
 # r2resize 1.6
 
 ## Features

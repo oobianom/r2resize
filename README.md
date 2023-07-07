@@ -36,7 +36,7 @@ library(r2resize)
 
 ### Screenshots:
 
-## Use in Rmarkdown or Quarto document
+## Use in Rmarkdown or Quarto document to add resizing toolbar to images and tables on the page
 
 ![](https://r2resize.obi.obianom.com/m/resizers.png)
 
@@ -51,7 +51,8 @@ r2resize::add.resizer(
   images = TRUE,
   line.color = "orange",
   line.height = 5,
-  line.width = 200
+  line.width = 200,
+  default.image.width = "40%"
 )
 ```
 

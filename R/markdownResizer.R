@@ -17,13 +17,13 @@
 #' @param default.image.width default width of all images on the page e.g. 100
 #'
 #' @section Examples for r2resize:
-#' More examples and demo pages for are located at this link -
-#' \url{https://rnetwork.obi.obianom.com/package/r2resize}.
+#' More examples and demo pages for this function are located at this link -
+#' \url{https://r2resize.obi.obianom.com}.
 #'
 #' @return Inclusion of mini toolbar for images and tables within a page
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # default settings
 #' r2resize::add.resizer()
 #'

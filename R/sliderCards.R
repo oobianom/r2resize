@@ -156,11 +156,20 @@ flexCard <- function(...,
 #' r2resize::elastiCard(
 #'   item1 = c(
 #'   icon = "edit",
-#'   title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+#'   title="Lorem ipsum dolor sit amet, consectetur
+#'   adipiscing elit, sed do eiusmod tempor incididunt
+#'   ut labore et dolore magna aliqua. Ut enim ad
+#'   minim veniam, quis nostrud exercitation
+#'   ullamco laboris nisi ut aliquip ex ea
+#'   commodo consequat.",
 #'   subtitle="A cool subtitle",
 #'   text.color="blue"),
 #'   item2 = c(
-#'   title="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+#'   title="Duis aute irure dolor in reprehenderit
+#'   in voluptate velit esse cillum dolore eu fugiat
+#'   nulla pariatur. Excepteur sint occaecat cupidatat
+#'   non proident, sunt in culpa qui officia deserunt
+#'   mollit anim id est laborum.",
 #'   subtitle="A cool subtitle",
 #'   text.color = "brown"
 #'  )

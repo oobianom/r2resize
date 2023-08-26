@@ -21,8 +21,6 @@
 #' @return Resizeable split screen container
 #'
 #' @examples
-#'
-#' \dontrun{
 #' #basic attributes
 #' r2resize::splitCard(
 #'   "Sample text",
@@ -62,7 +60,6 @@
 #'   text.right.color = "black",
 #'   position = "horizontal"
 #' )
-#' }
 #'
 #' @export
 
@@ -190,8 +187,6 @@ charNum1to100 <- as.character(unique(c(80,1:100)))
 #' @return Realizable split screen container style 2
 #'
 #' @examples
-#' \dontrun{
-#'
 #' #Use the default split card 2 function
 #' #add a question on one side, and answer on the other
 #' r2resize::splitCard2(
@@ -231,7 +226,6 @@ charNum1to100 <- as.character(unique(c(80,1:100)))
 #'   text.left.color = "red",
 #'   text.right.color = "blue"
 #' )
-#' }
 #'
 #' @export
 
@@ -335,9 +329,6 @@ splitCard2 <- function(left,
 #' @return Container with a resizing toolbar feature on the right
 #'
 #' @examples
-#'
-#' \dontrun{
-#'
 #' #simple sizeable card attribute
 #' r2resize::sizeableCard(
 #'   "sample rpkg.net text"
@@ -357,7 +348,6 @@ splitCard2 <- function(left,
 #'   bg.color = "lightgray",
 #'   border.color="black"
 #' )
-#' }
 #'
 #' @export
 
@@ -446,8 +436,6 @@ sizeableCard <- function(...,
 #' @return A window-like card container that is expandable and resizable
 #'
 #' @examples
-#'
-#' \dontrun{
 #' #simple window card with default attributes
 #' #shows up centered on the screen
 #' r2resize::windowCard("sample r2symbols text")
@@ -464,7 +452,6 @@ sizeableCard <- function(...,
 #' border.color = "brown",
 #' header.text.color = "white",
 #' body.text.color = "black")
-#' }
 #'
 #' @export
 
@@ -557,7 +544,6 @@ windowCard <- function(...,
 #'   "sample rpkg.net 2 ",
 #'   bg.color = "brown"
 #' )
-#' }
 #'
 #' @export
 

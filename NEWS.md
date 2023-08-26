@@ -1,3 +1,8 @@
+# r2resize 1.8
+
+ - [x] Adding examples
+ - [x] Using testhat for tests
+
 # r2resize 1.7
 
 ## Features

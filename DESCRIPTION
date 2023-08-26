@@ -20,7 +20,7 @@ Suggests:
     rmarkdown,
     knitr,
     r2symbols,
-    testthat (>= 3.0.0)
+    testthat
 Encoding: UTF-8
 VignetteBuilder: knitr
 Language: en-US

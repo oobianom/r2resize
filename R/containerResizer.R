@@ -543,7 +543,6 @@ windowCard <- function(...,
 #' @return container with a moving border to denote emphasis
 #'
 #' @examples
-#' \dontrun{
 #' #make a simple emphasis card
 #' #add as much content as need
 #' r2resize::empahsisCard(

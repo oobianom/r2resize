@@ -26,9 +26,6 @@ More examples and demo pages are located at this link -
 }
 
 \examples{
-
-\dontrun{
-
 #simple sizeable card attribute
 r2resize::sizeableCard(
   "sample rpkg.net text"
@@ -48,6 +45,5 @@ r2resize::sizeableCard(
   bg.color = "lightgray",
   border.color="black"
 )
-}
 
 }

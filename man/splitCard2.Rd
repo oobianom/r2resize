@@ -45,8 +45,6 @@ More examples and demo pages are located at this link -
 }
 
 \examples{
-\dontrun{
-
 #Use the default split card 2 function
 #add a question on one side, and answer on the other
 r2resize::splitCard2(
@@ -86,6 +84,5 @@ r2resize::splitCard2(
   text.left.color = "red",
   text.right.color = "blue"
 )
-}
 
 }

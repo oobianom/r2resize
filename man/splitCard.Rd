@@ -54,8 +54,6 @@ More examples and demo pages are located at this link -
 }
 
 \examples{
-
-\dontrun{
 #basic attributes
 r2resize::splitCard(
   "Sample text",
@@ -95,6 +93,5 @@ r2resize::splitCard(
   text.right.color = "black",
   position = "horizontal"
 )
-}
 
 }

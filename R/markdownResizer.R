@@ -23,7 +23,6 @@
 #' @return Inclusion of mini toolbar for images and tables within a page
 #'
 #' @examples
-#' \dontrun{
 #' # default settings
 #' r2resize::add.resizer()
 #'
@@ -73,8 +72,6 @@
 #'   line.height = 5,
 #'   default.image.width = "40%"
 #' ) # customized settings
-#'
-#' }
 #'
 #' @export
 

@@ -39,9 +39,6 @@ More examples and demo pages are located at this link -
 }
 
 \examples{
-\dontrun{
-
-
 #basic example with texts alone
 r2resize::elastiCard(
   item1 = c(
@@ -80,6 +77,5 @@ r2resize::elastiCard(
   text.color = "brown"
   )
 )
-}
 
 }

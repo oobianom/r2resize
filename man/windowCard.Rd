@@ -45,8 +45,6 @@ More examples and demo pages are located at this link -
 }
 
 \examples{
-
-\dontrun{
 #simple window card with default attributes
 #shows up centered on the screen
 r2resize::windowCard("sample r2symbols text")
@@ -63,6 +61,5 @@ bg.color = "white",
 border.color = "brown",
 header.text.color = "white",
 body.text.color = "black")
-}
 
 }

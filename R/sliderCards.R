@@ -16,7 +16,7 @@
 #' @return Multiple cards with flex functionality
 #'
 #' @examples
-#'
+#' \dontrun{
 #' r2resize::flexCard(
 #'   item1 = c(
 #'   bg = "https://r2resize.obi.obianom.com/m/image1.jpg",
@@ -32,6 +32,7 @@
 #'   text.color = "brown"
 #'   )
 #' )
+#' }
 #'
 #' @export
 
@@ -148,7 +149,7 @@ flexCard <- function(...,
 #' @return Multiple cards with hover elastic functionality
 #'
 #' @examples
-#'
+#' \dontrun{
 #' r2resize::elastiCard(
 #'   item1 = c(
 #'   bg = "https://r2resize.obi.obianom.com/m/image1.jpg",
@@ -162,6 +163,7 @@ flexCard <- function(...,
 #'   text.color = "brown"
 #'   )
 #' )
+#' }
 #'
 #' @export
 

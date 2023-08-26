@@ -45,14 +45,17 @@ More examples and demo pages are located at this link -
 }
 
 \examples{
+\dontrun{
 
+#Use the default split card 2 function
+#add a question on one side, and answer on the other
 r2resize::splitCard2(
   shiny::tags$h1("Question 1"),
   shiny::tags$h1("Answer 1"),
   slider.position = "40"
 )
 
-
+#specify the backgroun color for the sides
 r2resize::splitCard2(
   "Sample r2symbols 1",
   "Sample nextGen 1",
@@ -60,6 +63,9 @@ r2resize::splitCard2(
   bg.left.color = "lightgray"
 )
 
+
+#alter the border color
+#specify the text color for each side
 r2resize::splitCard2(
   "Sample shinyStorePlus",
   "Sample nextGen 1",
@@ -70,14 +76,16 @@ r2resize::splitCard2(
   text.right.color = "black"
 )
 
+##change the text color from one side to the other
 r2resize::splitCard2(
   "Sample sciRmdTheme 1",
   "Sample nextGen 1",
   bg.right.color = "white",
   bg.left.color = "lightgray",
   border.color = "gray",
-  text.left.color = "black",
-  text.right.color = "black"
+  text.left.color = "red",
+  text.right.color = "blue"
 )
+}
 
 }

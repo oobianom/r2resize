@@ -17,12 +17,28 @@ container with a moving border to denote emphasis
 \description{
 Emphasis container
 }
-\examples{
+\section{More examples for r2resize}{
 
-r2resize::emphasisCard(
+More examples and demo pages are located at this link -
+\url{https://r2resize.obi.obianom.com}.
+}
+
+\examples{
+\dontrun{
+#make a simple emphasis card
+#add as much content as need
+r2resize::empahsisCard(
+  "sample rpkg.net 1",
+  "sample rpkg.net 2 "
+)
+
+
+#specify the color of the background
+r2resize::empahsisCard(
   "sample rpkg.net 1",
   "sample rpkg.net 2 ",
-  bg.color = "cyan"
+  bg.color = "brown"
 )
+}
 
 }

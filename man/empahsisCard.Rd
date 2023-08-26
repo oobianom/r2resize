@@ -24,11 +24,21 @@ More examples and demo pages are located at this link -
 }
 
 \examples{
+\dontrun{
+#make a simple emphasis card
+#add as much content as need
+r2resize::empahsisCard(
+  "sample rpkg.net 1",
+  "sample rpkg.net 2 "
+)
 
+
+#specify the color of the background
 r2resize::empahsisCard(
   "sample rpkg.net 1",
   "sample rpkg.net 2 ",
-  bg.color = "cyan"
+  bg.color = "brown"
 )
+}
 
 }

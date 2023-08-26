@@ -27,14 +27,27 @@ More examples and demo pages are located at this link -
 
 \examples{
 
+\dontrun{
+
+#simple sizeable card attribute
 r2resize::sizeableCard(
   "sample rpkg.net text"
 )
 
+
+#specify the background color for the card
+r2resize::sizeableCard(
+  "sample r2resume text",
+  bg.color = "lightgray"
+)
+
+
+#specify the border color additionally
 r2resize::sizeableCard(
   "sample r2resume text",
   bg.color = "lightgray",
   border.color="black"
 )
+}
 
 }

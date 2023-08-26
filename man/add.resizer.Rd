@@ -55,12 +55,12 @@ Set options for the inclusion of sizing toolbar in documents
 }
 \section{Examples for r2resize}{
 
-More examples and demo pages for are located at this link -
-\url{https://rnetwork.obi.obianom.com/package/r2resize}.
+More examples and demo pages for this function are located at this link -
+\url{https://r2resize.obi.obianom.com}.
 }
 
 \examples{
-\donttest{
+\dontrun{
 # default settings
 r2resize::add.resizer()
 

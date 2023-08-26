@@ -580,8 +580,7 @@ empahsisCard <- function(..., bg.color = NULL) {
 
   # content
   shiny::div(shiny::div(class = "r2resize-emphasizeDiv",
-                        ...),
-             css)
+                        ...),css)
 }
 
 

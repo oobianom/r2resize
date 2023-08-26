@@ -60,8 +60,44 @@ More examples and demo pages for are located at this link -
 }
 
 \examples{
-r2resize::add.resizer() #default settings
+\donttest{
+# default settings
+r2resize::add.resizer()
 
+# add resizer to only images
+r2resize::add.resizer(
+  tables = FALSE,
+  images = TRUE
+ )
+
+
+# add resizer to only tables
+r2resize::add.resizer(
+  tables = TRUE,
+  images = FALSE
+ )
+
+
+# add resizer to both images
+r2resize::add.resizer(
+  tables = TRUE,
+  images = TRUE
+ )
+
+# set position of the resize toolbar
+r2resize::add.resizer(
+  position = "top" #this is the default, another is 'bottom'
+ )
+
+# set resizer line color, height and width
+r2resize::add.resizer(
+  line.color = "green",
+  line.width = 150,
+  line.height = 5
+ )
+
+
+#declare more arguments including default image size
 r2resize::add.resizer(
   theme.color = "blue",
   position = "top",
@@ -74,5 +110,7 @@ r2resize::add.resizer(
   line.height = 5,
   default.image.width = "40\%"
 ) # customized settings
+
+}
 
 }

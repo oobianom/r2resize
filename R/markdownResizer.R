@@ -23,8 +23,44 @@
 #' @return Inclusion of mini toolbar for images and tables within a page
 #'
 #' @examples
-#' r2resize::add.resizer() #default settings
+#' \donttest{
+#' # default settings
+#' r2resize::add.resizer()
 #'
+#' # add resizer to only images
+#' r2resize::add.resizer(
+#'   tables = FALSE,
+#'   images = TRUE
+#'  )
+#'
+#'
+#' # add resizer to only tables
+#' r2resize::add.resizer(
+#'   tables = TRUE,
+#'   images = FALSE
+#'  )
+#'
+#'
+#' # add resizer to both images
+#' r2resize::add.resizer(
+#'   tables = TRUE,
+#'   images = TRUE
+#'  )
+#'
+#' # set position of the resize toolbar
+#' r2resize::add.resizer(
+#'   position = "top" #this is the default, another is 'bottom'
+#'  )
+#'
+#' # set resizer line color, height and width
+#' r2resize::add.resizer(
+#'   line.color = "green",
+#'   line.width = 150,
+#'   line.height = 5
+#'  )
+#'
+#'
+#' #declare more arguments including default image size
 #' r2resize::add.resizer(
 #'   theme.color = "blue",
 #'   position = "top",
@@ -37,6 +73,8 @@
 #'   line.height = 5,
 #'   default.image.width = "40%"
 #' ) # customized settings
+#'
+#' }
 #'
 #' @export
 
@@ -53,7 +91,6 @@ add.resizer <- function(theme.color = NULL,
                         line.height = NULL,
                         dim.units = "px",
                         default.image.width = NULL) {
-
   # fetch selected position
   position <- match.arg(position)
 
@@ -84,8 +121,9 @@ add.resizer <- function(theme.color = NULL,
   if (file.exists(theme.02.js)) {
     con <- c(con, "<script>", readLines(theme.02.js), "</script>")
     con <- gsub("listgroupixon", "xxxxx", con)
-    if(!is.null(default.image.width))
-      con <- gsub("'pre3e2423'", paste0("'",default.image.width,"'"), con)
+    if (!is.null(default.image.width)) {
+      con <- gsub("'pre3e2423'", paste0("'", default.image.width, "'"), con)
+    }
   }
 
   # font size

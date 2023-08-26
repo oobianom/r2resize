@@ -1,5 +1,5 @@
 test_that("Simple test for flexcard function", {
-  r2resize::flexCard(
+  expect_type(r2resize::flexCard(
     item1 = c(
     bg = "https://r2resize.obi.obianom.com/m/image1.jpg",
     icon = "edit",
@@ -13,5 +13,5 @@ test_that("Simple test for flexcard function", {
     icon.color = "blue",
     text.color = "brown"
     )
-  )
+  ),"list")
 })

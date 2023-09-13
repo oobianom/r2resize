@@ -9,3 +9,9 @@ shinyExpandImage(imageid)
 \description{
 Elegant image viewer and resizer for images
 }
+\section{Use case}{
+
+Use in a shiny application for image(s) that you'd like to carry a viewer feature on click.\cr\cr
+   - Very portable
+}
+

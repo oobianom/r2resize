@@ -2,9 +2,15 @@
 % Please edit documentation in R/novoImageResizer.R
 \name{shinyExpandImage}
 \alias{shinyExpandImage}
-\title{Add shiny resize for images}
+\title{Elegant viewer functionality for images}
 \usage{
-shinyExpandImage(imageid)
+shinyExpandImage(imageid = c())
+}
+\arguments{
+\item{imageid}{one or more IDs of a div containing images}
+}
+\value{
+Feature that allows images to be easily expanded and viewed
 }
 \description{
 Elegant image viewer and resizer for images
@@ -16,3 +22,13 @@ When the image is clicked, it is expanded and toolbars appear to allow the user 
 if there are multiple images within the imageid holder, then they are automatically ordered at the bottom for ease of transition.
 }
 
+\examples{
+# simple expansion for images
+if(interactive()){
+  shinyApp(
+    ui = fluidPage(),
+    server = (function(input, output){})
+  )
+}
+
+}

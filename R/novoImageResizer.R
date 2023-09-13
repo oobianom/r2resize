@@ -1,4 +1,4 @@
-#' Add shiny resize for images
+#' Elegant viewer functionality for images
 #'
 #' Elegant image viewer and resizer for images
 #'

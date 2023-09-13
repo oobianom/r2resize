@@ -6,8 +6,12 @@
 #'
 
 shinyExpandImage <- function(imageid){
+  #declare folder name for htmltools
   ssp <- "r2resize"
   vs <- "0.0.0"
+  quickcode::add_key(imageid) #add keys to the vector of ids
+
+  #embed in a div and render
   htmltools::tags$div(
     htmltools::htmlDependency(
     ssp, vs,
@@ -17,7 +21,7 @@ shinyExpandImage <- function(imageid){
     all_files = FALSE
     ),
     lapply(imageid,function(i)
-    htmltools::tags$script(paste0('$(document).ready(function() { var $initScope = $("#',i,'"); if ($initScope.length) { $initScope.justifiedGallery( { border: -1, rowHeight: 150, margins: 8, waitThumbnailsLoad: true, randomize: false, }).on("jg.complete", function() { $initScope.lightGallery( { thumbnail: true, animateThumb: true, showThumbByDefault: true, }); }); }; $initScope.on("onAfterOpen.lg", function(event) { $("body").addClass("overflow-hidden"); }); $initScope.on("onCloseAfter.lg", function(event) { $("body").removeClass("overflow-hidden"); }); });'))
+    htmltools::tags$script(paste0('$(document).ready(function() { var $initScope',i$key,' = $("#',i$value,'"); if ($initScope.length) { $initScope.justifiedGallery( { border: -1, rowHeight: 150, margins: 8, waitThumbnailsLoad: true, randomize: false, }).on("jg.complete", function() { $initScope.lightGallery( { thumbnail: true, animateThumb: true, showThumbByDefault: true, }); }); }; $initScope.on("onAfterOpen.lg", function(event) { $("body").addClass("overflow-hidden"); }); $initScope.on("onCloseAfter.lg", function(event) { $("body").removeClass("overflow-hidden"); }); });'))
     )
     )
 

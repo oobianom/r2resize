@@ -1,0 +1,7 @@
+#' @export
+#'
+
+addShinyImageResizer <- function(){
+
+}
+

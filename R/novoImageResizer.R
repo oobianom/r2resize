@@ -15,6 +15,9 @@ addShinyImageResizer <- function(){
     stylesheet = "imgviewer.css",
     script = "imgviewer.js",
     all_files = FALSE
+    ),
+    htmltools::HTML(
+      "<b>hello</b>"
     )
   )
 

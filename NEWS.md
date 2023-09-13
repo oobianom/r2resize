@@ -1,3 +1,9 @@
+# r2resize 1.9
+
+ - [x] Elegant image expand viewer, shinyExpandImage()
+ - [ ] Fix bugs
+
+
 # r2resize 1.8
 
  - [x] Adding examples

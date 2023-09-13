@@ -1,7 +1,7 @@
 Package: r2resize
 Type: Package
 Title: In-Text Resizer for Images, Tables and Fancy Resizable Containers in 'Shiny', 'Rmarkdown' and 'Quarto' Documents
-Version: 1.8
+Version: 1.9
 Authors@R: c(
     person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
@@ -14,6 +14,8 @@ Depends:
 Imports: 
     utils,
     shiny,
+    htmltools,
+    quickcode,
     DT,
     nextGenShinyApps
 Suggests: 

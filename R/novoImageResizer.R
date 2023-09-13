@@ -2,15 +2,27 @@
 #'
 #' Elegant image viewer and resizer for images
 #'
-#' @export
+#' @param imageid one or more IDs of a div containing images
+#'
+#' @return Feature that allows images to be easily expanded and viewed
+#'
 #' @section Use case:
 #' Use in a shiny application for image(s) that you'd like to carry a viewer feature on click.\cr\cr
 #' When the image is clicked, it is expanded and toolbars appear to allow the user to in zoom in or out, as well as download the image. \cr\cr
 #' if there are multiple images within the imageid holder, then they are automatically ordered at the bottom for ease of transition.
 #'
+#' @examples
+#' # simple expansion for images
+#' if(interactive()){
+#'   shinyApp(
+#'     ui = fluidPage(),
+#'     server = (function(input, output){})
+#'   )
+#' }
 #'
+#' @export
 
-shinyExpandImage <- function(imageid) {
+shinyExpandImage <- function(imageid = c()) {
   # declare folder name for htmltools
   ssp <- "r2resize"
   vs <- "0.0.0"

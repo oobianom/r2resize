@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<link id="vendorsbundle" rel="stylesheet" media="screen, print" href="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/css/vendors.bundle.css">
+        <link id="appbundle" rel="stylesheet" media="screen, print" href="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/css/app.bundle.css">
+<link rel="stylesheet" media="screen, print" href="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/css/miscellaneous/lightgallery/lightgallery.bundle.css" />
+</head>
+
+
+<body>
+
+<div id="js-lightgallery">
+                                                <a class="" href="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/1.jpg" data-sub-html="The free in pointed they their for the so fame.">
+                                                    <img class="img-responsive" src="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/thumb/1.jpg" alt="image">
+                                                </a>
+                                                <a class="" href="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/2.jpg" data-sub-html="Sinking self-interest along four magazine he each specially rewritten">
+                                                    <img class="img-responsive" src="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/thumb/2.jpg" alt="image">
+                                                </a>
+                                                <a class="" href="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/3.jpg" data-sub-html="More and of are the of wonder, make written it checks, intrigued its the in.">
+                                                    <img class="img-responsive" src="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/thumb/3.jpg" alt="image">
+                                                </a>
+                                                <a class="" href="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/4.jpg" data-sub-html="And review, them. Turns second was enough those however the I wanting, written, above release unmoved would by slowly have peacefully">
+                                                    <img class="img-responsive" src="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/img/demo/gallery/thumb/4.jpg" alt="And review, them. Turns second was enough those however the I wanting, written, above release unmoved would by slowly have peacefully">
+                                                </a>
+                                                
+                                            </div>
+<script src="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/js/vendors.bundle.js"></script>
+        <script src="https://www.gotbootstrap.com/themes/smartadmin/4.5.1/js/app.bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="imgviewer.js"></script>
+<script>
+            $(document).ready(function()
+            {
+                var $initScope = $('#js-lightgallery');
+                if ($initScope.length)
+                {
+                    $initScope.justifiedGallery(
+                    {
+                        border: -1,
+                        rowHeight: 150,
+                        margins: 8,
+                        waitThumbnailsLoad: true,
+                        randomize: false,
+                    }).on('jg.complete', function()
+                    {
+                        $initScope.lightGallery(
+                        {
+                            thumbnail: true,
+                            animateThumb: true,
+                            showThumbByDefault: true,
+                        });
+                    });
+                };
+                $initScope.on('onAfterOpen.lg', function(event)
+                {
+                    $('body').addClass("overflow-hidden");
+                });
+                $initScope.on('onCloseAfter.lg', function(event)
+                {
+                    $('body').removeClass("overflow-hidden");
+                });
+            });
+
+        </script>
+</body>

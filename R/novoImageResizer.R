@@ -5,7 +5,8 @@
 #' @export
 #' @section Use case:
 #' Use in a shiny application for image(s) that you'd like to carry a viewer feature on click.\cr\cr
-#'  - Very portable
+#' When the image is clicked, it is expanded and toolbars appear to allow the user to in zoom in or out, as well as download the image. \cr\cr
+#' if there are multiple images within the imageid holder, then they are automatically ordered at the bottom for ease of transition.
 #'
 #'
 

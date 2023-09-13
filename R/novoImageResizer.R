@@ -5,7 +5,7 @@
 #' @export
 #'
 
-addShinyImageResizer <- function(){
+addShinyImageResizer <- function(imageid){
   ssp <- "r2resize"
   vs <- "0.0.0"
   htmltools::tags$div(
@@ -16,9 +16,40 @@ addShinyImageResizer <- function(){
     script = "imgviewer.js",
     all_files = FALSE
     ),
-    htmltools::HTML(
-      "<b>hello</b>"
-    )
+    htmltools::tags$script(paste0('
+                 $(document).ready(function()
+            {
+                var $initScope = $("#',imageid,'");
+                if ($initScope.length)
+                {
+                    $initScope.justifiedGallery(
+                    {
+                        border: -1,
+                        rowHeight: 150,
+                        margins: 8,
+                        waitThumbnailsLoad: true,
+                        randomize: false,
+                    }).on("jg.complete", function()
+                    {
+                        $initScope.lightGallery(
+                        {
+                            thumbnail: true,
+                            animateThumb: true,
+                            showThumbByDefault: true,
+                        });
+                    });
+                };
+                $initScope.on("onAfterOpen.lg", function(event)
+                {
+                    $("body").addClass("overflow-hidden");
+                });
+                $initScope.on("onCloseAfter.lg", function(event)
+                {
+                    $("body").removeClass("overflow-hidden");
+                });
+            });
+
+                 '))
   )
 
 }

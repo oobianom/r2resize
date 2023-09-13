@@ -5,7 +5,7 @@
 #' @export
 #'
 
-addShinyImageResizer <- function(imageid){
+shinyExpandImage <- function(imageid){
   ssp <- "r2resize"
   vs <- "0.0.0"
   htmltools::tags$div(

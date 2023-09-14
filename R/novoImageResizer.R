@@ -55,7 +55,8 @@ shinyExpandImage <- function(imageid = c()) {
       all_files = FALSE
     ),
     lapply(imageid, function(i)
-      htmltools::tags$script(paste0("$(document).ready(function() { var $initScope", i$key, ' = $("#', i$value, '"); if ($initScope', i$key, ".length) { $initScope", i$key, '.justifiedGallery( { border: -1, rowHeight: 150, margins: 8, waitThumbnailsLoad: true, randomize: false, }).on("jg.complete", function() { $initScope', i$key, ".lightGallery( { thumbnail: true, animateThumb: true, showThumbByDefault: true, }); }); }; $initScope", i$key, '.on("onAfterOpen.lg", function(event) { $("body").addClass("overflow-hidden"); }); $initScope', i$key, '.on("onCloseAfter.lg", function(event) { $("body").removeClass("overflow-hidden"); }); });'))
+      htmltools::tags$script(
+        paste0("$(document).ready(function() { var $initScope", i$key, ' = $("#', i$value, '"); if ($initScope', i$key, ".length) { $initScope", i$key, '.justifiedGallery( { border: -1, rowHeight: 150, margins: 8, waitThumbnailsLoad: true, randomize: false, }).on("jg.complete", function() { $initScope', i$key, ".lightGallery( { thumbnail: true, animateThumb: true, showThumbByDefault: true, }); }); }; $initScope", i$key, '.on("onAfterOpen.lg", function(event) { $("body").addClass("overflow-hidden"); }); $initScope', i$key, '.on("onCloseAfter.lg", function(event) { $("body").removeClass("overflow-hidden"); }); });'))
     )
   )
 }

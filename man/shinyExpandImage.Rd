@@ -23,11 +23,28 @@ if there are multiple images within the imageid holder, then they are automatica
 }
 
 \examples{
-# simple expansion for images
-if(interactive()){
-  shinyApp(
-    ui = fluidPage(),
-    server = (function(input, output){})
+# simple expansion for 2 images in a shiny app
+if (interactive()) {
+  shiny::shinyApp(
+    ui = shiny::fluidPage(
+      shinyExpandImage(c("ccgal1")),
+      htmltools::tags$div(
+        id = "ccgal1",
+        htmltools::tags$a(
+          href = "https://r2resize.obi.obianom.com/m/1b.jpg",
+          htmltools::tags$img(
+          src = "https://r2resize.obi.obianom.com/m/1b.jpg",
+          alt="sample text for image 1")
+        ),
+        htmltools::tags$a(
+          href = "https://r2resize.obi.obianom.com/m/1.jpg",
+          htmltools::tags$img(
+          src = "https://r2resize.obi.obianom.com/m/1.jpg",
+          alt="sample text for image 2")
+        )
+      )
+    ),
+    server = (function(input, output) {})
   )
 }
 

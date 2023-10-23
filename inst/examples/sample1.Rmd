@@ -1,5 +1,5 @@
 ---
-title: "Taking the r2resize R package to a new level with multiple new functionalities"
+title: "The r2resize R package multiple new functionalities"
 output:
   html_document:
     theme: default
@@ -29,7 +29,8 @@ r2resize::add.resizer(
   images = TRUE,
   line.color = "orange",
   line.height = 5,
-  line.width = 200
+  line.width = 200,
+  default.image.width = "40%"
 )
 
 ```

@@ -41,15 +41,14 @@
 
 shinyExpandImage <- function(imageid = c()) {
   # declare folder name for htmltools
-  ssp <- "r2resize"
-  vs <- "0.0.0"
+  vs <- utils::packageVersion(.packageName)
   quickcode::add_key(imageid) # add keys to the vector of ids
 
   # embed in a div and render
   htmltools::tags$div(
     htmltools::htmlDependency(
-      ssp, vs,
-      src = file.path(find.package(package = ssp), "themes"),
+      .packageName, vs,
+      src = file.path(find.package(package = .packageName), "themes"),
       stylesheet = "imgviewer.css",
       script = "imgviewer.js",
       all_files = FALSE

@@ -173,7 +173,7 @@ add.resizer <- function(theme.color = NULL,
 }
 
 template.loc <- function(template = "themes") {
-  file.path(find.package(package = "r2resize"), template)
+  file.path(find.package(package = .packageName), template)
 }
 
 

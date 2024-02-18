@@ -2,7 +2,7 @@
 % Please edit documentation in R/addJquery.R
 \name{add.JQuery}
 \alias{add.JQuery}
-\title{Include stylesheets and scripts}
+\title{Attach jQuery to current document}
 \usage{
 add.JQuery(version = "3.5.1")
 }
@@ -10,11 +10,24 @@ add.JQuery(version = "3.5.1")
 \item{version}{jQuery version}
 }
 \value{
-A list of files to be inserted in the header of a page
+script tag with jQuery link
 }
 \description{
-Use the package scripts and stylesheets in a page
+The current function allows inclusion of jQuery in an HTML output
+}
+\note{
+This function holds significance across the entire package, particularly
+in scenarios where a specific HTML output lacks the inclusion of the jQuery script
+required by other functions within this package. It serves as a crucial mechanism for
+ensuring that functionalities within the package remain operable even when the necessary
+jQuery script is absent from the HTML page by default knitting. By providing a fallback option,
+this function enhances the robustness and reliability of the package, allowing it to gracefully handle
+situations where jQuery is not explicitly included. Its role is pivotal in maintaining
+consistent behavior and functionality across diverse HTML environments, thereby
+facilitating seamless integration and usage of the package across various web
+development contexts.
 }
 \examples{
 add.JQuery()
+add.JQuery("3.7.1") # add a specific version
 }

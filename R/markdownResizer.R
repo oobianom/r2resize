@@ -136,10 +136,10 @@ add.resizer <- function(theme.color = NULL,
 
   # add resize to image or/and tables
   if (!tables) {
-    con <- gsub("if\\(allowtable\\)", "if(!allowtable)", con)
+    con <- gsub("table", "rm12table", con)
   }
   if (!images) {
-    con <- gsub("if\\(allowimage\\)", "if(!allowimage)", con)
+    con <- gsub("img", "rm12img", con)
   }
 
   # sub other properties

@@ -32,6 +32,8 @@ install_github("oobianom/r2resize")
 # Load library and begin using functions
 library(r2resize)
 
+# JQuery is required for most of the functions to run effectively
+add.JQuery() #optional: only add if the page does not automatically include JQuery
 ```
 
 ### Screenshots:
@@ -42,6 +44,8 @@ library(r2resize)
 
 Code:
 ```
+
+
 r2resize::add.resizer(
   theme.color = "black",
   position = "top",

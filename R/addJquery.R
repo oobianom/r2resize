@@ -8,8 +8,8 @@
 #' in scenarios where a specific HTML output lacks the inclusion of the jQuery script
 #' required by other functions within this package. It serves as a crucial mechanism for
 #' ensuring that functionalities within the package remain operable even when the necessary
-#' jQuery script is absent from the HTML page. By providing a fallback option, this function
-#' enhances the robustness and reliability of the package, allowing it to gracefully handle
+#' jQuery script is absent from the HTML page by default knitting. By providing a fallback option,
+#' this function enhances the robustness and reliability of the package, allowing it to gracefully handle
 #' situations where jQuery is not explicitly included. Its role is pivotal in maintaining
 #' consistent behavior and functionality across diverse HTML environments, thereby
 #' facilitating seamless integration and usage of the package across various web

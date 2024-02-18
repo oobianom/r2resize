@@ -1,3 +1,8 @@
+# r2resize 2.0
+
+ - [x] Added add.JQuery() for manual inclusion of jQuery script within your HTML file in case knitr does not automatically include it. By doing so, this ensures that scripts work as expected. Check README for more information.
+ - [x] Fix bugs with resizer for adding or removing resizers from tables or images
+ 
 # r2resize 1.9
 
  - [x] Elegant image expand viewer, shinyExpandImage()

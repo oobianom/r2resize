@@ -151,3 +151,4 @@ _NOTE: Please note that r2resize::add.resizer() should only be used in Rmarkdown
 
 
 
+###### By Obinna Obi Obianom, Creator of www.rpkg.net and www.shinyappstore.com

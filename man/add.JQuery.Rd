@@ -29,5 +29,5 @@ development contexts.
 }
 \examples{
 add.JQuery()
-add.JQuery("3.7.1") # add a specific version
+add.JQuery("3.7.0") # add a specific version
 }

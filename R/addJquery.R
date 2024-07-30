@@ -18,7 +18,7 @@
 #' @return script tag with jQuery link
 #' @examples
 #' add.JQuery()
-#' add.JQuery("3.7.1") # add a specific version
+#' add.JQuery("3.7.0") # add a specific version
 #' @export
 #'
 add.JQuery <- function(version = "3.5.1"){

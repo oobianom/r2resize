@@ -1,4 +1,4 @@
-# r2resize: In-text resizing of containers, images and tables in Rmarkdown documents and Shiny apps <img src="https://r2resize.obi.obianom.com/r2resize_logo.png" width="200" align="right"/>
+# r2resize 1.9.1: In-text resizing of containers, images and tables in Rmarkdown documents and R based apps <img src="https://r2resize.obi.obianom.com/r2resize_logo.png" width="200" align="right"/>
 
 ### Official site: https://r2resize.obi.obianom.com
 

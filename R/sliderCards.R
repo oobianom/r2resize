@@ -65,7 +65,7 @@ flexCard <- function(...,
     script <- gsub("resizepanelwhich", active.panel, script)
   }
   # combine stylesheets and scripts
-  uniquenum <- nextGenShinyApps::rand.num(1)
+  uniquenum <- quickcode::number(1)
   cssjs <- paste0(css, script)
   cssjs <- gsub("87n767m08o", uniquenum, cssjs)
 
@@ -217,7 +217,7 @@ elastiCard <- function(...,
     script <- gsub("resizepanelwhich", active.panel, script)
   }
   # combine stylesheets and scripts
-  uniquenum <- nextGenShinyApps::rand.num(1)
+  uniquenum <-  quickcode::number(1)
   cssjs <- paste0(css, script)
   cssjs <- gsub("87n767m08o", uniquenum, cssjs)
 

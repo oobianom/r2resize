@@ -4,9 +4,9 @@
 \name{r2resize-package}
 \alias{r2resize}
 \alias{r2resize-package}
-\title{r2resize: In-Text Resizer for Images, Tables and Fancy Resizable Containers in 'Shiny', 'Rmarkdown' and 'Quarto' Documents}
+\title{r2resize: In-Text Resize for Images, Tables and Fancy Resize Containers in 'shiny', 'rmarkdown' and 'quarto' Documents}
 \description{
-Automatic resizing toolbar for containers, images and tables. Most suitable to include resize functionality in 'Markdown', 'Rmarkdown' and 'Quarto' documents.
+Automatic resizing toolbar for containers, images and tables. Various resizer or expandable container functionalities are also included. Most suitable to include in 'shiny', 'markdown' and 'quarto' documents.
 }
 \seealso{
 Useful links:

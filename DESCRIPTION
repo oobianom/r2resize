@@ -1,11 +1,11 @@
 Package: r2resize
 Type: Package
-Title: In-Text Resizer for Images, Tables and Fancy Resizable Containers in 'shiny', 'rmarkdown' and 'quarto' Documents
-Version: 1.9
+Title: In-Text Resize for Images, Tables and Fancy Resize Containers in 'shiny', 'rmarkdown' and 'quarto' Documents
+Version: 1.9.1
 Authors@R: c(
     person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
-Description: Automatic resizing toolbar for containers, images and tables. Various resizable or expandable container functionalities are also included. Most suitable to include in 'shiny', 'markdown' and 'quarto' documents.
+Description: Automatic resizing toolbar for containers, images and tables. Various resizer or expandable container functionalities are also included. Most suitable to include in 'shiny', 'markdown' and 'quarto' documents.
 License: MIT + file LICENSE
 URL: https://r2resize.obi.obianom.com
 BugReports: https://github.com/oobianom/r2resize/issues
@@ -16,8 +16,7 @@ Imports:
     shiny,
     htmltools,
     quickcode,
-    DT,
-    nextGenShinyApps
+    DT
 Suggests: 
     rmarkdown,
     knitr,

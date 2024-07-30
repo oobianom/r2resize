@@ -1,3 +1,7 @@
+# r2resize 1.9.1
+
+ - Dependency fix
+
 # r2resize 1.9
 
  - [x] Added add.JQuery() for manual inclusion of jQuery script within your HTML file in case knitr does not automatically include it. By doing so, this ensures that scripts work as expected. Check README for more information.

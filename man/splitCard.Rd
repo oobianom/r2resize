@@ -45,7 +45,7 @@ splitCard(
 
 \item{min.height}{minimum height of the panel}
 
-\item{left.width}{width of the left panel e.g. 100% or 500px}
+\item{left.width}{width of the left panel e.g. 100 percent or 500 px}
 }
 \value{
 Resizeable split screen container

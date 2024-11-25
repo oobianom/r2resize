@@ -22,7 +22,7 @@ The r2resize package is available on CRAN and can be installed as shown below
 
 Attach library 
 
-```{r eval=TRUE,echo=TRUE}
+  ```{r eval=FALSE,echo=TRUE}
 library(r2resize)
 ```
 
@@ -40,7 +40,7 @@ Both can be used in any R based documents or shiny applications. Check documenta
 
 __Here is how to use it to create the sectional split screen contents__
 
-```{r eval=TRUE,echo=TRUE}
+```{r eval=FALSE,echo=TRUE}
 #basic attributes
 r2resize::splitCard(
   "Sample text",

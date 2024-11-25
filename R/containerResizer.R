@@ -14,7 +14,7 @@
 #' @param text.left.color color of left panel text
 #' @param text.right.color color of right panel text
 #' @param min.height minimum height of the panel
-#' @param left.width width of the left panel e.g. 100% or 500px
+#' @param left.width width of the left panel e.g. 100 percent or 500 px
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -

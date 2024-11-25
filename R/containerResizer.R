@@ -13,6 +13,8 @@
 #' @param border.color border color of the container e.g. red or #f5f5f5
 #' @param text.left.color color of left panel text
 #' @param text.right.color color of right panel text
+#' @param min.height minimum height of the panel
+#' @param left.width width of the left panel e.g. 100% or 500px
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -
@@ -49,6 +51,21 @@
 #' )
 #'
 #'
+#' #specify width of the left container
+#' #specify height of the entire panel
+#' r2resize::splitCard(
+#'   "pkg card.pro",
+#'   "pkg r2social",
+#'   bg.right.color = "white",
+#'   bg.left.color = "lightgray",
+#'   border.color = "black",
+#'   text.left.color = "black",
+#'   text.right.color = "black",
+#'   min.height = '400px',
+#'   left.width = "80%"
+#' )
+#'
+#'
 #' # specify split card on the horizontal position
 #' r2resize::splitCard(
 #'   "Sample sciRmdTheme 1",
@@ -73,11 +90,15 @@ splitCard <- function(left,
                       border.color = NULL,
                       position = c("vertical", "horizontal"),
                       text.left.color = "black",
-                      text.right.color = "black") {
+                      text.right.color = "black",
+                      min.height = NULL,
+                      left.width = NULL) {
   # fetch selected position
   position <- match.arg(position)
 
   # preset
+  h.m.set <- ifelse(is.null(min.height),'200px',min.height)
+  l.w.set <- ifelse(is.null(left.width),'50%',left.width)
   if(is.null(border.color)) border.color <- "#ffffff"
   uniquenum <-
     substring(round(as.numeric(Sys.time()) * sample(7:78, 1)), 5)
@@ -110,6 +131,8 @@ splitCard <- function(left,
   if (file.exists(theme.02.css)) {
     css <- c(css, "<style>", readLines(theme.02.css), "</style>")
     css <- gsub("sib53lver", border.color, css)
+    css <- gsub("mhw20x03", h.m.set, css)
+    css <- gsub("lws50x73", l.w.set, css)
     css <- paste(css, collapse = "")
   }
 

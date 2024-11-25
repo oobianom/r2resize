@@ -1,0 +1,87 @@
+---
+title: "Create markdown & shiny content holders with resizable sections using r2resize"
+author: "Obinna N. Obianom"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Create markdown & shiny content holders with resizable sections using r2resize}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+## Resizable content holders can be quite useful in Markdown and shiny outputs in R
+
+Resizable HTML content holders such as the ones created by the r2resize R package offer a highly versatile and user-friendly way to organize and display information on a web page. By allowing users to dynamically resize specific sections of the content, these dynamic layouts empower visitors to customize the view to suit their preferences and needs. This flexibility is particularly valuable when presenting complex data, comparing multiple information sources, or accommodating users with varying screen sizes or browsing habits. The resizable bars or handles enable users to quickly expand a section they want to focus on, while the other sections automatically adjust in size to maintain a cohesive layout. This enables an optimal viewing experience without requiring the user to navigate away or reload the page. Such content holders unlock new levels of interactivity and user control, enhancing engagement and making it easier for users to find and digest the most relevant information. The ability to resize sections on the fly also promotes a more efficient use of screen real estate, particularly on smaller mobile devices. Overall, resizable HTML content holders represent a powerful tool for web designers and developers to create dynamic, responsive, and user-centric experiences.
+
+### Installation and Library Attachment
+
+The r2resize package is available on CRAN and can be installed as shown below
+
+`install.packages(r2resize)`
+
+Attach library 
+
+```{r eval=TRUE,echo=TRUE}
+library(r2resize)
+```
+
+### Example of how to use the resizable content holder
+
+There are two functions to support creating resizable content holder known as split screen containers. These are - 
+
+
+`r2resize::splitCard()` or `r2resize::splitCard2()`
+
+
+Both can be used in any R based documents or shiny applications. Check documentaion for the arguments of each function.
+
+![](https://r2resize.obi.obianom.com/m/r2resize_splitcard_1.gif)
+
+__Here is how to use it to create the sectional split screen contents__
+
+```{r eval=TRUE,echo=TRUE}
+#basic attributes
+r2resize::splitCard(
+  "Sample text",
+  "Sample text 2"
+)
+
+#specify background color for each side
+r2resize::splitCard(
+  "Sample r2symbols 1",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  position = "vertical"
+)
+
+#add the split card attribute on vertical
+r2resize::splitCard(
+  "Sample shinyStorePlus",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  border.color = "black",
+  text.left.color = "black",
+  text.right.color = "black",
+  position = "vertical"
+)
+
+
+# specify split card on the horizontal position
+r2resize::splitCard(
+  "Sample sciRmdTheme 1",
+  "Sample nextGen 1",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  border.color = "gray",
+  text.left.color = "black",
+  text.right.color = "black",
+  position = "horizontal"
+)
+```
+
+
+
+

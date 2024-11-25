@@ -15,7 +15,9 @@ splitCard(
   border.color = NULL,
   position = c("vertical", "horizontal"),
   text.left.color = "black",
-  text.right.color = "black"
+  text.right.color = "black",
+  min.height = NULL,
+  left.width = NULL
 )
 }
 \arguments{
@@ -40,6 +42,10 @@ splitCard(
 \item{text.left.color}{color of left panel text}
 
 \item{text.right.color}{color of right panel text}
+
+\item{min.height}{minimum height of the panel}
+
+\item{left.width}{width of the left panel e.g. 100% or 500px}
 }
 \value{
 Resizeable split screen container
@@ -79,6 +85,21 @@ r2resize::splitCard(
   text.left.color = "black",
   text.right.color = "black",
   position = "vertical"
+)
+
+
+#specify width of the left container
+#specify height of the entire panel
+r2resize::splitCard(
+  "pkg card.pro",
+  "pkg r2social",
+  bg.right.color = "white",
+  bg.left.color = "lightgray",
+  border.color = "black",
+  text.left.color = "black",
+  text.right.color = "black",
+  min.height = '400px',
+  left.width = "80\%"
 )
 
 

@@ -116,6 +116,8 @@
 #'     default.image.width = "75%"
 #'   )
 #' }
+#'
+#' @export
 
 add.resizer <- function(theme.color = NULL,
                         position = c("top", "bottom"),

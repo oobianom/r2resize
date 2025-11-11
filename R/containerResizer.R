@@ -85,6 +85,7 @@
 #'   )
 #' }
 #' @export
+
 splitCard <- function(left,
                       right,
                       splitter.color = NULL,
@@ -263,6 +264,7 @@ charNum1to100 <- as.character(unique(c(80,1:100)))
 #'   )
 #' }
 #' @export
+
 splitCard2 <- function(left,
                        right,
                        bg.left.color = NULL,
@@ -469,6 +471,7 @@ sizeableCard <- function(...,
 
 
 
+
 #' Resizable, Moveable, and Expandable Window Card
 #'
 #' Creates an easily expandable, resizable, and moveable window-like container for content,
@@ -604,7 +607,6 @@ windowCard <- function(...,
   )
 }
 
-
 #' Create an Emphasis Card with a Dynamic Border
 #'
 #' Creates a container that visually emphasizes its content with a subtle, dynamic border effect.
@@ -658,6 +660,7 @@ windowCard <- function(...,
 #'   )
 #' }
 #' @export
+
 empahsisCard <- function(..., bg.color = NULL) {
   # preset
   bg.color <- ifelse(is.null(bg.color), "#f5f5f5", bg.color)
@@ -680,7 +683,8 @@ empahsisCard <- function(..., bg.color = NULL) {
 }
 
 
-#' @rdname empahsisCard
+#' @inherit empahsisCard
 #' @export
 #'
+
 emphasisCard <- empahsisCard

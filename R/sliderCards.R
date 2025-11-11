@@ -97,9 +97,9 @@
 flexCard <- function(...,
                      height.px = NULL,
                      width.px = NULL,
-                      border.color = "white",
-                      border.width.px = 1,
-                      active.panel = 1) {
+                     border.color = "white",
+                     border.width.px = 1,
+                     active.panel = 1) {
   # fetch card list
   cardlist <- list(...)
 
@@ -173,8 +173,8 @@ flexCard <- function(...,
         )
       )
     }),
-  style = ifelse(is.null(height.px),"",paste0("height:", height.px, "px;")),
-  style = ifelse(is.null(width.px),"",paste0("width:", width.px, "px;"))
+    style = ifelse(is.null(height.px),"",paste0("height:", height.px, "px;")),
+    style = ifelse(is.null(width.px),"",paste0("width:", width.px, "px;"))
   ),
   cssjs)
 }
@@ -297,11 +297,11 @@ flexCard <- function(...,
 #' }
 #' @export
 elastiCard <- function(...,
-                     height.px = NULL,
-                     width.px = NULL,
-                     border.color = "white",
-                     border.width.px = 1,
-                     active.panel = 1) {
+                       height.px = NULL,
+                       width.px = NULL,
+                       border.color = "white",
+                       border.width.px = 1,
+                       active.panel = 1) {
   # fetch card list
   cardlist <- list(...)
 
@@ -347,11 +347,11 @@ elastiCard <- function(...,
       shiny::tags$article(
         style = ifelse(is.null(self$bg), "", paste0(bgurl, self$bg, ");")),
         shiny::div(
-        class="r2resize-flexCard-info",
-        style=paste0("color:",ifelse(is.null(self$text.color),"#FFF",self$text.color)),
-        shiny::tags$h2(self$title),
-        shiny::tags$h5(self$subtitle),
-        shiny::tags$p(self$desc)
+          class="r2resize-flexCard-info",
+          style=paste0("color:",ifelse(is.null(self$text.color),"#FFF",self$text.color)),
+          shiny::tags$h2(self$title),
+          shiny::tags$h5(self$subtitle),
+          shiny::tags$p(self$desc)
         )
       )
     }),

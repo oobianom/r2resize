@@ -45,7 +45,7 @@
 #' If there are multiple images within the imageid holder, then they are automatically ordered at the bottom for ease of transition.
 #'
 #' @examples
-#' \\dontrun{
+#' dontrun{
 #' if (interactive()) {
 #'   library(shiny)
 #'   library(htmltools)
@@ -126,7 +126,7 @@
 #' }
 #' }
 #' @family Image and Container Resizing
-#' @seealso \\code{\\link{flexCard}}, \\code{\\link{elastiCard}}
+#' @seealso \code{\link{flexCard}}, \code{\link{elastiCard}}
 #' @export
 #'
 shinyExpandImage <- function(imageid = c()) {

@@ -14,7 +14,7 @@
 #' @param text.left.color The text color for the content within the left panel.
 #' @param text.right.color The text color for the content within the right panel.
 #' @param min.height The minimum height of the entire split container (e.g., "200px", "50vh").
-#' @param left.width The initial width of the left panel (when `position = "vertical"`) or height of the top panel (when `position = "horizontal"`). Can be a percentage (e.g., "50%") or a fixed pixel value (e.g., "500px").
+#' @param left.width The initial width of the left panel (when `position = "vertical"`) or height of the top panel (when `position = "horizontal"`). Can be a percentage (e.g., "50\%") or a fixed pixel value (e.g., "500px").
 #'
 #' @details
 #' The `splitCard` function provides a dynamic way to present two distinct sections of content within a single, resizable container.
@@ -208,7 +208,7 @@ charNum1to100 <- as.character(unique(c(80,1:100)))
 #' @param border.color The border color of the entire container. Can be a named R color or a hexadecimal color code.
 #' @param text.left.color The text color for the content within the left panel.
 #' @param text.right.color The text color for the content within the right panel.
-#' @param slider.position The fixed position of the slider as a percentage from 1 to 100 (e.g., "40" for 40% left panel width). Defaults to "80".
+#' @param slider.position The fixed position of the slider as a percentage from 1 to 100 (e.g., "40" for 40\% left panel width). Defaults to "80".
 #'
 #' @details
 #' Unlike `splitCard`, `splitCard2` provides a static split where the division between the left and right
@@ -230,7 +230,7 @@ charNum1to100 <- as.character(unique(c(80,1:100)))
 #' @examples
 #' if (interactive()) {
 #'   library(shiny)
-#'   # Basic split card 2 with a 40% left panel
+#'   # Basic split card 2 with a 40\% left panel
 #'   shinyApp(
 #'     ui = fluidPage(
 #'       h2("Basic Fixed Split Card"),
@@ -479,7 +479,7 @@ sizeableCard <- function(...,
 #'
 #' @param ... The content to be placed inside the window card. Can be any `shiny::tagList` or HTML content.
 #' @param title The title displayed in the header of the window card.
-#' @param width The initial width of the window card (e.g., "50%", "600px").
+#' @param width The initial width of the window card (e.g., "50\%", "600px").
 #' @param bg.color The background color of the content area within the window card. Can be a named R color or a hexadecimal color code.
 #' @param border.color The border color of the entire window card. Can be a named R color or a hexadecimal color code.
 #' @param header.text.color The text color of the title in the header.

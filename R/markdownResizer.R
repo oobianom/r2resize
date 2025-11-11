@@ -17,7 +17,7 @@
 #' @param line.width A numeric value specifying the width of the resizer track.
 #' @param line.height A numeric value specifying the height of the resizer track.
 #' @param dim.units A character string specifying the unit for the height and width of the track or thumb (e.g., "px").
-#' @param default.image.width A character string specifying the default width of all images on the page (e.g., "100%", "500px").
+#' @param default.image.width A character string specifying the default width of all images on the page (e.g., "100\%", "500px").
 #'
 #' @details
 #' The `add.resizer` function injects necessary CSS and JavaScript into your HTML document

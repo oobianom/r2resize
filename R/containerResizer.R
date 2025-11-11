@@ -1,85 +1,90 @@
 #' Resizable split screen container
 #'
-#' Highly customizable and resizable split screen container
+#' Creates a highly customizable and resizable split screen container for arranging UI elements side-by-side or top-and-bottom.
 #'
-#' @param left content on the left or top
-#' @param right content on the right or bottom
-#' @param splitter.color splitter color e.g red, black or #333333
-#' @param bg.left.color left panel color e.g red, black or #333333
-#' @param bg.right.color right panel color e.g red, black or #333333
-#' @param left.bg.url left panel background image e.g image1.png or https://..image1.png
-#' @param right.bg.url right panel background image e.g image1.png or https://..image1.png
-#' @param position position of divider or splitter
-#' @param border.color border color of the container e.g. red or #f5f5f5
-#' @param text.left.color color of left panel text
-#' @param text.right.color color of right panel text
-#' @param min.height minimum height of the panel
-#' @param left.width width of the left panel e.g. 100 percent or 500 px
+#' @param left The content to be displayed in the left (or top, if `position = "horizontal"`) panel. Can be any `shiny::tagList` or HTML content.
+#' @param right The content to be displayed in the right (or bottom, if `position = "horizontal"`) panel. Can be any `shiny::tagList` or HTML content.
+#' @param splitter.color The color of the draggable splitter line. Can be a named R color (e.g., "red", "black") or a hexadecimal color code (e.g., "#333333").
+#' @param bg.left.color The background color of the left panel. Can be a named R color or a hexadecimal color code.
+#' @param bg.right.color The background color of the right panel. Can be a named R color or a hexadecimal color code.
+#' @param left.bg.url An optional URL for a background image for the left panel (e.g., "image1.png" or "https://example.com/image1.png").
+#' @param right.bg.url An optional URL for a background image for the right panel (e.g., "image1.png" or "https://example.com/image1.png").
+#' @param position The orientation of the splitter. Can be "vertical" (left/right split) or "horizontal" (top/bottom split). Defaults to "vertical".
+#' @param border.color The border color of the entire container. Can be a named R color or a hexadecimal color code.
+#' @param text.left.color The text color for the content within the left panel.
+#' @param text.right.color The text color for the content within the right panel.
+#' @param min.height The minimum height of the entire split container (e.g., "200px", "50vh").
+#' @param left.width The initial width of the left panel (when `position = "vertical"`) or height of the top panel (when `position = "horizontal"`). Can be a percentage (e.g., "50%") or a fixed pixel value (e.g., "500px").
+#'
+#' @details
+#' The `splitCard` function provides a dynamic way to present two distinct sections of content within a single, resizable container.
+#' Users can drag the splitter to adjust the visible area of each panel, making it ideal for comparisons,
+#' dashboards, or any scenario requiring flexible content layout. The `position` argument allows
+#' switching between a left/right split and a top/bottom split, offering versatility in design.
+#' It's particularly useful within Shiny applications or R Markdown documents where interactive layouts are desired.
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -
 #' \url{https://rpkg.net/package/r2resize}.
 #'
-#' @return Resizeable split screen container
+#' @return A `shiny::div` element representing the resizable split screen container, ready for inclusion in a Shiny UI or R Markdown output.
+#'
+#' @family Container Functions
+#' @seealso \code{\link{splitCard2}}, \code{\link{sizeableCard}}, \code{\link{windowCard}}
+#' @note This function requires the `shiny` package for rendering and interactive functionality.
 #'
 #' @examples
-#' #basic attributes
-#' r2resize::splitCard(
-#'   "Sample text",
-#'   "Sample text 2"
-#' )
+#' if (interactive()) {
+#'   library(shiny)
+#'   # Basic vertical split card with default settings
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Basic Split Card"),
+#'       splitCard(
+#'         shiny::div(h3("Left Panel"), p("Content for the left side.")),
+#'         shiny::div(h3("Right Panel"), p("Content for the right side."))
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
 #'
-#' #specify background color for each side
-#' r2resize::splitCard(
-#'   "Sample r2symbols 1",
-#'   "Sample nextGen 1",
-#'   bg.right.color = "white",
-#'   bg.left.color = "lightgray",
-#'   position = "vertical"
-#' )
+#'   # Horizontal split card with custom colors and minimum height
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Horizontal Split Card with Custom Styling"),
+#'       splitCard(
+#'         shiny::div(h3("Top Panel (Blue)"), p("Content for the top section.")),
+#'         shiny::div(h3("Bottom Panel (Green)"), p("Content for the bottom section.")),
+#'         bg.left.color = "#E0F2F7",
+#'         bg.right.color = "#E8F5E9",
+#'         splitter.color = "#7CB342",
+#'         position = "horizontal",
+#'         min.height = "300px",
+#'         border.color = "#4CAF50"
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
 #'
-#' #add the split card attribute on vertical
-#' r2resize::splitCard(
-#'   "Sample shinyStorePlus",
-#'   "Sample nextGen 1",
-#'   bg.right.color = "white",
-#'   bg.left.color = "lightgray",
-#'   border.color = "black",
-#'   text.left.color = "black",
-#'   text.right.color = "black",
-#'   position = "vertical"
-#' )
-#'
-#'
-#' #specify width of the left container
-#' #specify height of the entire panel
-#' r2resize::splitCard(
-#'   "pkg card.pro",
-#'   "pkg r2social",
-#'   bg.right.color = "white",
-#'   bg.left.color = "lightgray",
-#'   border.color = "black",
-#'   text.left.color = "black",
-#'   text.right.color = "black",
-#'   min.height = '400px',
-#'   left.width = "80%"
-#' )
-#'
-#'
-#' # specify split card on the horizontal position
-#' r2resize::splitCard(
-#'   "Sample sciRmdTheme 1",
-#'   "Sample nextGen 1",
-#'   bg.right.color = "white",
-#'   bg.left.color = "lightgray",
-#'   border.color = "gray",
-#'   text.left.color = "black",
-#'   text.right.color = "black",
-#'   position = "horizontal"
-#' )
-#'
+#'   # Vertical split card with background images and specific widths
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Split Card with Background Images"),
+#'       splitCard(
+#'         shiny::div(h3("Image Background Left"), p("Some text over an image.")),
+#'         shiny::div(h3("Image Background Right"), p("More text over another image.")),
+#'         left.bg.url = "https://r2resize.obi.obianom.com/m/image1.jpg",
+#'         right.bg.url = "https://r2resize.obi.obianom.com/m/image2.jpg",
+#'         text.left.color = "white",
+#'         text.right.color = "black",
+#'         left.width = "30%",
+#'         min.height = "450px"
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
+#' }
 #' @export
-
 splitCard <- function(left,
                       right,
                       splitter.color = NULL,
@@ -190,68 +195,74 @@ splitCard <- function(left,
 charNum1to100 <- as.character(unique(c(80,1:100)))
 
 
-#' Re sizable split screen container version 2
+#' Resizable Split Screen Container Version 2 (Fixed Slider)
 #'
-#' Highly customizable and re sizable split screen container version 2
+#' Creates a highly customizable and resizable split screen container with a fixed, non-draggable slider position.
+#' This version is ideal for presenting two content areas with a pre-defined division.
 #'
-#' @param left content on the left or top
-#' @param right content on the right or bottom
-#' @param bg.left.color left panel color e.g red, black or #333333
-#' @param bg.right.color right panel color e.g red, black or #333333
-#' @param border.color border color of the container e.g. red or #f5f5f5
-#' @param text.left.color color of left panel text
-#' @param text.right.color color of right panel text
-#' @param slider.position position of the slider in percent
+#' @param left The content to be displayed in the left panel. Can be any `shiny::tagList` or HTML content.
+#' @param right The content to be displayed in the right panel. Can be any `shiny::tagList` or HTML content.
+#' @param bg.left.color The background color of the left panel. Can be a named R color (e.g., "red", "black") or a hexadecimal color code (e.g., "#333333").
+#' @param bg.right.color The background color of the right panel. Can be a named R color or a hexadecimal color code.
+#' @param border.color The border color of the entire container. Can be a named R color or a hexadecimal color code.
+#' @param text.left.color The text color for the content within the left panel.
+#' @param text.right.color The text color for the content within the right panel.
+#' @param slider.position The fixed position of the slider as a percentage from 1 to 100 (e.g., "40" for 40% left panel width). Defaults to "80".
+#'
+#' @details
+#' Unlike `splitCard`, `splitCard2` provides a static split where the division between the left and right
+#' content areas is set by the `slider.position` and cannot be interactively adjusted by the user.
+#' This makes it suitable for layouts where the proportional display of content is fixed.
+#' Common use cases include presenting questions and answers, code alongside output, or two related pieces of
+#' information with a predetermined visual hierarchy.
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -
 #' \url{https://rpkg.net/package/r2resize}.
 #'
-#' @return Realizable split screen container style 2
+#' @return A `shiny::div` element representing the split screen container style 2, ready for inclusion in a Shiny UI or R Markdown output.
+#'
+#' @family Container Functions
+#' @seealso \code{\link{splitCard}}, \code{\link{sizeableCard}}, \code{\link{windowCard}}
+#' @note This function requires the `shiny` package for rendering.
 #'
 #' @examples
-#' #Use the default split card 2 function
-#' #add a question on one side, and answer on the other
-#' r2resize::splitCard2(
-#'   shiny::tags$h1("Question 1"),
-#'   shiny::tags$h1("Answer 1"),
-#'   slider.position = "40"
-#' )
+#' if (interactive()) {
+#'   library(shiny)
+#'   # Basic split card 2 with a 40% left panel
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Basic Fixed Split Card"),
+#'       splitCard2(
+#'         shiny::div(h1("Question:"), p("What is the capital of France?")),
+#'         shiny::div(h1("Answer:"), p("Paris.")),
+#'         slider.position = "40",
+#'         bg.left.color = "#FFFDE7",
+#'         bg.right.color = "#E8F5E9"
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
 #'
-#' #specify the backgroun color for the sides
-#' r2resize::splitCard2(
-#'   "Sample r2symbols 1",
-#'   "Sample nextGen 1",
-#'   bg.right.color = "white",
-#'   bg.left.color = "lightgray"
-#' )
-#'
-#'
-#' #alter the border color
-#' #specify the text color for each side
-#' r2resize::splitCard2(
-#'   "Sample shinyStorePlus",
-#'   "Sample nextGen 1",
-#'   bg.right.color = "white",
-#'   bg.left.color = "lightgray",
-#'   border.color = "black",
-#'   text.left.color = "black",
-#'   text.right.color = "black"
-#' )
-#'
-#' ##change the text color from one side to the other
-#' r2resize::splitCard2(
-#'   "Sample sciRmdTheme 1",
-#'   "Sample nextGen 1",
-#'   bg.right.color = "white",
-#'   bg.left.color = "lightgray",
-#'   border.color = "gray",
-#'   text.left.color = "red",
-#'   text.right.color = "blue"
-#' )
-#'
+#'   # Split card 2 with custom text and border colors
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Styled Fixed Split Card"),
+#'       splitCard2(
+#'         shiny::div(h4("Left Side"), p("Detailed information here.")),
+#'         shiny::div(h4("Right Side"), p("Corresponding summary or data.")),
+#'         bg.right.color = "white",
+#'         bg.left.color = "#F0F4C3",
+#'         border.color = "#FFC107",
+#'         text.left.color = "darkgreen",
+#'         text.right.color = "darkblue",
+#'         slider.position = "60"
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
+#' }
 #' @export
-
 splitCard2 <- function(left,
                        right,
                        bg.left.color = NULL,
@@ -337,43 +348,63 @@ splitCard2 <- function(left,
 
 
 
-#' Resizable container content holder
+#' Resizable Container Content Holder with Size Controls
 #'
-#' Highly customizable and resizable  container content holder
+#' Creates a highly customizable container that holds content and provides a mini toolbar on the right
+#' for adjusting the content's display size (small, medium, large).
 #'
-#' @param ... content of container
-#' @param bg.color content background color e.g red, black or #333333
-#' @param border.color border color of container e.g. red or #f5f5f5
+#' @param ... The content to be placed inside the sizeable card. Can be any `shiny::tagList` or HTML content.
+#' @param bg.color The background color of the content area. Can be a named R color (e.g., "red", "black") or a hexadecimal color code (e.g., "#333333").
+#' @param border.color The border color of the container. Can be a named R color or a hexadecimal color code.
+#'
+#' @details
+#' The `sizeableCard` function is designed to present content in a flexible box that users can
+#' scale using intuitive "A" (small, medium, large) buttons integrated into a toolbar. This is useful
+#' for displaying text, images, or other UI elements where the user might want to adjust their
+#' size without altering the entire page layout. It provides a simple, self-contained resizing mechanism.
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -
 #' \url{https://rpkg.net/package/r2resize}.
 #'
-#' @return Container with a resizing toolbar feature on the right
+#' @return A `shiny::div` element representing the sizeable container with a resizing toolbar, ready for inclusion in a Shiny UI or R Markdown output.
+#'
+#' @family Container Functions
+#' @seealso \code{\link{splitCard}}, \code{\link{splitCard2}}, \code{\link{windowCard}}
+#' @note This function requires the `shiny` package for rendering.
 #'
 #' @examples
-#' #simple sizeable card attribute
-#' r2resize::sizeableCard(
-#'   "sample rpkg.net text"
-#' )
+#' if (interactive()) {
+#'   library(shiny)
+#'   # Simple sizeable card with default settings
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Basic Sizeable Card"),
+#'       sizeableCard(
+#'         shiny::p("This is some sample text within a sizeable card."),
+#'         shiny::img(src = "https://r2resize.obi.obianom.com/m/image1.jpg", height = "100px"),
+#'         shiny::p("Use the controls on the right to change its size.")
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
 #'
-#'
-#' #specify the background color for the card
-#' r2resize::sizeableCard(
-#'   "sample r2resume text",
-#'   bg.color = "lightgray"
-#' )
-#'
-#'
-#' #specify the border color additionally
-#' r2resize::sizeableCard(
-#'   "sample r2resume text",
-#'   bg.color = "lightgray",
-#'   border.color="black"
-#' )
-#'
+#'   # Sizeable card with custom background and border colors
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Styled Sizeable Card"),
+#'       sizeableCard(
+#'         shiny::h4("My Report Summary"),
+#'         shiny::p("This card contains important information about a project."),
+#'         shiny::em("Adjust the size as needed."),
+#'         bg.color = "#F0F4C3",
+#'         border.color = "#C0CA33"
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
+#' }
 #' @export
-
 sizeableCard <- function(...,
                          bg.color = NULL,
                          border.color = NULL) {
@@ -438,46 +469,81 @@ sizeableCard <- function(...,
 
 
 
-#' Resizable Moveable Expandable Window Card
+#' Resizable, Moveable, and Expandable Window Card
 #'
-#' Easily expandable and resizable content container holder
+#' Creates an easily expandable, resizable, and moveable window-like container for content,
+#' mimicking a desktop window within your Shiny application or HTML output.
 #'
-#' @param ... content of the container
-#' @param title title of the header
-#' @param width width of the container
-#' @param bg.color background color of the content area
-#' @param border.color color of the container border
-#' @param header.text.color color of the header text
-#' @param body.text.color color of the content text
+#' @param ... The content to be placed inside the window card. Can be any `shiny::tagList` or HTML content.
+#' @param title The title displayed in the header of the window card.
+#' @param width The initial width of the window card (e.g., "50%", "600px").
+#' @param bg.color The background color of the content area within the window card. Can be a named R color or a hexadecimal color code.
+#' @param border.color The border color of the entire window card. Can be a named R color or a hexadecimal color code.
+#' @param header.text.color The text color of the title in the header.
+#' @param body.text.color The text color of the content within the card's body.
+#'
+#' @details
+#' The `windowCard` function is a versatile UI component that allows for highly interactive content display.
+#' Users can drag the window around the page, resize it from its edges, and expand/collapse its content.
+#' This is particularly useful for pop-up information, draggable dashboards, or interactive panels in
+#' complex Shiny applications. The window initially appears centered on the screen.
 #'
 #' @section Examples for r2resize:
 #' More examples and demo pages are located at this link -
 #' \url{https://rpkg.net/package/r2resize}.
 #'
-#' @note Please note that only one windowCard may be created by page
+#' @note Due to the underlying JavaScript implementation and reliance on specific DOM IDs,
+#' only one `windowCard` should be created per page to ensure proper functionality and avoid conflicts.
+#' This function requires the `shiny` package for rendering and interactive functionality.
 #'
-#' @return A window-like card container that is expandable and resizable
+#' @return A `shiny::div` element representing the moveable, resizable, and expandable window card.
+#'
+#' @family Container Functions
+#' @seealso \code{\link{splitCard}}, \code{\link{splitCard2}}, \code{\link{sizeableCard}}
 #'
 #' @examples
-#' #simple window card with default attributes
-#' #shows up centered on the screen
-#' r2resize::windowCard("sample r2symbols text")
+#' if (interactive()) {
+#'   library(shiny)
+#'   # Simple window card with default attributes
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Interactive Window Card"),
+#'       windowCard(
+#'         shiny::h3("Welcome!"),
+#'         shiny::p("This is a draggable and resizable window."),
+#'         shiny::actionButton("closeBtn", "Close Window")
+#'       )
+#'     ),
+#'     server = function(input, output) {
+#'       observeEvent(input$closeBtn, {
+#'         # Example: How you might handle closing (requires custom JS for actual close)
+#'         showNotification("Window close requested (functionality not built-in)")
+#'       })
+#'     }
+#'   )
 #'
-#'
-#' #specify the width of the window card
-#' #specify the title
-#' #specify the header color
-#' #speciy other features
-#' r2resize::windowCard(
-#' title = "Sample Window card",
-#' width = "500px",
-#' bg.color = "white",
-#' border.color = "brown",
-#' header.text.color = "white",
-#' body.text.color = "black")
-#'
+#'   # Custom styled window card with a plot
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Styled Window Card with Plot"),
+#'       windowCard(
+#'         title = "Dynamic Plot Window",
+#'         width = "600px",
+#'         bg.color = "#E8F5E9",
+#'         border.color = "#4CAF50",
+#'         header.text.color = "white",
+#'         body.text.color = "#333333",
+#'         shiny::plotOutput("myPlot")
+#'       )
+#'     ),
+#'     server = function(input, output) {
+#'       output$myPlot <- shiny::renderPlot({
+#'         hist(rnorm(100), col = "skyblue", border = "white", main = "Random Normal Data")
+#'       })
+#'     }
+#'   )
+#' }
 #' @export
-
 windowCard <- function(...,
                        title = "Sample title",
                        width = "50%",
@@ -539,37 +605,59 @@ windowCard <- function(...,
 }
 
 
-#' Create an Emphasis Card
+#' Create an Emphasis Card with a Dynamic Border
 #'
-#' Emphasis container
+#' Creates a container that visually emphasizes its content with a subtle, dynamic border effect.
+#' This card is designed to draw user attention to important information or sections.
 #'
-#' @param ... content of the card
-#' @param bg.color content background color
+#' @param ... The content to be placed inside the emphasis card. Can be any `shiny::tagList` or HTML content.
+#' @param bg.color The background color of the content area. Can be a named R color (e.g., "red", "black") or a hexadecimal color code (e.g., "#333333").
+#'
+#' @details
+#' The `empahsisCard` (and its alias `emphasisCard`) provides a unique visual cue to highlight content.
+#' The border of the card subtly animates or changes, indicating that the content within is significant
+#' or has a special status. This is ideal for calls to action, important notices, or featured content.
 #'
 #' @section More examples for r2resize:
 #' More examples and demo pages are located at this link -
 #' \url{https://r2resize.obi.obianom.com}.
 #'
-#' @return container with a moving border to denote emphasis
+#' @return A `shiny::div` element representing the emphasis card with its dynamic border, ready for inclusion in a Shiny UI or R Markdown output.
+#'
+#' @family Container Functions
+#' @seealso \code{\link{emphasisCard}} (alias), \code{\link{splitCard}}
+#' @note This function requires the `shiny` package for rendering.
 #'
 #' @examples
-#' #make a simple emphasis card
-#' #add as much content as need
-#' r2resize::empahsisCard(
-#'   "sample rpkg.net 1",
-#'   "sample rpkg.net 2 "
-#' )
+#' if (interactive()) {
+#'   library(shiny)
+#'   # Simple emphasis card with basic text
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Emphasis Card Example"),
+#'       empahsisCard(
+#'         shiny::h4("Important Announcement!"),
+#'         shiny::p("Please read this crucial message.")
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
 #'
-#'
-#' #specify the color of the background
-#' r2resize::empahsisCard(
-#'   "sample rpkg.net 1",
-#'   "sample rpkg.net 2 ",
-#'   bg.color = "brown"
-#' )
-#'
+#'   # Emphasis card with a custom background color and multiple elements
+#'   shinyApp(
+#'     ui = fluidPage(
+#'       h2("Styled Emphasis Card"),
+#'       empahsisCard(
+#'         shiny::h3("Featured Product"),
+#'         shiny::img(src = "https://r2resize.obi.obianom.com/m/logo.png", height = "50px"),
+#'         shiny::p("Check out our new amazing product!"),
+#'         bg.color = "#FFEBEE"
+#'       )
+#'     ),
+#'     server = function(input, output) {}
+#'   )
+#' }
 #' @export
-
 empahsisCard <- function(..., bg.color = NULL) {
   # preset
   bg.color <- ifelse(is.null(bg.color), "#f5f5f5", bg.color)
@@ -592,10 +680,7 @@ empahsisCard <- function(..., bg.color = NULL) {
 }
 
 
-#' @inherit empahsisCard
+#' @rdname empahsisCard
 #' @export
 #'
-
 emphasisCard <- empahsisCard
-
-

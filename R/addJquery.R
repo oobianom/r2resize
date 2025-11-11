@@ -32,12 +32,10 @@
 #' # but can be manually added to ensure jQuery is present in a custom HTML context.
 #'
 #' # Example in a simple R Markdown chunk (won't render fully without proper setup)
-#' # \dontrun{
-#' # ```{r echo=FALSE, results="asis"}
-#' # r2resize::add.JQuery()
-#' # htmltools::div("This text requires jQuery for some interactive features.")
-#' # ```
-#' # }
+#' \dontrun{
+#' r2resize::add.JQuery()
+#' htmltools::div("This text requires jQuery for some interactive features.")
+#' }
 #' @seealso
 #' \code{\link{splitCard}} for an example of a `r2resize` component that might rely on jQuery.
 #'

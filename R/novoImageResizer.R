@@ -45,7 +45,7 @@
 #' If there are multiple images within the imageid holder, then they are automatically ordered at the bottom for ease of transition.
 #'
 #' @examples
-#' dontrun{
+#' \dontrun{
 #' if (interactive()) {
 #'   library(shiny)
 #'   library(htmltools)

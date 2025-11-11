@@ -62,10 +62,10 @@ test_that("add.resizer returns an HTML character string with correct class", {
       expect_true(grepl("red", resizer_output_custom))
       expect_true(grepl("16px", resizer_output_custom))
       expect_true(grepl("green", resizer_output_custom))
-      expect_true(grepl("thumb.width", resizer_output_custom)) # Should be replaced
-      expect_true(grepl("thumb.height", resizer_output_custom)) # Should be replaced
-      expect_true(grepl("line.width", resizer_output_custom)) # Should be replaced
-      expect_true(grepl("line.height", resizer_output_custom)) # Should be replaced
+      expect_false(grepl("thumb.width", resizer_output_custom)) # Should be replaced
+      expect_false(grepl("thumb.height", resizer_output_custom)) # Should be replaced
+      expect_false(grepl("line.width", resizer_output_custom)) # Should be replaced
+      expect_false(grepl("line.height", resizer_output_custom)) # Should be replaced
       expect_true(grepl("'50%'", resizer_output_custom))
     }
   )

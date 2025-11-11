@@ -1,7 +1,7 @@
 Package: r2resize
 Type: Package
 Title: In-Text Resize for Images, Tables and Fancy Resize Containers in 'shiny', 'rmarkdown' and 'quarto' Documents
-Version: 1.9.2
+Version: 2.0
 Authors@R: c(
     person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
@@ -26,5 +26,5 @@ Encoding: UTF-8
 VignetteBuilder: knitr
 Language: en-US
 LazyData: false
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Config/testthat/edition: 3

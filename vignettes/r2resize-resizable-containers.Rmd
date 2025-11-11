@@ -1,0 +1,130 @@
+---
+title: "Resizable Containers with r2resize"
+author: "R Packager"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Resizable Containers with r2resize}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE
+)
+library(r2resize)
+library(shiny)
+library(htmltools)
+```
+
+# Introduction to Resizable Containers
+
+The `r2resize` package provides a set of highly customizable and resizable HTML containers for your R Markdown documents and Shiny applications. This vignette will walk you through the usage of `splitCard`, `splitCard2`, `sizeableCard`, `windowCard`, and `empahsisCard`.
+
+## `splitCard()`: Resizable Split Screen Container
+
+The `splitCard` function creates a container with two panels (left/right or top/bottom) and a draggable splitter.
+
+```{r splitCard-example, eval=FALSE}
+# Basic vertical split card
+splitCard(
+  "Content on the Left/Top",
+  "Content on the Right/Bottom"
+)
+
+# Customizing colors and position
+splitCard(
+  "Left Panel Content",
+  "Right Panel Content",
+  bg.left.color = "lightblue",
+  bg.right.color = "lightgreen",
+  splitter.color = "darkgray",
+  position = "vertical",
+  min.height = "300px",
+  left.width = "60%"
+)
+
+# Horizontal split card
+splitCard(
+  shiny::tags$h3("Header for Top Panel"),
+  shiny::tags$p("Some text for the bottom panel."),
+  bg.left.color = "#f0f0f0",
+  bg.right.color = "white",
+  position = "horizontal"
+)
+```
+
+## `splitCard2()`: Alternative Split Screen Container
+
+`splitCard2` offers another style of split screen container, often useful for comparison or question-answer layouts.
+
+```{r splitCard2-example, eval=FALSE}
+# Simple splitCard2 with default styling
+splitCard2(
+  shiny::tags$h2("Question Section"),
+  shiny::tags$p("This is where your question or main topic goes."),
+  slider.position = "30" # 30% for the left panel
+)
+
+# Customizing colors and text
+splitCard2(
+  shiny::tags$h3("Code Snippet"),
+  shiny::tags$pre("print('Hello, r2resize!')"),
+  bg.left.color = "#e0e0e0",
+  bg.right.color = "white",
+  border.color = "blue",
+  text.left.color = "darkred",
+  text.right.color = "darkgreen",
+  slider.position = "50"
+)
+```
+
+## `sizeableCard()`: Resizable Content Holder
+
+`sizeableCard` creates a container with a resizing toolbar, allowing users to adjust its size.
+
+```{r sizeableCard-example, eval=FALSE}
+# Simple sizeable card
+sizeableCard(
+  shiny::tags$h4("My Resizable Content"),
+  shiny::tags$p("You can click the 'A' buttons to change the size of this card."),
+  bg.color = "#fffafa",
+  border.color = "gray"
+)
+```
+
+## `windowCard()`: Resizable, Moveable, Expandable Window Card
+
+`windowCard` creates a draggable and resizable window-like container, great for pop-up information or interactive dashboards.
+
+```{r windowCard-example, eval=FALSE}
+# Basic window card
+windowCard(
+  "This is content inside a moveable window!",
+  title = "My Pop-up Window",
+  width = "400px",
+  bg.color = "#e6f7ff",
+  border.color = "steelblue",
+  header.text.color = "white",
+  body.text.color = "black"
+)
+
+# Note: Only one windowCard may be created per page.
+```
+
+## `empahsisCard()`: Emphasis Container
+
+`empahsisCard` creates a container with a moving border effect to draw attention to its content.
+
+```{r empahsisCard-example, eval=FALSE}
+# Emphasis card with custom background
+empahsisCard(
+  shiny::tags$h3("Important Information!"),
+  shiny::tags$p("This card highlights crucial details with a dynamic border."),
+  bg.color = "#fdfbe4"
+)
+```

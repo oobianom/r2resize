@@ -4,7 +4,7 @@ author: "R Packager"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Flexible and Elastic Card Layouts}
+  %\VignetteIndexEntry{Flexible and Elastic Card Layouts with r2resize}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

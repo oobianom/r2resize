@@ -9,8 +9,8 @@ test_that("shinyExpandImage returns htmltools::tagList with script tags", {
   expect_false(inherits(image_output_single, "html_dependency"))
   expect_false(inherits(image_output_single, "list"))
   expect_false(length(image_output_single) > 0) # Should contain html_dependency and script tags
-  expect_false(grepl("imgviewer.css", image_output_single[[1]]$stylesheet))
-  expect_false(grepl("imgviewer.js", image_output_single[[1]]$script))
+  expect_false(grepl("imgviewer.css", image_output_single))
+  expect_false(grepl("imgviewer.js", image_output_single))
   expect_false(grepl('$("#myImageDiv")', as.character(image_output_single)))
 
   # Test with multiple image IDs
